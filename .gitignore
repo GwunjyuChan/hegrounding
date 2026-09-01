@@ -1,0 +1,44 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local environment variables
+.env
+
+.claude/
+
+/archive
+
+# Generated images — map crops and prediction visualisations
+*.jpg
+!docs/figures/*.jpg
+
+# Generated / intermediate CSV files
+benchmark/*.csv
+
+# Extraction state files
+extraction/.seen_ids
+
+# Large raw data files (place in data/ locally, not tracked in git)
+data/*.json
+data/*.csv
+data/*.zip
+
+CONTEXT.md
+
+# Meeting
+meetings/
+slides/
+
+# thesis proposal register
+proposal/
+register_files/
+
+
