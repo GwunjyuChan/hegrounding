@@ -11,6 +11,11 @@ wheels/
 
 # Local environment variables
 .env
+.env.*
+!.env.example
+
+# Local macOS metadata
+.DS_Store
 
 .claude/
 
@@ -19,6 +24,9 @@ wheels/
 # Generated images — map crops and prediction visualisations
 *.jpg
 !docs/figures/*.jpg
+!maps/napoleon_pilot/*.jpg
+!maps/zurich_pilot/*.jpg
+!benchmark/atlas/runs/**/reference_workspace/maps/zurich_pilot/*.jpg
 
 # Generated / intermediate CSV files
 benchmark/*.csv
@@ -31,14 +39,21 @@ data/*.json
 data/*.csv
 data/*.zip
 
+# reference files
+related_work/
+relative_work/
+
 CONTEXT.md
+project_progress_2026-09-13.md
 
 # Meeting
 meetings/
+plan/
 slides/
 
 # thesis proposal register
 proposal/
 register_files/
 
-
+# Local meeting follow-up plans
+/todo/

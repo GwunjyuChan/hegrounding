@@ -3,12 +3,12 @@
 
 The first task to run is place-name grounding:
 
-  python3 benchmark/vlm_eval.py --provider center --task place --limit 20
-  python3 benchmark/vlm_eval.py --provider openai --model gpt-4o --task place --sample 20
+  python3 benchmark/vlm_eval.py --benchmark PATH --provider center --task place --limit 20
+  python3 benchmark/vlm_eval.py --benchmark PATH --provider openai --model gpt-4o --task place --sample 20
 
 The same pipeline can also run event-text grounding:
 
-  python3 benchmark/vlm_eval.py --provider openai --model gpt-4o --task event --sample 20
+  python3 benchmark/vlm_eval.py --benchmark PATH --provider openai --model gpt-4o --task event --sample 20
 
 Outputs:
   - per-item JSONL results in benchmark/results/
@@ -60,7 +60,6 @@ def _load_qwen(model_id: str) -> tuple[Any, Any]:
     return _qwen_cache[model_id]
 
 
-DEFAULT_BENCHMARK = Path("benchmark/place_benchmark_mixed_200_local.jsonl")
 DEFAULT_RESULTS_DIR = Path("benchmark/results")
 DEFAULT_VIS_DIR = Path("benchmark/pred_vis")
 
@@ -101,6 +100,25 @@ Return only a JSON object in this exact schema:
 {{"x": 123, "y": 456, "confidence": 0.0}}
 """
 
+GEO_PROMPT = """\
+The image is a {img_w} x {img_h} pixel crop from a historical Swiss Siegfried map.
+It covers approximately {crop_km:.0f} km x {crop_km:.0f} km.
+
+Historical event:
+{event_text}
+
+Task:
+Locate the specific geographic feature described in this event — for example, the
+river bank where troops crossed, the mountain pass where a road was built, or the
+ford along a stream. Use the spatial clues in the text (river name, direction,
+distance, terrain type) to find the described feature on the map.
+
+Do NOT simply find the nearest settlement label. Point to the geographic feature itself.
+
+Return only a JSON object in this exact schema:
+{{"x": 123, "y": 456, "confidence": 0.0}}
+"""
+
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     with path.open(encoding="utf-8") as fh:
@@ -131,14 +149,40 @@ def image_data_url(path: str | Path) -> str:
     return f"data:image/jpeg;base64,{load_image_b64(path)}"
 
 
+def anonymise_event_text(text: str, place: str) -> str:
+    """Remove place-name hints from event text for the geo task.
+
+    Strips the leading 'In [place]:' prefix and replaces remaining
+    occurrences of the place name with '[Ort]' so the VLM cannot
+    trivially resolve the location by reading the map label.
+    """
+    import re
+    # Strip "In [anything]:" prefix (the HLS article context header)
+    text = re.sub(r"^In [^:]+:\s*", "", text)
+    # Replace the place name itself (case-insensitive)
+    if place:
+        text = re.sub(re.escape(place), "[Ort]", text, flags=re.IGNORECASE)
+    return text.strip()
+
+
 def build_prompt(rec: dict[str, Any], task: str) -> str:
-    template = PLACE_PROMPT if task == "place" else EVENT_PROMPT
+    if task == "place":
+        template = PLACE_PROMPT
+    elif task == "geo":
+        template = GEO_PROMPT
+    else:
+        template = EVENT_PROMPT
+
+    event_text = rec["event_text"]
+    if task == "geo":
+        event_text = anonymise_event_text(event_text, rec.get("place", ""))
+
     return template.format(
         img_w=rec["img_w"],
         img_h=rec["img_h"],
         crop_km=rec["crop_km"],
         place=rec["place"],
-        event_text=rec["event_text"],
+        event_text=event_text,
     )
 
 
@@ -416,8 +460,13 @@ def make_result(
     dist_px = dist_m = None
     hit = False
 
+    # For geo task use manually annotated geo_gold_px; fall back to gold_px if missing
+    gold_px = rec.get("geo_gold_px") if args.task == "geo" else rec["gold_px"]
+    if gold_px is None:
+        gold_px = rec["gold_px"]
+
     if pred_px is not None:
-        dist_px = pixel_distance(pred_px, rec["gold_px"])
+        dist_px = pixel_distance(pred_px, gold_px)
         dist_m = dist_px * rec["m_per_px"]
         hit = dist_m <= args.tolerance_m
 
@@ -434,7 +483,7 @@ def make_result(
         "event_type": rec.get("event_type", ""),
         "time": rec.get("time", ""),
         "image": rec["image"],
-        "gold_px": rec["gold_px"],
+        "gold_px": gold_px,
         "pred_px": pred_px,
         "dist_px": round(dist_px, 2) if dist_px is not None else None,
         "dist_m": round(dist_m, 2) if dist_m is not None else None,
@@ -571,7 +620,8 @@ def visualise_prediction(result: dict[str, Any], vis_dir: Path) -> Path | None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--benchmark", type=Path, default=DEFAULT_BENCHMARK)
+    parser.add_argument("--benchmark", type=Path, required=True,
+                        help="Explicit point-grounding benchmark; legacy defaults have been archived")
     parser.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS_DIR)
     parser.add_argument("--run-name", default=None)
     parser.add_argument("--provider", choices=sorted(CALLERS), default="center")
@@ -592,7 +642,7 @@ def main() -> None:
         default=Path(".env"),
         help="Optional .env file loaded before API clients are created.",
     )
-    parser.add_argument("--task", choices=["place", "event"], default="place")
+    parser.add_argument("--task", choices=["place", "event", "geo"], default="place")
     parser.add_argument("--ids", nargs="*", default=[])
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--sample", type=int, default=None)

@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-16T23:38:28.782578+00:00",
+  "events": 10,
+  "methods": {
+    "direct": {
+      "parsed": 8,
+      "errors": 2
+    },
+    "two_stage": {
+      "parsed": 9,
+      "errors": 1
+    }
+  }
+}

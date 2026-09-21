@@ -1,0 +1,109 @@
+{
+  "mode": "text_only_location_qa",
+  "model": "gpt-5",
+  "backend": "api",
+  "created_at": "2026-09-16T15:08:19.384156+00:00",
+  "source_package_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "tasks_sha256": "b0c9027f1e56ca1b65d3966274771ae0a7e1211b80e50d25eb68b8e85ad089fd",
+  "event_count": 10,
+  "max_output_tokens": 4096,
+  "human_review_status": "pending",
+  "answers": [
+    {
+      "event_id": "Z0001",
+      "answer_location": "the opposite bank of the Limmat",
+      "evidence_quotes": [
+        "Six hundred men boldly embarked and reached the opposite bank.",
+        "The rest of Lorge's division and part of Mesnard's division crossed the Limmat: fifteen thousand men had been brought across the river."
+      ],
+      "uncertainty": "The passage does not specify the exact landing point beyond stating it was the opposite bank; it does not name a precise spot.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0002",
+      "answer_location": "in a wood on the plateau of Closter-Fahr",
+      "evidence_quotes": [
+        "Korsakoff had stationed three battalions with artillery there, on the plateau of Closter-Fahr.",
+        "he advanced against the three Russian battalions guarding Closter-Fahr.",
+        "They had established themselves in a wood and defended it bravely."
+      ],
+      "uncertainty": "The specific wood within Closter-Fahr is not identified.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0003",
+      "answer_location": "Regensdorf",
+      "evidence_quotes": [
+        "Bontemps's brigade was stationed at Regensdorf to face Durasof should he move up from the lower Limmat."
+      ],
+      "uncertainty": "Exact position within Regensdorf is not specified.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0004",
+      "answer_location": "Altstetten",
+      "evidence_quotes": [
+        "Arriving at that moment, Massena set Klein's division, which was at Altstetten, in motion."
+      ],
+      "uncertainty": "",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0005",
+      "answer_location": "the heights behind Zurich",
+      "evidence_quotes": [
+        "He had captured the small camp at Hong, as well as the heights behind Zurich, and had seized the main road to Vintherthur"
+      ],
+      "uncertainty": "The exact heights are not specified beyond being 'behind Zurich'.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0006",
+      "answer_location": "On the Limmat’s bank near the village of Dietikon",
+      "evidence_quotes": [
+        "Preparations for the crossing had been made near the village of Dietikon",
+        "By morning they were afloat, and the troops were silently drawn up on the bank.",
+        "The rest of Lorge's division and part of Mesnard's division crossed the Limmat"
+      ],
+      "uncertainty": "The specific side or exact point on the bank is not stated.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0007",
+      "answer_location": "Wollishofen",
+      "evidence_quotes": [
+        "Mortier had advanced towards Zurich by way of Wollishofen"
+      ],
+      "uncertainty": "Exact point within Wollishofen not specified.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0008",
+      "answer_location": "Hong",
+      "evidence_quotes": [
+        "He had captured the small camp at Hong"
+      ],
+      "uncertainty": "Only the place name is provided; the exact site within Hong is not specified.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0009",
+      "answer_location": "the main road to Vintherthur near Zurich",
+      "evidence_quotes": [
+        "had seized the main road to Vintherthur, which led into Germany and was the only route by which the Russians could retreat."
+      ],
+      "uncertainty": "The exact segment or alignment of the road near Zurich is not specified.",
+      "quote_not_verbatim": []
+    },
+    {
+      "event_id": "Z0010",
+      "answer_location": "the other part of Zurich, behind the Limmat",
+      "evidence_quotes": [
+        "Korsakoff had finally realized his situation and had moved his troops into the other part of Zurich, behind the Limmat."
+      ],
+      "uncertainty": "The specific bank or district is not identified beyond being behind the Limmat.",
+      "quote_not_verbatim": []
+    }
+  ],
+  "errors": []
+}

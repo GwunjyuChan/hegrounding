@@ -1,0 +1,120 @@
+{
+  "map_version": "07b4a7bd30a1d0d87c043d8e",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "predictions": [
+    {
+      "event_id": "Z0001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            500,
+            600
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            578,
+            608
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0003",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            578,
+            478
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1032,
+            670
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1224,
+            578
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0006",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            473,
+            612
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1224,
+            787
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1032,
+            600
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0010",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1422,
+            738
+          ]
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "event_id": "Z0009",
+      "error_type": "ValueError"
+    }
+  ]
+}

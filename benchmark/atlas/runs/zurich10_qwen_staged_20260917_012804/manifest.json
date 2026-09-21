@@ -1,0 +1,29 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+  "coordinate_system": "image_pixels_top_left",
+  "event_count": 10,
+  "selected_event_ids": [
+    "Z0001",
+    "Z0002",
+    "Z0003",
+    "Z0004",
+    "Z0005",
+    "Z0006",
+    "Z0007",
+    "Z0008",
+    "Z0009",
+    "Z0010"
+  ],
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "input_package_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "created_at": "2026-09-16T23:31:15.771336+00:00",
+  "text_max_tokens": 4096,
+  "map_max_tokens": 4096,
+  "seed": 0,
+  "do_sample": false,
+  "interleave": "alternate_direct_first",
+  "stage2_input": "model_answer+model_quotes+model_uncertainty+original_question+map; no full original passage",
+  "gold_access": "none; scoring is a separate offline process",
+  "execution_status": "started"
+}

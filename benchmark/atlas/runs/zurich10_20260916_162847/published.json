@@ -1,0 +1,31 @@
+{
+  "gpt5": {
+    "model": "gpt-5",
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "events": [
+      "Z0001",
+      "Z0003",
+      "Z0004",
+      "Z0005",
+      "Z0006",
+      "Z0007",
+      "Z0008",
+      "Z0009",
+      "Z0010"
+    ]
+  },
+  "qwen3vl8b": {
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "events": [
+      "Z0001",
+      "Z0002",
+      "Z0004",
+      "Z0005",
+      "Z0006",
+      "Z0007",
+      "Z0008",
+      "Z0010"
+    ]
+  }
+}

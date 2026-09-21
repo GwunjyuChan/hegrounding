@@ -1,0 +1,226 @@
+{
+  "gpt5": {
+    "model": "gpt-5",
+    "rows": [
+      {
+        "event_id": "Z0001",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 924.8918855736599,
+        "distance_fraction_of_diagonal": 0.39647270750421226,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0002",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "call_or_parse_error": true
+      },
+      {
+        "event_id": "Z0003",
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "prediction_type": "point",
+        "outside_map_abstention": false
+      },
+      {
+        "event_id": "Z0004",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 182.4828759089466,
+        "distance_fraction_of_diagonal": 0.07822479687980051,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0005",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 244.91018761987016,
+        "distance_fraction_of_diagonal": 0.10498546553988694,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0006",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 786.3230888127348,
+        "distance_fraction_of_diagonal": 0.3370725258350549,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0007",
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "prediction_type": "point",
+        "distance_to_gold_px": 85.4748948350264,
+        "distance_fraction_of_diagonal": 0.03664045874709082,
+        "point_inside_gold": false
+      },
+      {
+        "event_id": "Z0008",
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "prediction_type": "point",
+        "distance_to_gold_px": 103.87011119662864,
+        "distance_fraction_of_diagonal": 0.044525922280470885,
+        "point_inside_gold": false
+      },
+      {
+        "event_id": "Z0009",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "line",
+        "unscored_geometry_pair": [
+          "point",
+          "line"
+        ]
+      },
+      {
+        "event_id": "Z0010",
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "prediction_type": "point",
+        "excluded_reason": "Question asks for Korsakoff's city sector after redeployment; saved geometry/evidence describe Durasof and the retreat road. Preserve gold, require independent review."
+      }
+    ],
+    "errors": [
+      {
+        "event_id": "Z0002",
+        "error_type": "JSONDecodeError"
+      }
+    ],
+    "summary": {
+      "attempts": 10,
+      "valid_geometry": 9,
+      "abstained": 0,
+      "point_gold_count": 4,
+      "point_gold_mean_px": 534.6520094788028,
+      "point_gold_median_px": 515.6166382163025,
+      "point_in_polygon_count": 2,
+      "point_in_polygon_hits": 0,
+      "elapsed_inference_seconds": 461.8282482920913
+    },
+    "usage": {
+      "input_tokens": 10583,
+      "output_tokens": 27696,
+      "total_tokens": 38279
+    }
+  },
+  "qwen3vl8b": {
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "rows": [
+      {
+        "event_id": "Z0001",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 358.6153928653928,
+        "distance_fraction_of_diagonal": 0.1537273901736545,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0002",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 348.30446451344835,
+        "distance_fraction_of_diagonal": 0.14930741228830222,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0003",
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "call_or_parse_error": true
+      },
+      {
+        "event_id": "Z0004",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 279.5782538038322,
+        "distance_fraction_of_diagonal": 0.11984659934188306,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0005",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 742.9468352446223,
+        "distance_fraction_of_diagonal": 0.3184784599103959,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0006",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "prediction_type": "point",
+        "distance_to_gold_px": 390.8068576675696,
+        "distance_fraction_of_diagonal": 0.1675268811279182,
+        "within_saved_tolerance": false
+      },
+      {
+        "event_id": "Z0007",
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "prediction_type": "point",
+        "distance_to_gold_px": 425.0,
+        "distance_fraction_of_diagonal": 0.1821844296804251,
+        "point_inside_gold": false
+      },
+      {
+        "event_id": "Z0008",
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "prediction_type": "point",
+        "distance_to_gold_px": 349.48247452483224,
+        "distance_fraction_of_diagonal": 0.14981238895202412,
+        "point_inside_gold": false
+      },
+      {
+        "event_id": "Z0009",
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "call_or_parse_error": true
+      },
+      {
+        "event_id": "Z0010",
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "prediction_type": "point",
+        "excluded_reason": "Question asks for Korsakoff's city sector after redeployment; saved geometry/evidence describe Durasof and the retreat road. Preserve gold, require independent review."
+      }
+    ],
+    "errors": [
+      {
+        "event_id": "Z0003",
+        "error_type": "ValueError"
+      },
+      {
+        "event_id": "Z0009",
+        "error_type": "ValueError"
+      }
+    ],
+    "summary": {
+      "attempts": 10,
+      "valid_geometry": 8,
+      "abstained": 0,
+      "point_gold_count": 5,
+      "point_gold_mean_px": 424.05036081897305,
+      "point_gold_median_px": 358.6153928653928,
+      "point_in_polygon_count": 2,
+      "point_in_polygon_hits": 0,
+      "elapsed_inference_seconds": 189.74217308487277
+    },
+    "usage": {
+      "input_tokens": 30831,
+      "output_tokens": 892,
+      "total_tokens": 31723
+    }
+  }
+}

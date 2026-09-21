@@ -1,0 +1,81 @@
+{
+  "map_version": "3cb177ba1bd166169eaf91eb",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "excluded": [
+    "Z0003"
+  ],
+  "metrics_kind": "diagnostic_against_saved_gold_not_formal_benchmark_accuracy",
+  "rows": [
+    {
+      "event_id": "Z0001",
+      "gold_type": "polygon",
+      "prediction_type": "point",
+      "prediction": {
+        "type": "point",
+        "coordinates": [
+          [
+            578,
+            720
+          ]
+        ]
+      },
+      "point_inside_gold": false,
+      "distance_to_gold_px": 656.5668282817827
+    },
+    {
+      "event_id": "Z0002",
+      "gold_type": "point",
+      "prediction_type": "point",
+      "prediction": {
+        "type": "point",
+        "coordinates": [
+          [
+            620,
+            480
+          ]
+        ]
+      },
+      "point_error_px": 496.5178748041202,
+      "tolerance_px": 0,
+      "within_saved_tolerance": false
+    },
+    {
+      "event_id": "Z0004",
+      "gold_type": "polygon",
+      "prediction_type": "point",
+      "prediction": {
+        "type": "point",
+        "coordinates": [
+          [
+            528,
+            250
+          ]
+        ]
+      },
+      "point_inside_gold": false,
+      "distance_to_gold_px": 237.77404772532103
+    },
+    {
+      "event_id": "Z0005",
+      "gold_type": "polygon",
+      "prediction_type": "point",
+      "prediction": {
+        "type": "point",
+        "coordinates": [
+          [
+            700,
+            380
+          ]
+        ]
+      },
+      "point_inside_gold": false,
+      "distance_to_gold_px": 298.0771712157776
+    }
+  ],
+  "errors": [],
+  "usage": {
+    "input_tokens": 6955,
+    "output_tokens": 188,
+    "total_tokens": 7143
+  }
+}

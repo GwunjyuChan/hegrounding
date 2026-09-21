@@ -1,0 +1,42 @@
+{
+  "reference_map": {
+    "source_id": "cb54ea14dd3bada20f2d4955",
+    "crop": [
+      0,
+      0,
+      2177,
+      1699
+    ],
+    "rotation": 0,
+    "width": 2177,
+    "height": 1699,
+    "image_sha256": "a85b6a201c4bca9d0210d8f68e38f1b3fe7fc7b332a4ebff16b0c1d3b7bee8e9",
+    "version": "07b4a7bd30a1d0d87c043d8e",
+    "map_id": "074f543caf035b8f",
+    "title": "苏黎世作战参考图输入实验 · 含部署提示 · 独立审核",
+    "provenance": "Napoleon Series zurich2.jpg. Full reference battle map, with original troop symbols and arrows. Diagnostic input ablation with answer cues; not an answer-free benchmark. No gold labels transferred from the Usteri 1816 map.",
+    "max_side": 3200,
+    "created_at": "2026-09-17T00:14:31.841299+00:00",
+    "coordinate_system": "image_pixels_top_left",
+    "source_name": "zurich2.jpg",
+    "source_page": null
+  },
+  "baseline_map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "method": "Qwen3-VL direct grounding; only map and its coordinate metadata replaced",
+  "known_confounds": [
+    "different geographic coverage",
+    "different resolution, scale and cartography",
+    "visible military answer cues"
+  ],
+  "scoring": "No cross-map pixel scoring; human reference-map annotation required",
+  "main_workspace_unchanged": {
+    "benchmark/atlas/gold.jsonl": "60d1dcb72276b7e9f784171d4f5ed237c0e6636ca85e23b537ae1314e80189d7",
+    "benchmark/atlas/maps.jsonl": "bb2b6681b5063f19255364a89c843ed4600e74e796cc41696f7b4e61a14c809e",
+    "benchmark/atlas/predictions.jsonl": "ceb5269e305364cf77fbe7d6a4d080db432cfe8cc6cc6130f43a741e9a61399c"
+  }
+}

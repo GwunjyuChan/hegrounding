@@ -1,0 +1,55 @@
+{
+  "map_version": "3cb177ba1bd166169eaf91eb",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "predictions": [
+    {
+      "event_id": "Z0001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            578,
+            720
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            620,
+            480
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            528,
+            250
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            700,
+            380
+          ]
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

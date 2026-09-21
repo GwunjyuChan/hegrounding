@@ -1,0 +1,124 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "model": "gpt-5",
+  "predictions": [
+    {
+      "event_id": "Z0001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            930,
+            780
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0003",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            930,
+            250
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1000,
+            260
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1225,
+            310
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0006",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            830,
+            690
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1105,
+            620
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            956,
+            248
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0009",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1168,
+            319
+          ],
+          [
+            1241,
+            278
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0010",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1178,
+            274
+          ]
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "event_id": "Z0002",
+      "error_type": "JSONDecodeError"
+    }
+  ]
+}

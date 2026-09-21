@@ -1,0 +1,202 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "model": "Qwen/Qwen3-VL-8B-Instruct [two-stage]",
+  "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "method": "two_stage",
+  "predictions": [
+    {
+      "event_id": "Z0001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            500,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            478,
+            228
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0003",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            478,
+            175
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            542,
+            148
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            700,
+            210
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            738,
+            437
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            357,
+            370
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0009",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            520,
+            300
+          ],
+          [
+            580,
+            350
+          ],
+          [
+            630,
+            400
+          ],
+          [
+            680,
+            450
+          ],
+          [
+            730,
+            500
+          ],
+          [
+            780,
+            550
+          ],
+          [
+            830,
+            600
+          ],
+          [
+            880,
+            650
+          ],
+          [
+            930,
+            700
+          ],
+          [
+            980,
+            750
+          ],
+          [
+            1030,
+            800
+          ],
+          [
+            1080,
+            850
+          ],
+          [
+            1130,
+            900
+          ],
+          [
+            1180,
+            950
+          ],
+          [
+            1230,
+            1000
+          ],
+          [
+            1280,
+            1050
+          ],
+          [
+            1330,
+            1100
+          ],
+          [
+            1380,
+            1150
+          ],
+          [
+            1430,
+            1200
+          ],
+          [
+            1480,
+            1250
+          ],
+          [
+            1530,
+            1300
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0010",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            650,
+            480
+          ]
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "event_id": "Z0006",
+      "error_type": "ValueError"
+    }
+  ]
+}

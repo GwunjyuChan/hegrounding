@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HE · 历史事件标注</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/vendor/leaflet.css"><link rel="stylesheet" href="/style.css">
+  <script defer src="/vendor/leaflet.js"></script><script defer src="/vendor/lucide.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <button id="home" class="brand" title="返回战场地图"><span class="brand-mark">HE</span><span>历史事件标注</span></button>
+    <span class="header-rule"></span><span id="header-location">欧洲战场</span><a href="/atlas.html">地图集编辑</a>
+    <div class="header-end"><span id="global-progress"></span><label class="annotator"><i data-lucide="user-round"></i><input id="annotator" aria-label="标注者" value="eric" maxlength="100"></label></div>
+  </header>
+  <main id="overview">
+    <aside class="battle-sidebar">
+      <div class="section-heading"><div class="eyebrow">HISTORICAL GROUNDING</div><h1>战场地图</h1><div class="overview-stats"><strong id="total-events">25</strong><span>事件</span><strong>4</strong><span>战场</span></div></div>
+      <div id="battle-list"></div>
+      <div class="sidebar-bottom"><span class="local-dot"></span>本地工作区<span>1799—1815</span></div>
+    </aside>
+    <section class="europe-area"><div id="europe-map" aria-label="欧洲战场地图"></div><div class="map-label">EUROPE<span>法国革命与拿破仑战争</span></div><div class="map-legend"><span><b style="background:#177d70"></b>1799 · 瑞士</span><span><b style="background:#b45937"></b>1806 · 波兰</span><span><b style="background:#426ba5"></b>1815 · 比利时</span></div><button id="reset-europe" class="icon-button map-reset" title="欧洲全图" aria-label="欧洲全图"><i data-lucide="scan"></i></button></section>
+  </main>
+  <main id="editor" hidden>
+    <aside class="event-sidebar">
+      <button id="back" class="back-button"><i data-lucide="arrow-left"></i>战场地图</button>
+      <h2 id="battle-title"></h2><p id="battle-meta" class="muted"></p>
+      <label class="search"><i data-lucide="search"></i><input id="event-search" placeholder="搜索事件" aria-label="搜索事件"></label>
+      <select id="event-filter" aria-label="筛选事件"><option value="all">全部事件</option><option value="pending">待标注</option><option value="accepted">已通过</option><option value="ambiguous">有歧义</option><option value="unlocatable">无法定位</option><option value="rejected">已剔除</option></select>
+      <div id="event-list"></div>
+    </aside>
+    <section class="workspace">
+      <div class="workspace-heading"><div><span id="event-id" class="mono"></span><span id="save-indicator" class="save-indicator"></span></div><div class="event-navigation"><button id="previous" class="icon-button" title="上一条" aria-label="上一条"><i data-lucide="chevron-left"></i></button><span id="event-position"></span><button id="next" class="icon-button" title="下一条" aria-label="下一条"><i data-lucide="chevron-right"></i></button></div></div>
+      <div class="image-workspace"><div id="historic-map" aria-label="历史地图标注画布"></div>
+        <div class="drawing-toolbar" role="toolbar" aria-label="几何工具">
+          <button class="icon-button active" data-mode="point" title="点" aria-label="点" aria-pressed="true"><i data-lucide="map-pin"></i></button><button class="icon-button" data-mode="line" title="线" aria-label="线" aria-pressed="false"><i data-lucide="route"></i></button><button class="icon-button" data-mode="polygon" title="区域" aria-label="区域" aria-pressed="false"><i data-lucide="pentagon"></i></button><span class="tool-divider"></span><button id="pan" class="icon-button" title="平移" aria-label="平移" aria-pressed="false"><i data-lucide="hand"></i></button><span class="tool-divider"></span><button id="undo" class="icon-button" title="撤销顶点" aria-label="撤销顶点"><i data-lucide="undo-2"></i></button><button id="redo" class="icon-button" title="重做顶点" aria-label="重做顶点"><i data-lucide="redo-2"></i></button><button id="clear" class="icon-button" title="清空标注" aria-label="清空标注"><i data-lucide="trash-2"></i></button><span class="tool-divider"></span><button id="fit-image" class="icon-button" title="适合窗口" aria-label="适合窗口"><i data-lucide="scan"></i></button>
+        </div>
+      </div>
+      <div class="image-footer"><span id="image-size"></span><span id="point-count">0 顶点</span><span id="cursor-position" class="mono"></span></div>
+    </section>
+    <aside class="annotation-sidebar">
+      <div class="annotation-scroll">
+        <div class="question-heading"><span class="eyebrow">目标事件</span><a id="article-link" target="_blank" rel="noopener noreferrer" title="原文网站" aria-label="原文网站"><i data-lucide="external-link"></i></a></div><h2 id="question"></h2>
+        <div class="tabs" role="tablist"><button id="text-tab" role="tab" aria-selected="true">正文</button><button id="source-tab" role="tab" aria-selected="false">原文</button></div>
+        <div id="passage" class="passage"></div><div id="text-kind" class="muted text-kind"></div>
+        <details id="review-notes"><summary>资料与审核备注</summary><p id="source-section"></p><p id="caution"></p></details>
+        <div class="field"><label for="status">审核状态</label><select id="status"><option value="accepted">通过 · accepted</option><option value="ambiguous">有歧义 · ambiguous</option><option value="unlocatable">无法定位 · unlocatable</option><option value="rejected">剔除 · rejected</option></select></div>
+        <div class="form-row"><div class="field"><label for="feature">要素类型</label><select id="feature"></select></div><div class="field tolerance"><label for="tolerance">容差 · 原图 px</label><input id="tolerance" type="number" min="0" step="1" value="0"></div></div>
+        <div class="field"><label for="evidence">证据 / 审核理由 <span class="required">*</span></label><textarea id="evidence" rows="4" maxlength="20000"></textarea></div>
+        <div class="field"><label for="history">标注版本</label><select id="history"><option value="">尚无记录</option></select></div>
+      </div>
+      <div class="save-area"><div id="form-error" role="alert"></div><div class="save-buttons"><button id="save" class="secondary"><i data-lucide="save"></i>保存</button><button id="save-next" class="primary">保存并下一条<i data-lucide="arrow-right"></i></button></div></div>
+    </aside>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="discard-dialog"><h2>尚有未保存的修改</h2><p>离开此事件会丢弃当前修改。</p><div class="dialog-actions"><button id="stay" class="secondary">继续标注</button><button id="discard" class="primary">放弃修改并离开</button></div></dialog>
+</body>
+</html>

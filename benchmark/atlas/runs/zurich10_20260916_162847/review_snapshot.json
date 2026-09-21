@@ -1,0 +1,16 @@
+{
+  "scope": "ten_candidate_diagnostic_including_outside_map_control",
+  "outside_map_control": [
+    "Z0003"
+  ],
+  "exclude_from_spatial_summary": {
+    "Z0010": "Question asks for Korsakoff's city sector after redeployment; saved geometry/evidence describe Durasof and the retreat road. Preserve gold, require independent review."
+  },
+  "cautions": [
+    "Saved point/line tolerances are zero; exact-match rates are not a meaningful historical localization threshold.",
+    "Z0009 asks for a road segment but saved gold is a point.",
+    "Map version, crop and gold differ from the preceding five-candidate runs; scores are not directly comparable.",
+    "All annotations and translations remain provisional; one shared map is not ten independent geographical samples."
+  ],
+  "candidate_sha256": "a6bfbd501038e4331fd40f74ac6e46bbdaf01b5c9285e54b0e80e72df2cad76e"
+}

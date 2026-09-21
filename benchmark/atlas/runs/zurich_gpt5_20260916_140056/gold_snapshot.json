@@ -1,0 +1,179 @@
+{
+  "map": {
+    "source_id": "9044e9115b4fce56695e9a0c",
+    "crop": [
+      1476,
+      102,
+      2988,
+      997
+    ],
+    "rotation": 0,
+    "width": 1512,
+    "height": 895,
+    "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+    "version": "3cb177ba1bd166169eaf91eb",
+    "map_id": "074f543caf035b8f",
+    "title": "苏黎世市区及近郊 · 1816 · 初始裁切",
+    "provenance": "Usteri, Der Canton Zürich, 1816. ZB Zürich, 4 Kb 55: 1. https://doi.org/10.3931/e-rara-27255 ; PDF 第3页（第二幅地图），苏黎世市区局部。初始裁切待人工确认；不是1799年地图。范围外事件须单独审核，不自动迁移旧作战图坐标。",
+    "max_side": 3200,
+    "created_at": "2026-09-13T13:51:43.761774+00:00",
+    "coordinate_system": "image_pixels_top_left",
+    "source_name": "Der Canton Zürich nebst einem Theil der angränzenden Cantonen.pdf",
+    "source_page": 3
+  },
+  "annotations": [
+    {
+      "schema_version": 1,
+      "map_id": "074f543caf035b8f",
+      "map_version": "3cb177ba1bd166169eaf91eb",
+      "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+      "event_id": "Z0001",
+      "status": "accepted",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            201,
+            4
+          ],
+          [
+            235,
+            106
+          ],
+          [
+            380,
+            94
+          ],
+          [
+            346,
+            1
+          ]
+        ]
+      },
+      "evidence": "near the village of Dietikon",
+      "annotator": "Guanyu Chen",
+      "geo_feature_type": "ford",
+      "tolerance_px": null,
+      "coordinate_system": "image_pixels_top_left",
+      "width": 1512,
+      "height": 895,
+      "created_at": "2026-09-13T13:58:52.090280+00:00"
+    },
+    {
+      "schema_version": 1,
+      "map_id": "074f543caf035b8f",
+      "map_version": "3cb177ba1bd166169eaf91eb",
+      "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+      "event_id": "Z0002",
+      "status": "accepted",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            457,
+            11
+          ]
+        ]
+      },
+      "evidence": "on the plateau of Closter-Fahr.",
+      "annotator": "Guanyu Chen",
+      "geo_feature_type": "other",
+      "tolerance_px": 0,
+      "coordinate_system": "image_pixels_top_left",
+      "width": 1512,
+      "height": 895,
+      "created_at": "2026-09-13T14:04:06.088842+00:00"
+    },
+    {
+      "schema_version": 1,
+      "map_id": "074f543caf035b8f",
+      "map_version": "3cb177ba1bd166169eaf91eb",
+      "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+      "event_id": "Z0003",
+      "status": "outside_map",
+      "geometry": null,
+      "evidence": "Regensdoff",
+      "annotator": "Guanyu Chen",
+      "geo_feature_type": "other",
+      "tolerance_px": null,
+      "coordinate_system": "image_pixels_top_left",
+      "width": 1512,
+      "height": 895,
+      "created_at": "2026-09-14T16:40:29.357837+00:00"
+    },
+    {
+      "schema_version": 1,
+      "map_id": "074f543caf035b8f",
+      "map_version": "3cb177ba1bd166169eaf91eb",
+      "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+      "event_id": "Z0004",
+      "status": "accepted",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            765,
+            206
+          ],
+          [
+            831,
+            208
+          ],
+          [
+            835,
+            277
+          ],
+          [
+            766,
+            260
+          ]
+        ]
+      },
+      "evidence": "Altstetten",
+      "annotator": "Guanyu Chen",
+      "geo_feature_type": "other",
+      "tolerance_px": null,
+      "coordinate_system": "image_pixels_top_left",
+      "width": 1512,
+      "height": 895,
+      "created_at": "2026-09-14T16:46:13.482927+00:00"
+    },
+    {
+      "schema_version": 1,
+      "map_id": "074f543caf035b8f",
+      "map_version": "3cb177ba1bd166169eaf91eb",
+      "image_sha256": "736c66a93c53e40e575c74cdd2cd1c8cfbf84c88a6e1cfe668bd19a16fa62b80",
+      "event_id": "Z0005",
+      "status": "accepted",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            768,
+            5
+          ],
+          [
+            904,
+            11
+          ],
+          [
+            892,
+            116
+          ],
+          [
+            773,
+            91
+          ]
+        ]
+      },
+      "evidence": "Hongg",
+      "annotator": "Guanyu Chen",
+      "geo_feature_type": "other",
+      "tolerance_px": null,
+      "coordinate_system": "image_pixels_top_left",
+      "width": 1512,
+      "height": 895,
+      "created_at": "2026-09-14T16:48:02.000486+00:00"
+    }
+  ]
+}

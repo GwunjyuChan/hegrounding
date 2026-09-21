@@ -1,0 +1,20 @@
+{
+  "mode": "text_only_location_qa",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "backend": "qwen-local",
+  "created_at": "2026-09-16T15:08:24.238611+00:00",
+  "source_package_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "tasks_sha256": "b0c9027f1e56ca1b65d3966274771ae0a7e1211b80e50d25eb68b8e85ad089fd",
+  "event_count": 10,
+  "max_output_tokens": 4096,
+  "human_review_status": "pending",
+  "local_config": {
+    "backend": "qwen-transformers-offline",
+    "device": "mps",
+    "dtype": "torch.float16",
+    "model_path": "/Users/ericchen/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+    "torch": "2.14.0",
+    "transformers": "5.16.1",
+    "do_sample": false
+  }
+}

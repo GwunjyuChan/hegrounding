@@ -1,0 +1,34 @@
+{
+  "geographic": {
+    "requests": 10,
+    "valid_geometry": 8,
+    "abstained": 0,
+    "errors": [
+      {
+        "event_id": "Z0003",
+        "error_type": "ValueError"
+      },
+      {
+        "event_id": "Z0009",
+        "error_type": "ValueError"
+      }
+    ],
+    "elapsed_seconds": 182.1630385821918,
+    "accuracy": null,
+    "accuracy_unavailable_reason": "No independent gold for reference map; different coordinate systems and map coverage"
+  },
+  "reference": {
+    "requests": 10,
+    "valid_geometry": 9,
+    "abstained": 0,
+    "errors": [
+      {
+        "event_id": "Z0009",
+        "error_type": "ValueError"
+      }
+    ],
+    "elapsed_seconds": 255.95614824898075,
+    "accuracy": null,
+    "accuracy_unavailable_reason": "No independent gold for reference map; different coordinate systems and map coverage"
+  }
+}
