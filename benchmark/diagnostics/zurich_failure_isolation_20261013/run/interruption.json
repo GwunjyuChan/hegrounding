@@ -1,0 +1,9 @@
+{
+  "status": "stopped_adaptively",
+  "completed_calls": 4,
+  "planned_calls": 16,
+  "interrupted_unscored_call": "labels_full_pixels_s0",
+  "reason": "Both multi-target synthetic calibration calls exhausted the token budget; isolate target count before continuing the map matrix.",
+  "new_protocol": "../ADAPTATION.md",
+  "interrupted_call_is_not_a_model_failure": true
+}

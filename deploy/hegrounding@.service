@@ -1,0 +1,33 @@
+[Unit]
+Description=HE Grounding annotation workspace (%i)
+After=network.target
+
+[Service]
+Type=simple
+User=hegrounding
+Group=hegrounding
+WorkingDirectory=/opt/hegrounding/current
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=MPLBACKEND=Agg
+Environment=MPLCONFIGDIR=/var/cache/hegrounding-%i
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/etc/hegrounding/%i.env
+ExecStart=/opt/hegrounding/venv/bin/python /opt/hegrounding/current/benchmark/annotation_server.py --port ${PORT} --data-root /var/lib/hegrounding/%i --public-origin https://experiment.chanlukaka.com --url-prefix ${URL_PREFIX} --events-url / --place-lab-url /labels/place-lab.html --workspace-kind ${WORKSPACE_KIND} --disable-model-jobs
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/hegrounding/%i
+CacheDirectory=hegrounding-%i
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+TasksMax=96
+MemoryMax=1G
+CPUQuota=100%
+
+[Install]
+WantedBy=multi-user.target

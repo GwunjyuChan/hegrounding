@@ -1,0 +1,437 @@
+{
+  "metrics_kind": "provisional_pixel_diagnostics_not_benchmark_accuracy",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "gold_sha256": "c36a7e78f2391bc9a21068e7a7ecfbbb5da3799509f9b6c14c6c8e51c974e53b",
+  "excluded": [
+    "Z0009",
+    "Z0010"
+  ],
+  "summaries": {
+    "baseline": {
+      "valid": 8,
+      "abstained": 0,
+      "errors": 2,
+      "point_n": 5,
+      "point_mean_px": 424.05036081897305,
+      "point_median_px": 358.6153928653928,
+      "point_in_polygon": {
+        "hits": 0,
+        "n": 2
+      },
+      "cost": {
+        "calls": 10,
+        "seconds": 189.74217308487277,
+        "input_tokens": 30831,
+        "output_tokens": 892,
+        "total_tokens": 31723
+      }
+    },
+    "native_pixels": {
+      "valid": 9,
+      "abstained": 0,
+      "errors": 1,
+      "point_n": 5,
+      "point_mean_px": 418.93197333094963,
+      "point_median_px": 346.1444785057245,
+      "point_in_polygon": {
+        "hits": 0,
+        "n": 2
+      },
+      "cost": {
+        "calls": 10,
+        "seconds": 501.5037554150913,
+        "input_tokens": 31381,
+        "output_tokens": 4519,
+        "total_tokens": 35900
+      }
+    }
+  },
+  "paired_point_gold": {
+    "event_ids": [
+      "Z0001",
+      "Z0002",
+      "Z0004",
+      "Z0005",
+      "Z0006"
+    ],
+    "n": 5,
+    "baseline": {
+      "mean_px": 424.05036081897305,
+      "median_px": 358.6153928653928
+    },
+    "native_pixels": {
+      "mean_px": 418.93197333094963,
+      "median_px": 346.1444785057245
+    },
+    "improved": 3,
+    "worsened": 2,
+    "tied": 0
+  },
+  "rows": {
+    "baseline": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 358.6153928653928,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              400
+            ]
+          ]
+        }
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 348.30446451344835,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              378
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "error",
+        "error_type": "ValueError",
+        "geometry": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 279.5782538038322,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              150
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 742.9468352446223,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              678,
+              218
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 390.8068576675696,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              437,
+              487
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 425.0,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              730,
+              430
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 349.48247452483224,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              300
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "ValueError",
+        "geometry": null
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "point",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              667,
+              387
+            ]
+          ]
+        }
+      }
+    },
+    "native_pixels": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 383.3131878764413,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              502,
+              428
+            ]
+          ]
+        }
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 346.1444785057245,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              528,
+              378
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              278,
+              300
+            ]
+          ]
+        }
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 280.58510295452254,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              148
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 742.1495806102703,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              678,
+              220
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 342.4675167077894,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              400,
+              450
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 419.3149174546501,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              738,
+              430
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 375.9494646890723,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              350
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "JSONDecodeError",
+        "geometry": null
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "point",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              620,
+              420
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "local_configs": {
+    "baseline": {
+      "backend": "qwen-transformers-offline",
+      "device": "mps",
+      "dtype": "torch.float16",
+      "model_path": "/Users/ericchen/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "torch": "2.14.0",
+      "transformers": "5.16.1",
+      "do_sample": false
+    },
+    "native_pixels": {
+      "backend": "qwen-transformers-offline",
+      "device": "mps",
+      "dtype": "torch.float16",
+      "model_path": "/Users/ericchen/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "torch": "2.14.0",
+      "transformers": "5.16.1",
+      "do_sample": false
+    }
+  },
+  "preprocessing": {
+    "original_size_wh": [
+      1538,
+      1754
+    ],
+    "processed_size_wh": [
+      1568,
+      1760
+    ],
+    "scale_xy": [
+      1.0,
+      1.0
+    ],
+    "patch_size": 16,
+    "merge_size": 2,
+    "visual_tokens": 2695,
+    "processor_size": {
+      "longest_edge": 16777216,
+      "shortest_edge": 65536
+    },
+    "policy": "native_pixels_right_bottom_padding_no_resize",
+    "canvas_size_wh": [
+      1568,
+      1760
+    ],
+    "padding_ltrb": [
+      0,
+      0,
+      30,
+      6
+    ],
+    "content_scale_xy": [
+      1.0,
+      1.0
+    ],
+    "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+    "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+    "original_pixels_verified": true
+  }
+}

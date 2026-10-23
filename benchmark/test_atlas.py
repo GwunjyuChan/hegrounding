@@ -55,6 +55,73 @@ class AtlasTests(unittest.TestCase):
         with Image.open(self.store.asset_path(self.current["active"]["version"])) as im:
             self.assertEqual(im.getpixel((20, 30)), (0, 0, 0))
 
+    def test_large_scan_import_and_default_save_preserve_native_pixels(self):
+        size = (10000, 6001)  # More than the previous 60-million-pixel limit.
+        data = io.BytesIO()
+        image = Image.new("RGB", size, "white")
+        image.putpixel((9999, 6000), (17, 29, 43))
+        image.save(data, format="PNG")
+        image.close()
+        source = self.store.import_source(data.getvalue(), "large-scan.png")
+        self.assertEqual((source["width"], source["height"]), size)
+        body = {**self.map_body, "base_revision": self.current["revision"],
+                "source_id": source["id"], "crop": [0, 0, *size]}
+        del body["max_side"]
+        saved = self.store.save_map(self.mid, body)
+        active = saved["active"]
+        self.assertEqual(active["max_side"], 0)
+        self.assertEqual((active["width"], active["height"]), size)
+        with Image.open(self.store.asset_path(active["version"])) as result:
+            self.assertEqual(result.getpixel((9999, 6000)), (17, 29, 43))
+
+    def test_jpeg2000_archive_scan_can_be_imported(self):
+        data = io.BytesIO()
+        Image.new("RGB", (123, 87), "#ecdac5").save(data, format="JPEG2000")
+        source = self.store.import_source(data.getvalue(), "archive.jp2")
+        self.assertEqual((source["width"], source["height"]), (123, 87))
+
+    def test_optional_resize_can_exceed_old_6000_pixel_cap(self):
+        saved = self.store.save_map(self.mid, {**self.map_body,
+            "base_revision": self.current["revision"], "max_side": 12000})
+        self.assertEqual(saved["active"]["max_side"], 12000)
+        self.assertEqual((saved["active"]["width"], saved["active"]["height"]), (300, 250))
+
+    def test_reference_is_selected_only_after_explicit_confirmation(self):
+        (self.store.base / "maps.jsonl").unlink()
+        current = self.store.detail(self.mid)
+        self.assertIsNone(current["active"])
+        source = self.store.reference_source(self.mid, {"base_revision": None})
+        self.assertEqual((source["width"], source["height"]), (300, 200))
+        self.assertIsNone(self.store.detail(self.mid)["active"])
+        self.assertFalse((self.store.base / "maps.jsonl").exists())
+        selected = self.store.use_reference(self.mid, {"base_revision": None})
+        self.assertEqual(selected["active"]["base_map_role"], "reference_map")
+        self.assertEqual((selected["active"]["width"], selected["active"]["height"]), (300, 200))
+        self.assertEqual(selected["active"]["crop"], [0, 0, 300, 200])
+        self.assertTrue(all(e["gold"] is None for e in selected["events"]))
+
+    def test_reference_selection_preserves_old_annotations_and_checks_revision(self):
+        self.store.save_gold(self.mid, self.gold_body())
+        before = (self.store.base / "gold.jsonl").read_bytes()
+        with self.assertRaises(Conflict):
+            self.store.use_reference(self.mid, {"base_revision": None})
+        current = self.store.use_reference(self.mid, {"base_revision": self.current["revision"]})
+        self.assertNotEqual(current["active"]["version"], self.current["active"]["version"])
+        self.assertIsNone(current["events"][0]["gold"])
+        self.assertEqual((self.store.base / "gold.jsonl").read_bytes(), before)
+        restored = self.store.restore(self.mid, {"base_revision": current["revision"], "version": self.current["active"]["version"]})
+        self.assertIsNotNone(restored["events"][0]["gold"])
+
+    def test_reference_role_survives_crop_and_export(self):
+        source = self.store.reference_source(self.mid, {"base_revision": self.current["revision"]})
+        self.current = self.store.save_map(self.mid, {**self.map_body,
+            "base_revision": self.current["revision"], "source_id": source["id"], "crop": [0, 0, 200, 100]})
+        self.assertEqual(self.current["active"]["base_map_role"], "reference_map")
+        self.store.save_gold(self.mid, self.gold_body())
+        self.assertEqual(self.store.catalog()["maps"][0]["accepted"], 1)
+        with zipfile.ZipFile(io.BytesIO(self.store.export(self.mid, "input"))) as archive:
+            self.assertEqual(json.loads(archive.read("manifest.json"))["base_map_role"], "reference_map")
+
     def test_gold_never_modifies_clean_image_or_legacy_annotations(self):
         path = self.store.asset_path(self.current["active"]["version"])
         before = path.read_bytes()
@@ -110,13 +177,27 @@ class AtlasTests(unittest.TestCase):
 
     def test_bad_crops_and_rotations(self):
         for change in ({"crop": [-1, 0, 100, 100]}, {"crop": [0, 0, 501, 200]}, {"crop": [0, 0, 1, 1]},
-                       {"crop": [0.0, 0, 100, 100]}, {"rotation": 45}, {"max_side": 9000}):
+                       {"crop": [0.0, 0, 100, 100]}, {"rotation": 45}, {"max_side": -1}):
             with self.subTest(change=change), self.assertRaises(ValueError):
                 self.store.save_map(self.mid, {**self.map_body, "base_revision": self.current["revision"], **change})
 
     def test_rotation_output_dimensions(self):
         result = self.store.save_map(self.mid, {**self.map_body, "base_revision": self.current["revision"], "rotation": 90})
         self.assertEqual((result["active"]["width"], result["active"]["height"]), (250, 300))
+
+    def test_known_pixel_crop_rotation_and_overlay_location(self):
+        for angle, point in ((0, [20, 30]), (90, [219, 20]), (180, [279, 219]), (270, [30, 279])):
+            with self.subTest(angle=angle):
+                current = self.store.detail(self.mid)
+                result = self.store.save_map(self.mid, {**self.map_body,
+                    "base_revision": current["revision"], "rotation": angle})
+                version = result["active"]["version"]
+                with Image.open(self.store.asset_path(version)) as im:
+                    self.assertEqual(im.getpixel(tuple(point)), (0, 0, 0))
+                self.store.save_gold(self.mid, self.gold_body(map_version=version,
+                    geometry={"type": "point", "coordinates": [point]}))
+                with Image.open(io.BytesIO(self.store.overlay(self.mid, "0-0", "gold"))) as im:
+                    self.assertEqual(im.getpixel(tuple(point)), (207, 63, 73))
 
     def test_invalid_gold(self):
         for change in ({"evidence": ""}, {"geometry": None}, {"status": "outside_map"},
@@ -125,6 +206,26 @@ class AtlasTests(unittest.TestCase):
                        {"geometry": {"type": "polygon", "coordinates": [[0, 0], [30, 30], [0, 30], [30, 0]]}}):
             with self.subTest(change=change), self.assertRaises(ValueError):
                 self.store.save_gold(self.mid, self.gold_body(**change))
+
+    def test_confidence_validation_and_export_isolation(self):
+        for value in (True, False, 0, 6, 2.5, "5"):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                self.store.save_gold(self.mid, self.gold_body(confidence=value))
+        first = self.store.save_gold(self.mid, self.gold_body())
+        self.assertIsNone(first["events"][0]["gold"]["confidence"])
+        second = self.store.save_gold(self.mid, self.gold_body(
+            base_revision=first["events"][0]["revision"], confidence=5))
+        self.assertEqual(second["events"][0]["gold"]["confidence"], 5)
+        # An older client must not silently erase a score.
+        third = self.store.save_gold(self.mid, self.gold_body(base_revision=second["events"][0]["revision"]))
+        self.assertEqual(third["events"][0]["gold"]["confidence"], 5)
+        exported = json.loads(self.store.export(self.mid, "gold"))
+        self.assertEqual(exported["annotations"][0]["confidence"], 5)
+        with zipfile.ZipFile(io.BytesIO(self.store.export(self.mid, "input"))) as z:
+            self.assertNotIn("confidence", z.read("tasks.jsonl").decode())
+        fourth = self.store.save_gold(self.mid, self.gold_body(
+            base_revision=third["events"][0]["revision"], confidence=None))
+        self.assertIsNone(fourth["events"][0]["gold"]["confidence"])
 
     def test_predictions_separate_and_reject_wrong_version(self):
         body = {"map_version": self.current["active"]["version"], "model": "test-only", "predictions": [
@@ -203,6 +304,15 @@ class AtlasTests(unittest.TestCase):
             archive.writestr("gold.json", "{}")
         with self.assertRaises(ValueError):
             read_package(path)
+
+    def test_pixel_runner_rejects_normalized_package_before_model_load(self):
+        with patch("sys.argv", ["run", "--input", "unused.zip"]), \
+                patch.object(run_atlas_vlm, "read_package", return_value=(
+                    {"coordinate_system": "normalized_1000"}, b"", [], "")), \
+                patch.object(run_atlas_vlm, "load_local_qwen") as load, \
+                patch("sys.stderr", io.StringIO()), self.assertRaises(SystemExit):
+            run_atlas_vlm.main()
+        load.assert_not_called()
 
     def test_local_runner_does_not_load_credentials_or_call_api(self):
         self.store.save_gold(self.mid, self.gold_body())

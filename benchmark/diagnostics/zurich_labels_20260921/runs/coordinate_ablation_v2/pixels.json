@@ -1,0 +1,40 @@
+{
+  "map_version": "1e7f8c48bababd0f6cd342da",
+  "model": "Qwen/Qwen3-VL-8B-Instruct [label-pixels]",
+  "coordinate_system": "image_pixels_top_left",
+  "predictions": [],
+  "errors": [
+    {
+      "event_id": "P001",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P002",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P003",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P004",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P005",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P006",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P007",
+      "error_type": "ValueError"
+    },
+    {
+      "event_id": "P008",
+      "error_type": "ValueError"
+    }
+  ]
+}

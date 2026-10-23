@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local-only browser annotation app. Run with --port 8765."""
+"""Loopback annotation app; public mode requires an authenticated HTTPS proxy."""
 from __future__ import annotations
 
 import argparse
@@ -10,6 +10,7 @@ import json
 import math
 import mimetypes
 import os
+import re
 from pathlib import Path
 import secrets
 import threading
@@ -19,15 +20,20 @@ os.environ.setdefault("MPLBACKEND", "Agg")
 from annotate_geo import FEATURE_TYPES, ROOT, load_jsonl, validate_geometry
 from PIL import Image
 from atlas_store import AtlasStore, Conflict
+from place_lab import PlaceLab, PlaceJobs
 
 STATIC = Path(__file__).with_name("gui")
 BATTLES = (
+    {"id": "san_sebastian_1813", "name": "圣塞巴斯蒂安围城", "label": "San Sebastián", "date": "1813.07–09", "country": "西班牙", "lat": 43.324, "lng": -1.981, "color": "#985575"},
+    {"id": "bussaco_1810", "name": "布萨科战役 · 内伊进攻", "label": "Bussaco", "date": "1810.09.27", "country": "葡萄牙", "lat": 40.376, "lng": -8.365, "color": "#b45937"},
+    {"id": "marengo_1800", "name": "Marengo 战后部署", "label": "Marengo", "date": "1800.06.15 · 依原图标题", "country": "意大利", "lat": 44.885, "lng": 8.679, "color": "#426ba5"},
     {"id": "zurich_second_1799", "name": "第二次苏黎世战役", "label": "Zürich", "date": "1799.09.25–26", "country": "瑞士", "lat": 47.377, "lng": 8.542, "color": "#177d70"},
     {"id": "borkowo", "name": "Borkowo 战斗", "label": "Borkowo", "date": "1806.12.24", "country": "波兰", "lat": 52.56, "lng": 20.67, "color": "#b45937"},
     {"id": "sochocin", "name": "Sochocin 战斗", "label": "Sochocin", "date": "1806.12.24", "country": "波兰", "lat": 52.69, "lng": 20.47, "color": "#b45937"},
     {"id": "wavre", "name": "瓦夫尔战役", "label": "Wavre", "date": "1815.06.18–19", "country": "比利时", "lat": 50.717, "lng": 4.61, "color": "#426ba5"},
 )
-DATASETS = (("benchmark/napoleon_pilot_20.jsonl", "benchmark/napoleon_annotations.jsonl"),
+BATTLES += tuple(json.loads(Path(__file__).with_name("map_expansion_battles.json").read_text(encoding="utf-8")))
+DATASETS = (("benchmark/map_first_candidates.jsonl", "benchmark/map_first_annotations.jsonl"),
             ("benchmark/zurich_pilot_10.jsonl", "benchmark/zurich_annotations.jsonl"))
 
 
@@ -160,6 +166,8 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def trusted_host(self):
+        if self.server.public_origin:
+            return self.headers.get("Host") == urlsplit(self.server.public_origin).netloc
         port = self.server.server_address[1]
         return self.headers.get("Host") in {f"127.0.0.1:{port}", f"localhost:{port}"}
 
@@ -171,19 +179,31 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/catalog":
                 with self.server.store.lock:
                     catalog = self.server.store.catalog()
-                return self.send(200, {**catalog, "csrf": self.server.token})
+                return self.send(200, {**catalog, "csrf": self.server.token, "workspace": self.server.workspace})
             if path == "/api/atlas":
                 with self.server.store.lock:
                     data = self.server.atlas.catalog()
-                return self.send(200, {**data, "csrf": self.server.token})
+                return self.send(200, {**data, "csrf": self.server.token, "workspace": self.server.workspace})
+            if path == '/api/place-maps':
+                with self.server.store.lock:
+                    data = self.server.place_lab.catalog()
+                return self.send(200, {**data, 'csrf': self.server.token, 'workspace': self.server.workspace,
+                                       'model_jobs_enabled': not self.server.disable_model_jobs})
             if path.startswith("/api/atlas/"):
                 parts = path.removeprefix("/api/atlas/").split("/")
+                if len(parts) == 3 and parts[1] == "place-jobs":
+                    return self.send(200, self.server.place_jobs.state(parts[0], parts[2]))
                 with self.server.store.lock:
                     expected = parse_qs(urlsplit(self.path).query).get("version", [None])[0]
                     if expected is not None and (self.server.atlas.detail(parts[0])["active"] or {}).get("version") != expected:
                         raise Conflict("底图已更新，请刷新后再导出。")
                     if len(parts) == 1:
                         return self.send(200, self.server.atlas.detail(parts[0]))
+                    if len(parts) == 2 and parts[1] == "places":
+                        return self.send(200, {**self.server.place_lab.detail(parts[0]),
+                                               "jobs": self.server.place_jobs.recent(parts[0])})
+                    if len(parts) == 2 and parts[1] == 'place-input':
+                        return self.send(200, self.server.place_lab.export_input(parts[0]), 'application/zip')
                     if len(parts) == 2 and parts[1] in {"input", "gold"}:
                         data = self.server.atlas.export(parts[0], parts[1])
                         return self.send(200, data, "application/zip" if parts[1] == "input" else "application/json")
@@ -200,12 +220,16 @@ class Handler(BaseHTTPRequestHandler):
             elif path.startswith("/maps/"):
                 file = self.server.store.images[path.removeprefix("/maps/")]
             else:
-                file = (STATIC / ("index.html" if path == "/" else path.lstrip("/"))).resolve()
+                default = 'place-lab.html' if self.server.workspace['kind'] == 'isolated' else 'index.html'
+                file = (STATIC / (default if path == "/" else path.lstrip("/"))).resolve()
                 if not file.is_relative_to(STATIC.resolve()):
                     raise KeyError(path)
             if not file.is_file():
                 raise KeyError(path)
-            return self.send(200, file.read_bytes(), mimetypes.guess_type(file.name)[0] or "application/octet-stream")
+            data = file.read_bytes()
+            if file.suffix == ".html":
+                data = data.replace(b'<base href="/">', f'<base href="{self.server.url_prefix}/">'.encode())
+            return self.send(200, data, mimetypes.guess_type(file.name)[0] or "application/octet-stream")
         except KeyError:
             self.send(404, {"error": "Not found"})
         except Conflict as exc:
@@ -218,16 +242,17 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         if not self.trusted_host() or not secrets.compare_digest(self.headers.get("X-CSRF-Token", ""), self.server.token):
             return self.send(403, {"error": "Unauthorized local request"})
-        if self.headers.get("Origin") not in {None, "http://" + self.headers.get("Host", "")}:
+        origins = {self.server.public_origin} if self.server.public_origin else {None, "http://" + self.headers.get("Host", "")}
+        if self.headers.get("Origin") not in origins:
             return self.send(403, {"error": "Cross-origin request rejected"})
         path = urlsplit(self.path).path
-        if not path.startswith(("/api/event/", "/api/atlas/")):
+        if path != '/api/place-maps' and not path.startswith(("/api/event/", "/api/atlas/")):
             return self.send(404, {"error": "Not found"})
         try:
             length = int(self.headers.get("Content-Length", "0"))
             if path == "/api/atlas/upload":
-                if not 0 < length <= 80 * 1024 * 1024:
-                    raise ValueError("文件须小于 80 MB。")
+                if not 0 < length <= 512 * 1024 * 1024:
+                    raise ValueError("文件须非空且不超过 512 MiB。")
                 query = parse_qs(urlsplit(self.path).query)
                 data = self.rfile.read(length)
                 with self.server.store.lock:
@@ -239,10 +264,22 @@ class Handler(BaseHTTPRequestHandler):
             body = json.loads(self.rfile.read(length))
             if not isinstance(body, dict):
                 raise ValueError("Invalid JSON object")
+            if path == '/api/place-maps':
+                with self.server.store.lock:
+                    result = self.server.place_lab.create_map(body)
+                return self.send(200, result)
             if path.startswith("/api/atlas/"):
                 parts = unquote(path.removeprefix("/api/atlas/")).split("/")
-                actions = {"map": self.server.atlas.save_map, "gold": self.server.atlas.save_gold,
-                           "restore": self.server.atlas.restore, "predictions": self.server.atlas.prediction}
+                if len(parts) == 2 and parts[1] == "place-predict":
+                    if self.server.disable_model_jobs:
+                        return self.send(403, {"error": "Model inference is disabled on this server"})
+                    return self.send(202, self.server.place_jobs.start(parts[0], body))
+                actions = {"map": self.server.atlas.save_map, "use-reference": self.server.atlas.use_reference,
+                           "reference-source": self.server.atlas.reference_source,
+                           "gold": self.server.atlas.save_gold,
+                           "restore": self.server.atlas.restore, "predictions": self.server.atlas.prediction,
+                           "places": self.server.place_lab.add, "place-gold": self.server.place_lab.save_gold,
+                           "place-predictions": self.server.place_lab.import_predictions}
                 if len(parts) != 2 or parts[1] not in actions:
                     raise KeyError(path)
                 with self.server.store.lock:
@@ -259,10 +296,57 @@ class Handler(BaseHTTPRequestHandler):
             self.send(500, {"error": "保存失败，请检查磁盘和文件权限。"})
 
 
-def make_server(port=8765, root=ROOT):
+def workspace_info(store, event_port=8767, place_port=8769):
+    for port in (event_port, place_port):
+        if type(port) is not int or not 1 <= port <= 65535:
+            raise ValueError("Workspace port must be in 1..65535")
+    isolated = store.root.resolve() != ROOT.resolve()
+    labels = bool(store.records) and all(r.get("place_name") for r in store.records.values())
+    return {"kind": "isolated" if isolated else "main",
+            "name": "地名实验工作区" if labels else "独立实验工作区" if isolated else "历史事件工作区",
+            "item_label": "地名样本" if labels else "事件",
+            "events_url": f"http://127.0.0.1:{event_port}/" if isolated else "/",
+            "place_lab_url": "/place-lab.html" if isolated else f"http://127.0.0.1:{place_port}/place-lab.html"}
+
+
+def make_server(port=8765, root=ROOT, event_port=8767, place_port=8769, *,
+                public_origin=None, url_prefix="", events_url=None, place_lab_url=None,
+                workspace_kind=None, disable_model_jobs=False):
+    if public_origin:
+        origin = urlsplit(public_origin)
+        if (origin.scheme != "https" or not origin.hostname or origin.username or origin.password
+                or origin.path or origin.query or origin.fragment
+                or not re.fullmatch(r"https://[a-zA-Z0-9.-]+(?::[0-9]+)?", public_origin)):
+            raise ValueError("Public origin must be an HTTPS origin without a path")
+    if url_prefix and not re.fullmatch(r"(?:/[a-zA-Z0-9_-]+)+", url_prefix):
+        raise ValueError("Invalid URL prefix")
+    for url in (events_url, place_lab_url):
+        if url is not None and not re.fullmatch(r"/(?:[a-zA-Z0-9_./-]*)", url):
+            raise ValueError("Workspace links must be same-origin absolute paths")
+        if url is not None and (url.startswith("//") or ".." in url):
+            raise ValueError("Invalid workspace link")
+    if workspace_kind not in {None, "main", "isolated"}:
+        raise ValueError("Invalid workspace kind")
+    store = Store(root)
     server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
-    server.store = Store(root)
+    server.public_origin = public_origin
+    server.url_prefix = url_prefix
+    server.disable_model_jobs = disable_model_jobs or bool(public_origin)
+    server.store = store
+    server.workspace = workspace_info(server.store, event_port, place_port)
+    if workspace_kind:
+        server.workspace["kind"] = workspace_kind
+        if workspace_kind == "main":
+            server.workspace.update(name="历史事件工作区", item_label="事件")
+    if public_origin:
+        server.workspace.update(events_url="/", place_lab_url=url_prefix + "/place-lab.html")
+    if events_url is not None:
+        server.workspace["events_url"] = events_url
+    if place_lab_url is not None:
+        server.workspace["place_lab_url"] = place_lab_url
     server.atlas = AtlasStore(server.store)
+    server.place_lab = PlaceLab(server.atlas, server.store.lock)
+    server.place_jobs = PlaceJobs(server.place_lab)
     server.token = secrets.token_hex(32)
     return server
 
@@ -271,14 +355,26 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--data-root", type=Path, default=ROOT, help="Alternate project root, e.g. an isolated test fixture")
+    parser.add_argument("--event-workspace-port", type=int, default=8767, help="Main event workspace navigation port")
+    parser.add_argument("--place-workspace-port", type=int, default=8769, help="Place experiment navigation port")
+    parser.add_argument("--public-origin", help="HTTPS origin behind an authenticated reverse proxy; disables inference")
+    parser.add_argument("--url-prefix", default="", help="Proxy-stripped mount path, e.g. /labels")
+    parser.add_argument("--events-url", help="Same-origin event workspace URL")
+    parser.add_argument("--place-lab-url", help="Same-origin place workspace URL")
+    parser.add_argument("--workspace-kind", choices=("main", "isolated"))
+    parser.add_argument("--disable-model-jobs", action="store_true")
     args = parser.parse_args()
-    server = make_server(args.port, args.data_root)
+    server = make_server(args.port, args.data_root, args.event_workspace_port, args.place_workspace_port,
+                         public_origin=args.public_origin, url_prefix=args.url_prefix,
+                         events_url=args.events_url, place_lab_url=args.place_lab_url,
+                         workspace_kind=args.workspace_kind, disable_model_jobs=args.disable_model_jobs)
     print(f"Annotation GUI: http://127.0.0.1:{server.server_address[1]}", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         pass
     finally:
+        server.place_jobs.close()
         server.server_close()
 
 

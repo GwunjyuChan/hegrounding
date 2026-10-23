@@ -1,0 +1,1400 @@
+{
+  "metrics_kind": "provisional_pixel_diagnostics_not_benchmark_accuracy",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "gold_sha256": "c36a7e78f2391bc9a21068e7a7ecfbbb5da3799509f9b6c14c6c8e51c974e53b",
+  "excluded": [
+    "Z0009",
+    "Z0010"
+  ],
+  "rows": {
+    "qwen_instruct": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 383.3131878764413,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              502,
+              428
+            ]
+          ]
+        }
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 346.1444785057245,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              528,
+              378
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              278,
+              300
+            ]
+          ]
+        }
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 280.58510295452254,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              148
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 742.1495806102703,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              678,
+              220
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 342.4675167077894,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              400,
+              450
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 419.3149174546501,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              738,
+              430
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 375.9494646890723,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              350
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "JSONDecodeError",
+        "geometry": null
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "point",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              620,
+              420
+            ]
+          ]
+        }
+      }
+    },
+    "qwen_thinking": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null
+      }
+    },
+    "gpt6_astra": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "ValueError",
+        "geometry": null
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 18.24828759089466,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              520,
+              35
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "abstained",
+        "prediction_type": null,
+        "outside_map_abstention": true,
+        "geometry": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 20.8806130178211,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              826,
+              270
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "polygon",
+        "unscored_geometry_pair": [
+          "point",
+          "polygon"
+        ],
+        "geometry": {
+          "type": "polygon",
+          "coordinates": [
+            [
+              1280,
+              220
+            ],
+            [
+              1340,
+              160
+            ],
+            [
+              1430,
+              145
+            ],
+            [
+              1490,
+              210
+            ],
+            [
+              1480,
+              315
+            ],
+            [
+              1425,
+              400
+            ],
+            [
+              1330,
+              375
+            ],
+            [
+              1270,
+              295
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 47.53945729601885,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              260,
+              86
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 0.0,
+        "point_inside_gold": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1194,
+              790
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 0.0,
+        "point_inside_gold": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              888,
+              105
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "line",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "line",
+          "coordinates": [
+            [
+              1252,
+              329
+            ],
+            [
+              1256,
+              293
+            ],
+            [
+              1268,
+              249
+            ],
+            [
+              1284,
+              210
+            ],
+            [
+              1308,
+              173
+            ],
+            [
+              1339,
+              133
+            ],
+            [
+              1380,
+              105
+            ]
+          ]
+        }
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "polygon",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "polygon",
+          "coordinates": [
+            [
+              1212,
+              346
+            ],
+            [
+              1250,
+              368
+            ],
+            [
+              1270,
+              410
+            ],
+            [
+              1300,
+              450
+            ],
+            [
+              1292,
+              505
+            ],
+            [
+              1300,
+              546
+            ],
+            [
+              1278,
+              557
+            ],
+            [
+              1255,
+              519
+            ],
+            [
+              1235,
+              465
+            ],
+            [
+              1215,
+              406
+            ],
+            [
+              1201,
+              376
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "summaries": {
+    "qwen_instruct": {
+      "valid_geometry": 9,
+      "abstained": 0,
+      "errors": 1,
+      "error_types": {
+        "JSONDecodeError": 1
+      },
+      "point_n": 5,
+      "point_mean_px": 418.93197333094963,
+      "point_median_px": 346.1444785057245,
+      "point_in_polygon": {
+        "hits": 0,
+        "scorable_n": 2,
+        "eligible_n": 2
+      },
+      "outside_map_correct": false,
+      "token_limit_ids": [
+        "Z0009"
+      ],
+      "thinking_tokens": 0,
+      "cost": {
+        "calls": 10,
+        "seconds": 482.8076572921127,
+        "input_tokens": 31381,
+        "output_tokens": 4519,
+        "total_tokens": 35900
+      }
+    },
+    "qwen_thinking": {
+      "valid_geometry": 0,
+      "abstained": 0,
+      "errors": 10,
+      "error_types": {
+        "IncompleteThinking": 10
+      },
+      "point_n": 0,
+      "point_mean_px": null,
+      "point_median_px": null,
+      "point_in_polygon": {
+        "hits": 0,
+        "scorable_n": 0,
+        "eligible_n": 2
+      },
+      "outside_map_correct": false,
+      "token_limit_ids": [
+        "Z0001",
+        "Z0002",
+        "Z0003",
+        "Z0004",
+        "Z0005",
+        "Z0006",
+        "Z0007",
+        "Z0008",
+        "Z0009",
+        "Z0010"
+      ],
+      "thinking_tokens": 40960,
+      "cost": {
+        "calls": 10,
+        "seconds": 3501.267233917024,
+        "input_tokens": 31401,
+        "output_tokens": 40960,
+        "total_tokens": 72361
+      }
+    },
+    "gpt6_astra": {
+      "valid_geometry": 8,
+      "abstained": 1,
+      "errors": 1,
+      "error_types": {
+        "ValueError": 1
+      },
+      "point_n": 3,
+      "point_mean_px": 28.88945263491154,
+      "point_median_px": 20.8806130178211,
+      "point_in_polygon": {
+        "hits": 2,
+        "scorable_n": 2,
+        "eligible_n": 2
+      },
+      "outside_map_correct": true,
+      "token_limit_ids": [],
+      "thinking_tokens": 1898,
+      "cost": {
+        "calls": 10,
+        "seconds": 108.03683858481236,
+        "input_tokens": 36633,
+        "output_tokens": 2286,
+        "total_tokens": 38919
+      }
+    }
+  },
+  "audit_hashes": {
+    "qwen_instruct": "be2786ae8b01e94d305ef5157092645f269a36fee2783461812be35f525339ff",
+    "qwen_thinking": "b9ad06ae41c544dfcc0cb9c4ff20dcc143aed1beda0be21cf91290afc0fcc8f1",
+    "gpt6_astra": "72fd7f18416106d4247ebf59305852c6cb9a41790342b94d26e441bec825e47a"
+  },
+  "paired_points": {
+    "qwen_instruct+qwen_thinking": {
+      "compared_methods": [
+        "qwen_instruct",
+        "qwen_thinking"
+      ],
+      "event_ids": [],
+      "n": 0,
+      "methods": {}
+    },
+    "qwen_instruct+gpt6_astra": {
+      "compared_methods": [
+        "qwen_instruct",
+        "gpt6_astra"
+      ],
+      "event_ids": [
+        "Z0002",
+        "Z0004",
+        "Z0006"
+      ],
+      "n": 3,
+      "methods": {
+        "qwen_instruct": {
+          "mean_px": 323.06569938934547,
+          "median_px": 342.4675167077894
+        },
+        "gpt6_astra": {
+          "mean_px": 28.88945263491154,
+          "median_px": 20.8806130178211
+        }
+      }
+    },
+    "qwen_thinking+gpt6_astra": {
+      "compared_methods": [
+        "qwen_thinking",
+        "gpt6_astra"
+      ],
+      "event_ids": [],
+      "n": 0,
+      "methods": {}
+    },
+    "qwen_instruct+qwen_thinking+gpt6_astra": {
+      "compared_methods": [
+        "qwen_instruct",
+        "qwen_thinking",
+        "gpt6_astra"
+      ],
+      "event_ids": [],
+      "n": 0,
+      "methods": {}
+    }
+  },
+  "supplemental_8192": {
+    "instruct": [
+      {
+        "event_id": "Z0009",
+        "status": "error",
+        "prediction": null,
+        "error_type": "JSONDecodeError",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "JSONDecodeError"
+        },
+        "usage": {
+          "input_tokens": 2996,
+          "output_tokens": 8192,
+          "total_tokens": 11188,
+          "thinking_tokens": 0,
+          "answer_tokens": 8192,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671850240,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 716.8253080830909
+      }
+    ],
+    "thinking": [
+      {
+        "event_id": "Z0001",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3229,
+          "output_tokens": 8192,
+          "total_tokens": 11421,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671857408,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 703.7007847079076
+      },
+      {
+        "event_id": "Z0002",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3223,
+          "output_tokens": 8192,
+          "total_tokens": 11415,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671857408,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 702.9124595830217
+      },
+      {
+        "event_id": "Z0003",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "outside_map",
+          "gold_type": null,
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3240,
+          "output_tokens": 8192,
+          "total_tokens": 11432,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671858432,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 702.7030520420521
+      },
+      {
+        "event_id": "Z0004",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3050,
+          "output_tokens": 8192,
+          "total_tokens": 11242,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671852288,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 699.7531863753684
+      },
+      {
+        "event_id": "Z0005",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 2981,
+          "output_tokens": 8192,
+          "total_tokens": 11173,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671850240,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 698.5081692496315
+      },
+      {
+        "event_id": "Z0006",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3231,
+          "output_tokens": 8192,
+          "total_tokens": 11423,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671857408,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 702.9456361662596
+      },
+      {
+        "event_id": "Z0007",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "polygon",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3063,
+          "output_tokens": 8192,
+          "total_tokens": 11255,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671852288,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 699.9798852908425
+      },
+      {
+        "event_id": "Z0008",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "polygon",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 2994,
+          "output_tokens": 8192,
+          "total_tokens": 11186,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671850240,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 698.5869427919388
+      },
+      {
+        "event_id": "Z0009",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "point",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 2998,
+          "output_tokens": 8192,
+          "total_tokens": 11190,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671850240,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 698.8393542501144
+      },
+      {
+        "event_id": "Z0010",
+        "status": "error",
+        "prediction": null,
+        "error_type": "IncompleteThinking",
+        "diagnostic": {
+          "gold_status": "accepted",
+          "gold_type": "line",
+          "status": "error",
+          "error_type": "IncompleteThinking"
+        },
+        "usage": {
+          "input_tokens": 3392,
+          "output_tokens": 8192,
+          "total_tokens": 11584,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671862528,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 706.1647087917663
+      }
+    ]
+  }
+}

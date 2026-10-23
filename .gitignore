@@ -25,6 +25,8 @@ wheels/
 *.jpg
 !docs/figures/*.jpg
 !maps/napoleon_pilot/*.jpg
+!maps/napoleon_maps/*.jpg
+!maps/napoleon_maps/*.gif
 !maps/zurich_pilot/*.jpg
 !benchmark/atlas/runs/**/reference_workspace/maps/zurich_pilot/*.jpg
 
@@ -57,3 +59,27 @@ register_files/
 
 # Local meeting follow-up plans
 /todo/
+
+# Deployment bundles and generated access credentials
+/.deploy/
+
+# Generated review page (rebuilt by build.py) and its overview images
+benchmark/annotations/*/review.html
+benchmark/annotations/*/overviews/
+benchmark/annotations/_*_tmp.json
+# Local review journal for testing only; the server copy is authoritative (exports live in benchmark/gold/)
+benchmark/annotations/assistant_round_20261011/human_reviews.jsonl
+
+# Experiment renders and input bundles (regenerable); results stay as JSON/JSONL/Markdown
+benchmark/atlas/runs/**/*.png
+benchmark/atlas/runs/**/*.zip
+benchmark/atlas/runs/**/*.image
+benchmark/atlas/runs/**/comparison.html
+benchmark/diagnostics/**/*.png
+benchmark/diagnostics/**/*.zip
+benchmark/diagnostics/**/*.image
+benchmark/diagnostics/**/comparison.html
+
+# Saved third-party web pages (some are modern copyrighted texts); provenance is in benchmark/sources/raw/*.md
+benchmark/sources/raw/*.html
+benchmark/sources/raw/*.htm

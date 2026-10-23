@@ -1,0 +1,23 @@
+{
+  "source": "known rendering bounds, not model predictions",
+  "boxes": {
+    "Altstetten": [
+      156,
+      305,
+      323,
+      334
+    ],
+    "ZURICH": [
+      1034,
+      705,
+      1185,
+      734
+    ],
+    "Regensdorf": [
+      547,
+      1475,
+      754,
+      1512
+    ]
+  }
+}

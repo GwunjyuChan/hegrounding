@@ -50,17 +50,49 @@ def load_local_qwen(model_id):
     return model, processor, metadata
 
 
-def call_local_qwen(local, image, row, instruction, max_tokens):
+def pad_image_without_resampling(image, factor):
+    if factor <= 0:
+        raise ValueError("Image alignment factor must be positive")
+    width, height = image.size
+    padded_size = tuple((size + factor - 1) // factor * factor for size in image.size)
+    padded = Image.new(image.mode, padded_size, "white")
+    padded.paste(image, (0, 0))
+    original_hash = digest(image.tobytes())
+    if digest(padded.crop((0, 0, width, height)).tobytes()) != original_hash:
+        raise ValueError("Padding changed original pixels")
+    return padded, {"policy": "native_pixels_right_bottom_padding_no_resize",
+                    "original_size_wh": [width, height], "canvas_size_wh": list(padded_size),
+                    "padding_ltrb": [0, 0, padded.width - width, padded.height - height],
+                    "content_scale_xy": [1.0, 1.0], "original_rgb_sha256": original_hash,
+                    "canvas_rgb_sha256": digest(padded.tobytes()), "original_pixels_verified": True}
+
+
+def call_local_qwen(local, image, row, instruction, max_tokens, preserve_image_pixels=False):
     import torch
 
     model, processor, _ = local
     with Image.open(io.BytesIO(image)) as source:
         im = source.convert("RGB")
+    original_size = im.size
+    padding = None
+    image_options = {}
+    if preserve_image_pixels:
+        ip = processor.image_processor
+        im, padding = pad_image_without_resampling(im, ip.patch_size * ip.merge_size)
+        if im.width * im.height > ip.size["longest_edge"]:
+            raise ValueError("Native image exceeds configured pixel budget; refusing to downsample")
+        image_options["do_resize"] = False
     messages = [{"role": "system", "content": SYSTEM + instruction},
                 {"role": "user", "content": [{"type": "text", "text": task_prompt(row)},
                                               {"type": "image", "image": im}]}]
     template = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = processor(text=[template], images=[im], padding=True, return_tensors="pt").to(model.device)
+    inputs = processor(text=[template], images=[im], padding=True, return_tensors="pt", **image_options).to(model.device)
+    preprocessing = image_preprocessing_metadata(processor, original_size, inputs["image_grid_thw"].tolist())
+    if padding is not None:
+        if preprocessing["processed_size_wh"] != list(im.size):
+            raise ValueError("Processor changed the padded image dimensions")
+        preprocessing.update(padding)
+        preprocessing["scale_xy"] = [1.0, 1.0]
     input_count = inputs["input_ids"].shape[1]
     with torch.inference_mode():
         outputs = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
@@ -69,8 +101,25 @@ def call_local_qwen(local, image, row, instruction, max_tokens):
     usage = {"input_tokens": input_count, "output_tokens": len(generated),
              "total_tokens": input_count + len(generated),
              "image_grid_thw": inputs["image_grid_thw"].tolist(),
+             "image_preprocessing": preprocessing,
              "reached_token_limit": len(generated) >= max_tokens}
     return raw.strip(), usage
+
+
+def image_preprocessing_metadata(processor, original_size, grid):
+    ip = processor.image_processor
+    patch = ip.patch_size
+    merge = ip.merge_size
+    if len(grid) != 1:
+        raise ValueError("Expected one image grid")
+    temporal, rows, columns = grid[0]
+    width, height = original_size
+    return {"original_size_wh": [width, height],
+            "processed_size_wh": [columns * patch, rows * patch],
+            "scale_xy": [columns * patch / width, rows * patch / height],
+            "patch_size": patch, "merge_size": merge,
+            "visual_tokens": temporal * rows * columns // (merge * merge),
+            "processor_size": dict(ip.size)}
 
 
 def read_package(path):
@@ -146,11 +195,17 @@ def main():
     parser.add_argument("--env-file", type=Path, default=Path(__file__).resolve().parents[1] / ".env")
     parser.add_argument("--limit", type=int, default=1)
     parser.add_argument("--max-output-tokens", type=int, default=4096)
+    parser.add_argument("--preserve-image-pixels", action="store_true",
+                        help="Qwen only: pad right/bottom for patch alignment, disable resizing; original coordinates unchanged")
     parser.add_argument("--execute", action="store_true", help="Actually send data to the selected model endpoint")
     args = parser.parse_args()
     if args.limit <= 0 or args.max_output_tokens <= 0:
         parser.error("limit and max-output-tokens must be positive")
+    if args.preserve_image_pixels and args.backend != "qwen-local":
+        parser.error("--preserve-image-pixels requires --backend qwen-local")
     manifest, image, tasks, instruction = read_package(args.input)
+    if manifest.get("coordinate_system", "image_pixels_top_left") not in {"image_pixels_top_left", "pixels"}:
+        parser.error("This runner expects pixel outputs; use place_diagnostics.py for coordinate ablations")
     tasks = tasks[:args.limit]
     print(f"Map {manifest['map_version']}: {len(tasks)} tasks, clean PNG {len(image)} bytes")
     if not args.execute:
@@ -184,13 +239,17 @@ def main():
                        "backend": args.backend, "api": args.api if client else None,
                        "base_url": str(client.base_url) if client else None, "created_at": stamp(),
                        "max_output_tokens": args.max_output_tokens, "instruction": SYSTEM + instruction,
-                       "task": row}
+                       "task": row, "preserve_image_pixels": args.preserve_image_pixels}
             if local is not None:
                 attempt["local_config"] = local[2]
             started = time.monotonic()
             try:
                 if local is not None:
-                    raw, usage = call_local_qwen(local, image, row, instruction, args.max_output_tokens)
+                    if args.preserve_image_pixels:
+                        raw, usage = call_local_qwen(local, image, row, instruction, args.max_output_tokens,
+                                                    preserve_image_pixels=True)
+                    else:
+                        raw, usage = call_local_qwen(local, image, row, instruction, args.max_output_tokens)
                 else:
                     raw, usage = call_model(client, args.api, args.model, image, row, instruction, args.max_output_tokens)
                 attempt.update(raw=raw, usage=usage)

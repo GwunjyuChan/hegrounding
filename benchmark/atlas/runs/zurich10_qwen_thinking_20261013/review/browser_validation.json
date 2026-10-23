@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "allTenQuestions": true,
+      "allModelViews": true,
+      "nonblankMaps": true,
+      "horizontalOverflow": false,
+      "screenshot": "/private/tmp/zurich-thinking-desktop.png"
+    },
+    {
+      "viewport": "mobile",
+      "allTenQuestions": true,
+      "allModelViews": true,
+      "nonblankMaps": true,
+      "horizontalOverflow": false,
+      "screenshot": "/private/tmp/zurich-thinking-mobile.png"
+    }
+  ],
+  "errors": []
+}

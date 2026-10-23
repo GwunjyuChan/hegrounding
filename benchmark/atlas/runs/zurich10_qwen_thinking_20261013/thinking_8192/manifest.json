@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen3-VL-8B-Thinking",
+  "revision": "92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b",
+  "mode": "thinking",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "input_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "selected_event_ids": [
+    "Z0001",
+    "Z0002",
+    "Z0003",
+    "Z0004",
+    "Z0005",
+    "Z0006",
+    "Z0007",
+    "Z0008",
+    "Z0009",
+    "Z0010"
+  ],
+  "max_output_tokens": 8192,
+  "do_sample": false,
+  "quantization": null,
+  "inference_dtype": "float16",
+  "preserve_image_pixels": true,
+  "spatial_exclusions_declared_before_run": [
+    "Z0009",
+    "Z0010"
+  ],
+  "outside_map_diagnostic": [
+    "Z0003"
+  ],
+  "gold_loaded_during_inference": false,
+  "runner_sha256": "99ccc880d9f2142ba18ec4b1603a4da6cea692d8df7dac6de065e77bd1b15a03",
+  "created_at": "2026-10-13T05:16:32.182115+00:00"
+}

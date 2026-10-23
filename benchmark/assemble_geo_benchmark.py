@@ -3,11 +3,11 @@
 Assemble the geo benchmark by joining spatial candidate crops with manual annotations.
 
 Reads:
-  benchmark/napoleon_pilot_20.jsonl  — candidate events and map images
-  benchmark/napoleon_annotations.jsonl — manual pixel geometries and evidence
+  benchmark/map_first_candidates.jsonl  — candidate events and map images
+  benchmark/map_first_annotations.jsonl — manual pixel geometries and evidence
 
 Writes:
-  benchmark/napoleon_reviewed.jsonl — latest accepted records
+  benchmark/map_first_reviewed.jsonl — latest accepted records
 
 Geometry can be a point, line or polygon. geo_gold_px is populated for points only.
 Legacy HLS candidates are supported using explicit input paths.
@@ -34,11 +34,11 @@ def load_jsonl(path: Path) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidates", type=Path,
-                        default=Path("benchmark/napoleon_pilot_20.jsonl"))
+                        default=Path("benchmark/map_first_candidates.jsonl"))
     parser.add_argument("--annotations", type=Path,
-                        default=Path("benchmark/napoleon_annotations.jsonl"))
+                        default=Path("benchmark/map_first_annotations.jsonl"))
     parser.add_argument("--output", type=Path,
-                        default=Path("benchmark/napoleon_reviewed.jsonl"))
+                        default=Path("benchmark/map_first_reviewed.jsonl"))
     args = parser.parse_args()
 
     candidates = {r["event_id"]: r for r in load_jsonl(args.candidates)}

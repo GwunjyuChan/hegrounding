@@ -1,0 +1,43 @@
+{
+  "accuracy": null,
+  "reason": "pending independent human label boxes",
+  "modes": {
+    "pixels": {
+      "calls": 8,
+      "strict_valid": 0,
+      "valid_points": 8,
+      "errors": 0,
+      "format_normalizations": 8,
+      "elapsed_seconds": 255.6607796670869
+    },
+    "normalized_1000": {
+      "calls": 8,
+      "strict_valid": 0,
+      "valid_points": 8,
+      "errors": 0,
+      "format_normalizations": 8,
+      "elapsed_seconds": 254.71187158371322
+    }
+  },
+  "image_preprocessing": {
+    "original_size_wh": [
+      1538,
+      1754
+    ],
+    "processed_size_wh": [
+      1536,
+      1760
+    ],
+    "scale_xy": [
+      0.9986996098829649,
+      1.0034207525655645
+    ],
+    "patch_size": 16,
+    "merge_size": 2,
+    "visual_tokens": 2640,
+    "processor_size": {
+      "longest_edge": 16777216,
+      "shortest_edge": 65536
+    }
+  }
+}

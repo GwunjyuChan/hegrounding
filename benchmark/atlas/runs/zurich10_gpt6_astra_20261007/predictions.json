@@ -1,0 +1,206 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "model": "gpt-6-astra",
+  "predictions": [
+    {
+      "event_id": "Z0002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            520,
+            35
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0003",
+      "geometry": null
+    },
+    {
+      "event_id": "Z0004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            826,
+            270
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0005",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1280,
+            220
+          ],
+          [
+            1340,
+            160
+          ],
+          [
+            1430,
+            145
+          ],
+          [
+            1490,
+            210
+          ],
+          [
+            1480,
+            315
+          ],
+          [
+            1425,
+            400
+          ],
+          [
+            1330,
+            375
+          ],
+          [
+            1270,
+            295
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0006",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            260,
+            86
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1194,
+            790
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            888,
+            105
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0009",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1252,
+            329
+          ],
+          [
+            1256,
+            293
+          ],
+          [
+            1268,
+            249
+          ],
+          [
+            1284,
+            210
+          ],
+          [
+            1308,
+            173
+          ],
+          [
+            1339,
+            133
+          ],
+          [
+            1380,
+            105
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0010",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1212,
+            346
+          ],
+          [
+            1250,
+            368
+          ],
+          [
+            1270,
+            410
+          ],
+          [
+            1300,
+            450
+          ],
+          [
+            1292,
+            505
+          ],
+          [
+            1300,
+            546
+          ],
+          [
+            1278,
+            557
+          ],
+          [
+            1255,
+            519
+          ],
+          [
+            1235,
+            465
+          ],
+          [
+            1215,
+            406
+          ],
+          [
+            1201,
+            376
+          ]
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "event_id": "Z0001",
+      "error_type": "ValueError",
+      "http_status": null,
+      "api_error_code": null
+    }
+  ]
+}

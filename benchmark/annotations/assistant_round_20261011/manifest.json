@@ -1,0 +1,222 @@
+{
+  "round_id": "assistant_round_20261011",
+  "date": "2026-10-11",
+  "scope": "active_datasets_only",
+  "event_count": 139,
+  "annotation_image_count": 26,
+  "status_counts": {
+    "ambiguous": 13,
+    "outside_map": 6,
+    "proposed": 120
+  },
+  "geometry_count": 123,
+  "source_check_counts": {
+    "local_original_and_reference_map": 10,
+    "verbatim_source_passage_and_map_viewed": 101,
+    "external_original_viewed": 24,
+    "map_caption_viewed": 4
+  },
+  "datasets": [
+    {
+      "path": "benchmark/zurich_pilot_10.jsonl",
+      "sha256": "5cd1e63feb3c72c93209471c46c96b189609f473639ca918404c3b18cacae711"
+    },
+    {
+      "path": "benchmark/map_first_candidates.jsonl",
+      "sha256": "7e20cacc067a5f75939322e842bd8ecfa45af554c2fb2742f16ec6bb2de20693"
+    }
+  ],
+  "annotation_decisions_sha256": "5842dc5519a3fe0602cc5cb6682d6d664f15c3e478b245554ae8d5ffaf60879e",
+  "image_assets": [
+    {
+      "path": "benchmark/atlas/assets/2ae3fca4eb15dced41f82401.png",
+      "width": 1538,
+      "height": 1754,
+      "sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec"
+    },
+    {
+      "path": "maps/zurich_pilot/zurich2.jpg",
+      "width": 2177,
+      "height": 1699,
+      "sha256": "66447450d37d58b900744a6ce90e4f6b60debf806db2b6c543c307985342c8e5"
+    },
+    {
+      "path": "maps/napoleon_maps/marengo_plate4.jpg",
+      "width": 1750,
+      "height": 1232,
+      "sha256": "3c7a466b716e7b585c1a1ee735929b3493e5d7f821f25821a3b6f8a4d704200b"
+    },
+    {
+      "path": "maps/napoleon_maps/bussaco_ney_1907_hires.jpg",
+      "width": 1141,
+      "height": 1200,
+      "sha256": "c0017121d9b72e754f0c956811a532447e9580d68757189ce078a6f95e11d6cc"
+    },
+    {
+      "path": "maps/napoleon_maps/san_sebastian_1813.jpg",
+      "width": 1260,
+      "height": 765,
+      "sha256": "d89640aa190ff782fd9a8047632dd1ba77e00ca0d36a2dbf831436eda93b3dd6"
+    },
+    {
+      "path": "maps/napoleon_maps/zurich_first_1799.jpg",
+      "width": 1302,
+      "height": 1302,
+      "sha256": "3e3211ae72670257d61454fb86aedd52f7ef8d078a047287499043d95dc7cd3a"
+    },
+    {
+      "path": "maps/napoleon_maps/marengo_morning_1800.jpg",
+      "width": 1741,
+      "height": 1217,
+      "sha256": "9fa2798ff2530d09f393941506c565c81503da2d25ce3f96695132521dec1b60"
+    },
+    {
+      "path": "maps/napoleon_maps/bussaco_reynier_1810.jpg",
+      "width": 1166,
+      "height": 1200,
+      "sha256": "b8981c2b74a7f735af7204072dd50828dd20741cfe22a5c35fa5eff91e99968c"
+    },
+    {
+      "path": "maps/napoleon_maps/albuera_1811.jpg",
+      "width": 783,
+      "height": 1192,
+      "sha256": "e8fffa51576e063562315a715792447da35a84d3d474254493adb7b439692c3f"
+    },
+    {
+      "path": "maps/napoleon_maps/orthez_1814.jpg",
+      "width": 1007,
+      "height": 643,
+      "sha256": "310dc3e5044b8f3385cbe84d5224ec4a8cee3d2b5d5e6382f3656d90bb74714a"
+    },
+    {
+      "path": "maps/napoleon_maps/toulouse_1814.jpg",
+      "width": 765,
+      "height": 1136,
+      "sha256": "63bedee196251c5492836296633b7c61bbc8d68f608c249aa65263249c7ea435"
+    },
+    {
+      "path": "maps/napoleon_maps/jena_1806.jpg",
+      "width": 1288,
+      "height": 1387,
+      "sha256": "2aa5feccbc0e298909d77b0be92f21c301ab70a7794b005375e4fc9f9858536a"
+    },
+    {
+      "path": "maps/napoleon_maps/auerstadt_1806.jpg",
+      "width": 1558,
+      "height": 1507,
+      "sha256": "75fadb91cd84df8530f6d3344e7c530cfb08764ef2849965aebd6882d0ce91f9"
+    },
+    {
+      "path": "maps/napoleon_maps/ebersberg_1809.jpg",
+      "width": 1581,
+      "height": 1930,
+      "sha256": "05a10afc05bd84fef4754fd19d2b0f1c34979810eaf1fda43acfe86e6508f28e"
+    },
+    {
+      "path": "maps/napoleon_maps/wagram_night_1809.jpg",
+      "width": 1740,
+      "height": 1664,
+      "sha256": "1399bc185f86863298283caad9b4da356b0f226ef97e133418e4da6c9612b9f7"
+    },
+    {
+      "path": "maps/napoleon_maps/waterloo_1815.jpg",
+      "width": 1449,
+      "height": 880,
+      "sha256": "cc9d9d0b40122311e940f048278137472558f9c4f8dc299a90b1e4b5f4005c13"
+    },
+    {
+      "path": "maps/napoleon_maps/quatre_bras_east_1815.jpg",
+      "width": 588,
+      "height": 766,
+      "sha256": "1746bd4eb59391866114aca05ca6a6accb0970fb1087eb197d7d16777ef04a6b"
+    },
+    {
+      "path": "maps/napoleon_maps/flushing_1809.gif",
+      "width": 1155,
+      "height": 622,
+      "sha256": "c1a2324d26dd7a9e6ec58417a2d5ad57890556e0158376cea0c67eeba8f58c74"
+    },
+    {
+      "path": "maps/napoleon_maps/bergen_op_zoom_1814.jpg",
+      "width": 1019,
+      "height": 815,
+      "sha256": "92889038663317ae60beeb378c6eeba16a580040ae6cd46a2e476b8cc2574957"
+    },
+    {
+      "path": "maps/napoleon_maps/znaim_1809.jpg",
+      "width": 1924,
+      "height": 1984,
+      "sha256": "1b522d2cf50f065cc8240291e1905c5e6b7003300b5aa217774abf6a8237ffd1"
+    },
+    {
+      "path": "maps/napoleon_maps/kulm_1813.jpg",
+      "width": 1697,
+      "height": 1312,
+      "sha256": "f4f31370c6f68030197fd50e0c3603c24691ce781573b61f4706fbe21a6dae80"
+    },
+    {
+      "path": "maps/napoleon_maps/pultusk_1806.jpg",
+      "width": 2356,
+      "height": 1728,
+      "sha256": "4122fa53151fe064130ce2ad31566086519be2328e3d1817a5144948fe7c0901"
+    },
+    {
+      "path": "maps/napoleon_maps/heilsberg_1807.jpg",
+      "width": 783,
+      "height": 1140,
+      "sha256": "0059634c0a8ff2d375bbeef3f8d2f9c938bf83189b25aa0869b96226f256ac6c"
+    },
+    {
+      "path": "maps/napoleon_maps/eylau_1807.jpg",
+      "width": 880,
+      "height": 1252,
+      "sha256": "e3a86f976b0a2fafe8333deabf4e4129e9ed84e663a9fd0a325436b39507247b"
+    },
+    {
+      "path": "maps/napoleon_maps/friedland_1807.jpg",
+      "width": 783,
+      "height": 1138,
+      "sha256": "fb117485f1db741062960abf9f40a00015640bfd9e074e26bd72f9de22e1684b"
+    },
+    {
+      "path": "maps/napoleon_maps/polotsk_first_1812.jpg",
+      "width": 2048,
+      "height": 1240,
+      "sha256": "263adce6bccd69a5e3e8e5fa1b14d2c7b06187275d67a80664c9b2a2ad789941"
+    },
+    {
+      "path": "maps/napoleon_maps/berezina_1812.jpg",
+      "width": 1053,
+      "height": 2048,
+      "sha256": "ea74893ac6b8470230cc53face32490993533bab27c56b4b76d4d677d92aee2a"
+    }
+  ],
+  "gold": false,
+  "all_human_reviews_pending": true,
+  "eligible_for_scoring": false,
+  "image_resize_applied": false,
+  "paid_model_calls": 0,
+  "old_gold_modified": false,
+  "current_atlas_modified": false,
+  "online_sync_performed": false,
+  "prior_prediction_exposure": {
+    "zurich_second_1799": true
+  },
+  "schema_note": "Custom pixel geometry, not GeoJSON; polygon closure is implicit. Null geometry is a documented unresolved decision.",
+  "feature_type_vocabulary": {
+    "bridge": "Bridge structure or its physical end",
+    "ford": "Shallow river crossing / ford",
+    "river_bank": "Land along the edge of a river",
+    "river": "River channel or a section of water",
+    "road": "Road, track or road segment",
+    "junction": "Road junction or crossroads",
+    "woodland": "Woods, forest or woodland edge",
+    "high_ground": "Hill, ridge or slope",
+    "open_ground": "Open field, meadow or plain",
+    "settlement": "Village, town or built-up suburb",
+    "building": "Individual building, mill or farm building",
+    "other": "Unlisted or unspecified geographic feature"
+  },
+  "feature_type_vocabulary_source": "benchmark/annotate_geo.py:FEATURE_TYPES",
+  "validation": "IDs, reference hashes/dimensions, bounds, polygon area and self-intersections passed"
+}

@@ -1,0 +1,15 @@
+{
+  "events_checked": 110,
+  "desktop": "1440x960",
+  "mobile": "390x844",
+  "overlay_checks": "passed",
+  "map_pixels": "nonblank",
+  "filter_reference_toggle": "passed",
+  "horizontal_overflow": false,
+  "page_errors": [],
+  "decisions_sha256": "43d2b4a2d482d6b6e6233c02ee6c0276ca20f4910be723765272425e2befeff9",
+  "screenshots": [
+    "/private/tmp/annotation-review-desktop.png",
+    "/private/tmp/annotation-review-mobile.png"
+  ]
+}

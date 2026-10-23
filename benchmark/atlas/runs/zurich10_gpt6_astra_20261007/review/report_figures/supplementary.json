@@ -1,0 +1,123 @@
+{
+  "figure_crops": {
+    "Z0002": [
+      149,
+      0,
+      909,
+      458
+    ],
+    "Z0004": [
+      409,
+      59,
+      1169,
+      379
+    ],
+    "Z0006": [
+      165,
+      6,
+      925,
+      770
+    ],
+    "Z0007": [
+      615,
+      350,
+      1375,
+      941
+    ],
+    "Z0008": [
+      348,
+      0,
+      1108,
+      430
+    ],
+    "Z0005": [
+      598,
+      65,
+      1538,
+      595
+    ],
+    "Z0009": [
+      778,
+      25,
+      1538,
+      409
+    ],
+    "Z0010": [
+      540,
+      0,
+      1538,
+      637
+    ]
+  },
+  "unique_passages": 4,
+  "image_diagonal_px": 2332.800891632203,
+  "timing": {
+    "qwen_native": {
+      "median_seconds": 16.06308116647415,
+      "total_seconds": 501.5037554150913,
+      "reasoning_tokens": null
+    },
+    "gpt5": {
+      "median_seconds": 43.228481250000186,
+      "total_seconds": 461.8282482920913,
+      "reasoning_tokens": 27072
+    },
+    "gpt6_astra": {
+      "median_seconds": 8.17920860403683,
+      "total_seconds": 108.03683858481236,
+      "reasoning_tokens": 1898
+    }
+  },
+  "all_three_common_points": {
+    "qwen_native": {
+      "event_ids": [
+        "Z0004",
+        "Z0006"
+      ],
+      "mean_px": 311.52630983115597
+    },
+    "gpt5": {
+      "event_ids": [
+        "Z0004",
+        "Z0006"
+      ],
+      "mean_px": 484.4029823608407
+    },
+    "gpt6_astra": {
+      "event_ids": [
+        "Z0004",
+        "Z0006"
+      ],
+      "mean_px": 34.21003515691998
+    }
+  },
+  "within_map_gold_coverage": {
+    "qwen_native": {
+      "point_distance_n": 5,
+      "point_gold_n": 5,
+      "region_point_n": 2
+    },
+    "gpt5": {
+      "point_distance_n": 4,
+      "point_gold_n": 5,
+      "region_point_n": 2
+    },
+    "gpt6_astra": {
+      "point_distance_n": 3,
+      "point_gold_n": 5,
+      "region_point_n": 2
+    }
+  },
+  "exploratory_Z0001": {
+    "not_a_valid_prediction": true,
+    "raw_coordinates": [
+      311,
+      100
+    ],
+    "distance_if_shape_normalized_px": 9.055385138137417
+  },
+  "exploratory_Z0005": {
+    "not_primary_score": true,
+    "gold_point_to_predicted_polygon_px": 128.01012953766082
+  }
+}

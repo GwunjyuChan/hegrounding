@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-21T14:55:57.811144+00:00",
+  "source_image": "/Users/ericchen/thesis/hegrounding/benchmark/atlas/assets/2ae3fca4eb15dced41f82401.png",
+  "source_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+  "map_id": "fbde77fedccc51cc",
+  "map_version": "1e7f8c48bababd0f6cd342da",
+  "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+  "targets": [
+    "ZURICH",
+    "Altstetten",
+    "Albisrieden",
+    "Wollishofen",
+    "Kilchberg",
+    "Rüschlikon",
+    "Thalweil",
+    "Horgen"
+  ],
+  "gold_status": "pending_human_review",
+  "task_kind": "printed_label_center",
+  "split_group": "zurich_1816_single_map"
+}

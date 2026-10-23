@@ -1,0 +1,735 @@
+{
+  "metrics_kind": "exploratory_provisional_diagnostics_not_accuracy",
+  "config": {
+    "model": "Qwen/Qwen3-VL-8B-Thinking",
+    "revision": "92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b",
+    "mode": "thinking",
+    "map": {
+      "map_version": "2ae3fca4eb15dced41f82401",
+      "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+      "coordinate_system": "image_pixels_top_left",
+      "event_count": 10
+    },
+    "input_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+    "selected_event_ids": [
+      "Z0003",
+      "Z0004"
+    ],
+    "max_output_tokens": 40960,
+    "do_sample": true,
+    "quantization": null,
+    "generation_preset": "hf-thinking-vl",
+    "generation_kwargs": {
+      "max_new_tokens": 40960,
+      "do_sample": true,
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "repetition_penalty": 1.0
+    },
+    "generation_source": "https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking/blob/92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b/README.md",
+    "presence_penalty": 0.0,
+    "seed": 0,
+    "seed_scope": "per_request",
+    "inference_dtype": "float16",
+    "preserve_image_pixels": true,
+    "spatial_exclusions_declared_before_run": [
+      "Z0009",
+      "Z0010"
+    ],
+    "outside_map_diagnostic": [
+      "Z0003"
+    ],
+    "gold_loaded_during_inference": false,
+    "runner_sha256": "4a6f3acdbaea1bb6b726aae5cee0b05a985fdeaff186c97fbdd21023dee61c2e",
+    "created_at": "2026-10-13T14:36:40.279952+00:00"
+  },
+  "gold_sha256": "c36a7e78f2391bc9a21068e7a7ecfbbb5da3799509f9b6c14c6c8e51c974e53b",
+  "rows": {
+    "thinking_sampling": {
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              420,
+              580
+            ]
+          ]
+        },
+        "usage": {
+          "input_tokens": 3240,
+          "output_tokens": 2063,
+          "total_tokens": 5303,
+          "thinking_tokens": 2015,
+          "answer_tokens": 48,
+          "reached_token_limit": false,
+          "stop_reason": "eos",
+          "thinking_completed": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671809280,
+          "mps_driver_allocated_bytes": 19683639296
+        },
+        "elapsed_seconds": 181.32014879211783,
+        "max_output_tokens": 40960,
+        "final_answer": "{\n  \"event_id\": \"Z0003\",\n  \"geometry\": {\n    \"type\": \"point\",\n    \"coordinates\": [\n      [420, 580]\n    ]\n  }\n}",
+        "completed_within_4096_tokens": true,
+        "completed_within_8192_tokens": true
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 325.5764119219941,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              350
+            ]
+          ]
+        },
+        "usage": {
+          "input_tokens": 3050,
+          "output_tokens": 2737,
+          "total_tokens": 5787,
+          "thinking_tokens": 2701,
+          "answer_tokens": 36,
+          "reached_token_limit": false,
+          "stop_reason": "eos",
+          "thinking_completed": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671808512,
+          "mps_driver_allocated_bytes": 19683639296
+        },
+        "elapsed_seconds": 236.11609429121017,
+        "max_output_tokens": 40960,
+        "final_answer": "{\"event_id\": \"Z0004\", \"geometry\": {\"type\": \"point\", \"coordinates\": [[500, 350]]}}",
+        "completed_within_4096_tokens": true,
+        "completed_within_8192_tokens": true
+      }
+    },
+    "thinking_4096": {
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null,
+        "usage": {
+          "input_tokens": 3240,
+          "output_tokens": 4096,
+          "total_tokens": 7336,
+          "thinking_tokens": 4096,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671825664,
+          "mps_driver_allocated_bytes": 20757381120
+        },
+        "elapsed_seconds": 347.63314654212445,
+        "max_output_tokens": 4096,
+        "final_answer": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null,
+        "usage": {
+          "input_tokens": 3050,
+          "output_tokens": 4096,
+          "total_tokens": 7146,
+          "thinking_tokens": 4096,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671819520,
+          "mps_driver_allocated_bytes": 20748992512
+        },
+        "elapsed_seconds": 347.7532692910172,
+        "max_output_tokens": 4096,
+        "final_answer": null
+      }
+    },
+    "thinking_8192": {
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null,
+        "usage": {
+          "input_tokens": 3240,
+          "output_tokens": 8192,
+          "total_tokens": 11432,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671858432,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 702.7030520420521,
+        "max_output_tokens": 8192,
+        "final_answer": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "IncompleteThinking",
+        "geometry": null,
+        "usage": {
+          "input_tokens": 3050,
+          "output_tokens": 8192,
+          "total_tokens": 11242,
+          "thinking_tokens": 8192,
+          "answer_tokens": 0,
+          "reached_token_limit": true,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671852288,
+          "mps_driver_allocated_bytes": 21831122944
+        },
+        "elapsed_seconds": 699.7531863753684,
+        "max_output_tokens": 8192,
+        "final_answer": null
+      }
+    },
+    "instruct": {
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              278,
+              300
+            ]
+          ]
+        },
+        "usage": {
+          "input_tokens": 3238,
+          "output_tokens": 47,
+          "total_tokens": 3285,
+          "thinking_tokens": 0,
+          "answer_tokens": 47,
+          "reached_token_limit": false,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671793152,
+          "mps_driver_allocated_bytes": 19675250688
+        },
+        "elapsed_seconds": 15.753243290819228,
+        "max_output_tokens": 4096,
+        "final_answer": "{\n  \"event_id\": \"Z0003\",\n  \"geometry\": {\n    \"type\": \"point\",\n    \"coordinates\": [\n      [278, 300]\n    ]\n  }\n}"
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 280.58510295452254,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              148
+            ]
+          ]
+        },
+        "usage": {
+          "input_tokens": 3048,
+          "output_tokens": 47,
+          "total_tokens": 3095,
+          "thinking_tokens": 0,
+          "answer_tokens": 47,
+          "reached_token_limit": false,
+          "image_grid_thw": [
+            [
+              1,
+              110,
+              98
+            ]
+          ],
+          "image_preprocessing": {
+            "original_size_wh": [
+              1538,
+              1754
+            ],
+            "processed_size_wh": [
+              1568,
+              1760
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ],
+            "patch_size": 16,
+            "merge_size": 2,
+            "visual_tokens": 2695,
+            "processor_size": {
+              "longest_edge": 16777216,
+              "shortest_edge": 65536
+            },
+            "policy": "native_pixels_right_bottom_padding_no_resize",
+            "canvas_size_wh": [
+              1568,
+              1760
+            ],
+            "padding_ltrb": [
+              0,
+              0,
+              30,
+              6
+            ],
+            "content_scale_xy": [
+              1.0,
+              1.0
+            ],
+            "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+            "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+            "original_pixels_verified": true
+          },
+          "mps_allocated_bytes": 17671787008,
+          "mps_driver_allocated_bytes": 19675250688
+        },
+        "elapsed_seconds": 15.308418166823685,
+        "max_output_tokens": 4096,
+        "final_answer": "{\n  \"event_id\": \"Z0004\",\n  \"geometry\": {\n    \"type\": \"point\",\n    \"coordinates\": [\n      [578, 148]\n    ]\n  }\n}"
+      }
+    },
+    "gpt6": {
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "abstained",
+        "prediction_type": null,
+        "outside_map_abstention": true,
+        "geometry": null,
+        "usage": {
+          "input_tokens": 3759,
+          "input_tokens_details": {
+            "cache_write_tokens": 3756,
+            "cached_tokens": 0
+          },
+          "output_tokens": 85,
+          "output_tokens_details": {
+            "reasoning_tokens": 67
+          },
+          "total_tokens": 3844
+        },
+        "elapsed_seconds": 7.26233833306469,
+        "max_output_tokens": 4096,
+        "final_answer": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 20.8806130178211,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              826,
+              270
+            ]
+          ]
+        },
+        "usage": {
+          "input_tokens": 3575,
+          "input_tokens_details": {
+            "cache_write_tokens": 3572,
+            "cached_tokens": 0
+          },
+          "output_tokens": 53,
+          "output_tokens_details": {
+            "reasoning_tokens": 25
+          },
+          "total_tokens": 3628
+        },
+        "elapsed_seconds": 5.394945458974689,
+        "max_output_tokens": 4096,
+        "final_answer": null
+      }
+    }
+  },
+  "audit_hashes": {
+    "thinking_sampling": "857e73f563d697d7523d2cfb960610568030759c8d047722f9198f13fcaf4230",
+    "thinking_4096": "b9ad06ae41c544dfcc0cb9c4ff20dcc143aed1beda0be21cf91290afc0fcc8f1",
+    "thinking_8192": "143f3d681d6c2691191fbc46bdf27b0b49d9b25c806ea75c7bc3d6ebc94c2bfb",
+    "instruct": "be2786ae8b01e94d305ef5157092645f269a36fee2783461812be35f525339ff",
+    "gpt6": "72fd7f18416106d4247ebf59305852c6cb9a41790342b94d26e441bec825e47a"
+  },
+  "figure_crops": {
+    "Z0003": {
+      "full": [
+        0,
+        0,
+        1538,
+        1754
+      ],
+      "detail": [
+        0,
+        190,
+        1200,
+        690
+      ]
+    },
+    "Z0004": {
+      "full": [
+        0,
+        0,
+        1538,
+        1754
+      ],
+      "detail": [
+        63,
+        0,
+        1263,
+        500
+      ]
+    }
+  },
+  "summary": {
+    "selected_cases": [
+      "Z0003",
+      "Z0004"
+    ],
+    "valid_final_answers": 2,
+    "completed_thinking_blocks": 2,
+    "completed_within_4096_tokens": 2,
+    "completed_within_8192_tokens": 2,
+    "total_seconds": 417.436243083328,
+    "output_tokens": 4800
+  }
+}

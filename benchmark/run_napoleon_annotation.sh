@@ -7,5 +7,5 @@ if [[ ! -x "$PYTHON" ]]; then
   PYTHON=python3
 fi
 exec "$PYTHON" benchmark/annotate_geo.py \
-  --input benchmark/napoleon_pilot_20.jsonl \
-  --output benchmark/napoleon_annotations.jsonl "$@"
+  --input benchmark/map_first_candidates.jsonl \
+  --output benchmark/map_first_annotations.jsonl "$@"

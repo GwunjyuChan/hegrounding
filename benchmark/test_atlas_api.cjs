@@ -4,17 +4,18 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, 'gui/atlas-api.js'), 'utf8');
+const urlSource = fs.readFileSync(path.join(__dirname, 'gui/workspace-url.js'), 'utf8');
 const response = (status, data) => ({ok: status === 200, status, json: async () => data});
-function client(queue) {
+function client(queue, baseURI = 'http://localhost:8767/') {
   const calls = [];
-  const context = vm.createContext({fetch: async (url, options) => {
+  const context = vm.createContext({URL, document: {baseURI}, fetch: async (url, options) => {
     calls.push({url, options});
     assert.ok(queue.length, 'Unexpected request');
     const item = queue.shift();
     if (item instanceof Error) throw item;
     return item;
   }});
-  vm.runInContext(source, context);
+  vm.runInContext(urlSource + '\n' + source, context);
   return {request: context.atlasJSON, calls};
 }
 
@@ -22,6 +23,14 @@ test('GET does not fetch a session separately', async () => {
   const c = client([response(200, {maps: []})]);
   assert.deepEqual(await c.request('/api/atlas'), {maps: []});
   assert.equal(c.calls.length, 1);
+});
+
+test('mounted workspace keeps session and writes in the same dataset', async () => {
+  const c = client([response(200, {csrf: 'labels'}), response(200, {saved: true})],
+    'https://experiment.chanlukaka.com/labels/');
+  await c.request('/api/atlas/map/gold', {method: 'POST', body: 'draft'});
+  assert.equal(c.calls[0].url, 'https://experiment.chanlukaka.com/labels/api/atlas');
+  assert.equal(c.calls[1].url, 'https://experiment.chanlukaka.com/labels/api/atlas/map/gold');
 });
 test('save refreshes token while preserving submitted draft and revision', async () => {
   const c = client([response(200, {csrf: 'fresh'}), response(200, {saved: true})]);

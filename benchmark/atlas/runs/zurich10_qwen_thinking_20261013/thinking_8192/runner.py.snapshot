@@ -1,0 +1,217 @@
+"""Offline Qwen3-VL Instruct/Thinking evaluation on frozen clean atlas inputs."""
+from __future__ import annotations
+
+import argparse
+import gc
+import importlib.metadata
+import io
+import json
+import os
+from pathlib import Path
+import time
+
+from PIL import Image
+from run_atlas_vlm import (
+    SYSTEM, digest, image_preprocessing_metadata, load_local_qwen,
+    pad_image_without_resampling, parse_geometry, read_package, stamp, task_prompt,
+)
+
+ROOT = Path(__file__).resolve().parents[1]
+RUNS = ROOT / "benchmark/atlas/runs"
+SOURCE = RUNS / "zurich10_20260916_162847/input.zip"
+CACHE = ROOT / ".venv/qwen-thinking/hf-cache"
+MODELS = {
+    "instruct": ("Qwen/Qwen3-VL-8B-Instruct", "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"),
+    "thinking": ("Qwen/Qwen3-VL-8B-Thinking", "92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b"),
+}
+IMAGE_HASH = "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec"
+
+
+class IncompleteThinking(ValueError):
+    pass
+
+
+def final_answer(raw, thinking):
+    """Select the declared final channel, never mine JSON from unfinished reasoning."""
+    if thinking:
+        if raw.count("</think>") != 1:
+            raise IncompleteThinking("Expected one completed thinking block")
+        raw = raw.split("</think>", 1)[1]
+    elif "<think>" in raw or "</think>" in raw:
+        raise ValueError("Unexpected reasoning block from Instruct")
+    if "<think>" in raw or "</think>" in raw:
+        raise ValueError("Unexpected reasoning delimiter in final answer")
+    return raw.strip()
+
+
+def save(path, value):
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
+    temporary.replace(path)
+
+
+def infer(local, image, row, instruction, max_tokens, thinking):
+    import torch
+
+    model, processor, _ = local
+    original = Image.open(io.BytesIO(image)).convert("RGB")
+    ip = processor.image_processor
+    canvas, padding = pad_image_without_resampling(original, ip.patch_size * ip.merge_size)
+    if canvas.width * canvas.height > ip.size["longest_edge"]:
+        raise ValueError("Native image exceeds pixel budget; no downsampling allowed")
+    messages = [
+        {"role": "system", "content": SYSTEM + instruction},
+        {"role": "user", "content": [
+            {"type": "text", "text": task_prompt(row)}, {"type": "image", "image": canvas},
+        ]},
+    ]
+    template = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    if template.rstrip().endswith("<think>") != thinking:
+        raise ValueError("Chat template does not match the requested model edition")
+    inputs = processor(text=[template], images=[canvas], padding=True, return_tensors="pt",
+                       do_resize=False).to(model.device)
+    grid = inputs["image_grid_thw"].tolist()
+    preprocessing = image_preprocessing_metadata(processor, original.size, grid)
+    if preprocessing["processed_size_wh"] != list(canvas.size):
+        raise ValueError("Processor changed native image dimensions")
+    preprocessing.update(padding)
+    preprocessing["scale_xy"] = [1.0, 1.0]
+    count = inputs["input_ids"].shape[1]
+    if model.device.type == "mps":
+        torch.mps.synchronize()
+    with torch.inference_mode():
+        outputs = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
+    tokens = outputs[0, count:].tolist()
+    raw = processor.decode(tokens, skip_special_tokens=True).strip()
+    # Preserve raw token decoding so thinking delimiters remain auditable.
+    raw_special = processor.decode(tokens, skip_special_tokens=False)
+    end_id = processor.tokenizer.convert_tokens_to_ids("</think>")
+    thinking_count = tokens.index(end_id) + 1 if thinking and end_id in tokens else len(tokens) if thinking else 0
+    usage = {
+        "input_tokens": count, "output_tokens": len(tokens), "total_tokens": count + len(tokens),
+        "thinking_tokens": thinking_count, "answer_tokens": len(tokens) - thinking_count,
+        "reached_token_limit": len(tokens) >= max_tokens,
+        "image_grid_thw": grid, "image_preprocessing": preprocessing,
+        "mps_allocated_bytes": torch.mps.current_allocated_memory() if model.device.type == "mps" else None,
+        "mps_driver_allocated_bytes": torch.mps.driver_allocated_memory() if model.device.type == "mps" else None,
+    }
+    return {"raw": raw, "raw_with_special_tokens": raw_special, "generated_token_ids": tokens,
+            "usage": usage, "rendered_prompt_sha256": digest(template.encode()),
+            "chat_template_sha256": digest(processor.chat_template.encode())}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--mode", choices=MODELS, required=True)
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--input", type=Path, default=SOURCE)
+    parser.add_argument("--max-output-tokens", type=int, default=4096)
+    parser.add_argument("--event-id", action="append", default=[])
+    parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--execute", action="store_true")
+    args = parser.parse_args()
+    if args.max_output_tokens <= 0:
+        parser.error("Token budget must be positive")
+    manifest, png, tasks, instruction = read_package(args.input)
+    if manifest["image_sha256"] != IMAGE_HASH or [t["event_id"] for t in tasks] != [f"Z{i:04d}" for i in range(1, 11)]:
+        parser.error("Expected the frozen Zurich ten-question package")
+    if set(args.event_id) - {t["event_id"] for t in tasks}:
+        parser.error("Unknown event ID")
+    tasks = [t for t in tasks if not args.event_id or t["event_id"] in args.event_id]
+    model_id, revision = MODELS[args.mode]
+    model_path = CACHE / ("models--" + model_id.replace("/", "--")) / "snapshots" / revision
+    config = {
+        "model": model_id, "revision": revision, "mode": args.mode, "map": manifest,
+        "input_sha256": digest(args.input.read_bytes()), "selected_event_ids": [t["event_id"] for t in tasks],
+        "max_output_tokens": args.max_output_tokens, "do_sample": False, "quantization": None,
+        "inference_dtype": "float16", "preserve_image_pixels": True,
+        "spatial_exclusions_declared_before_run": ["Z0009", "Z0010"],
+        "outside_map_diagnostic": ["Z0003"], "gold_loaded_during_inference": False,
+        "runner_sha256": digest(Path(__file__).read_bytes()),
+    }
+    print(json.dumps(config, indent=2), flush=True)
+    if not args.execute:
+        print("Dry run; no model loaded")
+        return
+    if not model_path.is_dir():
+        parser.error("Pinned local model missing; download separately")
+    out = args.output.resolve()
+    if out.exists() and not args.resume:
+        parser.error("Output exists; use --resume only to continue unattempted questions")
+    out.mkdir(parents=True, exist_ok=True)
+    config_path = out / "manifest.json"
+    if config_path.exists():
+        previous = json.loads(config_path.read_text())
+        if any(previous.get(k) != v for k, v in config.items()):
+            parser.error("Resume configuration differs from the saved run")
+    else:
+        save(config_path, {**config, "created_at": stamp()})
+        (out / "input.zip").write_bytes(args.input.read_bytes())
+        (out / "runner.py.snapshot").write_bytes(Path(__file__).read_bytes())
+    audit = out / "predictions.attempts.jsonl"
+    attempts = [json.loads(line) for line in audit.read_text().splitlines()] if audit.exists() else []
+    if len({a["event_id"] for a in attempts}) != len(attempts):
+        parser.error("Duplicate attempts in journal")
+    done = {a["event_id"] for a in attempts}
+    pending = [t for t in tasks if t["event_id"] not in done]
+    if not pending:
+        print("All selected questions already attempted")
+        return
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    import torch
+    if not torch.backends.mps.is_available() and not torch.cuda.is_available():
+        raise RuntimeError("No GPU available; refusing an unexpectedly slow CPU run")
+    torch.manual_seed(0)
+    local = load_local_qwen(str(model_path))
+    if next(local[0].parameters()).dtype != torch.float16:
+        raise RuntimeError("Expected unquantized float16 inference")
+    local[2].update(model_id=model_id, revision=revision,
+                    generation_config=local[0].generation_config.to_dict())
+    save(out / "local_config.json", local[2])
+    stopped = False
+    with audit.open("a", encoding="utf-8") as stream:
+        for row in pending:
+            attempt = {
+                "event_id": row["event_id"], "map_version": manifest["map_version"],
+                "image_sha256": manifest["image_sha256"], "model": model_id, "mode": args.mode,
+                "created_at": stamp(), "max_output_tokens": args.max_output_tokens,
+                "instruction": SYSTEM + instruction, "task": row, "local_config": local[2],
+            }
+            started = time.monotonic()
+            print(f"Starting {args.mode} {row['event_id']}", flush=True)
+            try:
+                attempt.update(infer(local, png, row, instruction, args.max_output_tokens, args.mode == "thinking"))
+                final = final_answer(attempt["raw"], args.mode == "thinking")
+                attempt["final_answer"] = final
+                attempt["prediction"] = parse_geometry(final, row)
+                attempt["status"] = "abstained" if attempt["prediction"]["geometry"] is None else "valid"
+            except Exception as exc:
+                attempt.update(status="error", error_type=type(exc).__name__, error=str(exc))
+                # A failed backend must not be mistaken for ten independent model failures.
+                stopped = "raw" not in attempt
+            attempt["elapsed_seconds"] = time.monotonic() - started
+            stream.write(json.dumps(attempt, ensure_ascii=False, allow_nan=False) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+            attempts.append(attempt)
+            predictions = [a["prediction"] for a in attempts if "prediction" in a]
+            errors = [{"event_id": a["event_id"], "error_type": a["error_type"]} for a in attempts if a["status"] == "error"]
+            save(out / "predictions.json", {"map_version": manifest["map_version"], "model": model_id,
+                                             "predictions": predictions, "errors": errors})
+            print(f"{row['event_id']}: {attempt['status']}, {attempt['elapsed_seconds']:.1f}s, "
+                  f"tokens={attempt.get('usage', {}).get('output_tokens')}, {attempt.get('error', '')}", flush=True)
+            gc.collect()
+            if local[0].device.type == "mps":
+                torch.mps.empty_cache()
+            if stopped:
+                break
+    attempted = {a["event_id"] for a in attempts}
+    save(out / "completed.json", {"finished_at": stamp(), "completed_all_tasks": len(attempted) == len(tasks),
+                                   "stopped_on_backend_error": stopped,
+                                   "unattempted": [t["event_id"] for t in tasks if t["event_id"] not in attempted]})
+    if stopped:
+        raise SystemExit("Backend failure; inspect audit before continuing")
+
+
+if __name__ == "__main__":
+    main()

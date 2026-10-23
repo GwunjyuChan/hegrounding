@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HE Grounding | 审核</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif;color:#252a2c;background:#f6f7f7;letter-spacing:0;font-size:14px;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}button,select,input,textarea{font:inherit}button,select{height:32px;border:1px solid #cbd1d2;border-radius:4px;background:#fff;color:inherit}button{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 10px}button:hover{background:#edf3f1}button:disabled{opacity:.4;cursor:default}button svg{width:16px;height:16px;flex:none}button.icon{width:32px;padding:0;flex:none}button[aria-pressed=true]{border-color:#257858;color:#165c41;background:#e6f3eb}select{max-width:100%;padding:0 26px 0 8px;min-width:0;font-size:13px}input[type=checkbox]{accent-color:#246d4e}input[type=range]{width:72px;accent-color:#246d4e}a{color:#176d63;overflow-wrap:anywhere}
+header{height:48px;display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid #d9dddd;background:#fff}h1{font-size:16px;margin:0;font-weight:650;white-space:nowrap}h1 a{text-decoration:none}#round-counts{font-size:12px;color:#6b7472;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.reviewer-box{display:flex;align-items:center;gap:6px;font-size:12px;color:#5d6860}.reviewer-box input{width:120px;height:30px;border:1px solid #cbd3ce;border-radius:4px;padding:0 8px;font-size:13px}header .report{text-decoration:none;display:flex;gap:5px;align-items:center;font-size:13px}header .report svg{width:16px;height:16px}#language-select{height:30px;width:96px;flex:none;font-size:12px}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 430px;height:calc(100dvh - 48px);min-height:420px}.map-pane{display:flex;flex-direction:column;min-width:0;min-height:0}
+.filters{display:flex;gap:6px;padding:8px 10px;border-bottom:1px solid #e1e5e4;background:#fff;flex-wrap:wrap;align-items:center}#position{font-size:12px;color:#5e6b62;min-width:44px;text-align:center;font-variant-numeric:tabular-nums}#map-filter{flex:1 1 120px}#event-select{flex:0 1 150px}#review-filter,#status-filter{flex:0 0 auto}#screening-filter{flex:0 1 128px}
+.tool-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:6px 10px;border-bottom:1px solid #d5dbda;background:#fff}.toolbar{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.toolbar label{display:flex;align-items:center;gap:4px;white-space:nowrap;font-size:13px}.divider{height:20px;border-left:1px solid #d8dddd;margin:0 2px}.view-mode{display:flex;gap:3px}.view-mode button{font-size:13px;padding:0 9px}#zoom-value{font-size:12px;min-width:38px;font-variant-numeric:tabular-nums}
+.edit-toolbar{flex:1 1 0;flex-wrap:nowrap}.edit-toolbar .mode-tools{display:flex;gap:3px}.edit-toolbar .editor-state{flex:1 1 0;font-size:11px;color:#12658b;margin-left:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.layer-swatch{width:9px;height:9px;display:inline-block;background:#cc0066}.layer-swatch.human{background:#126eaa}
+.viewport{position:relative;flex:1;min-height:220px;overflow:hidden;background:#e8eded;touch-action:none;cursor:grab}.viewport.dragging{cursor:grabbing}.viewport.editing{cursor:crosshair}#stage{position:absolute;transform-origin:0 0;will-change:transform}#map-image{display:block;max-width:none;pointer-events:none;user-select:none}#overlay{position:absolute;left:0;top:0;pointer-events:none}#map-note{position:absolute;bottom:10px;left:10px;background:#ffffffed;color:#763c0f;border:1px solid #e1c8aa;padding:6px 10px;border-radius:3px;font-size:12px;pointer-events:none;max-width:480px;overflow-wrap:anywhere}#map-note:empty{display:none}
+.details{display:flex;flex-direction:column;min-height:0;min-width:0;border-left:1px solid #d5dbda;background:#fff}#empty{padding:25px;color:#6b7070}#event-detail{display:flex;flex-direction:column;min-height:0;flex:1}
+.detail-head{padding:14px 18px 12px;border-bottom:1px solid #e6eae8}.event-heading{display:flex;align-items:center;gap:8px}h2{font-size:15px;line-height:1.2;margin:0;color:#5b6663;font-weight:600}.badge{display:inline-flex;padding:3px 6px;background:#e8f3ed;color:#1d6145;border-radius:3px;font-size:11px;white-space:nowrap}.badge.ambiguous{background:#fff0d8;color:#855007}.badge.source_conflict,.badge.unreadable,.badge.outside_map{background:#fce7e9;color:#992f40}
+#question{font-size:16px;font-weight:650;line-height:1.5;margin:8px 0 0;overflow-wrap:anywhere}.candidate{margin-top:10px;padding:8px 10px;background:#f4f8f6;border-radius:4px;font-size:13px;line-height:1.5}.candidate .k{color:#63716a;font-size:12px;margin-right:4px}#location{font-weight:600;color:#1e614a}#caveat{display:block;color:#7a4a0c;font-size:12px;margin-top:3px;white-space:pre-wrap}#caveat:empty{display:none}
+.detail-scroll{flex:1;min-height:0;overflow:auto;padding:12px 18px 18px}.section-label{font-size:12px;color:#63716a;margin:0 0 6px;font-weight:500}.input-text{font-size:13.5px;line-height:1.7;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.input-text mark{background:#fff0b3;color:inherit;padding:1px 0;border-radius:2px}.source-cite{font-size:11.5px;color:#6b7572;margin:10px 0 0;line-height:1.5}.source-cite a{margin-left:6px}#source-note{font-size:12px;color:#7a4a0c;margin:6px 0 0;white-space:pre-wrap}#source-note:empty{display:none}
+.more{margin-top:16px;border-top:1px solid #e6eae8;padding-top:10px}.more>summary{font-size:13px;color:#365c4b;cursor:pointer;padding:2px 0}.more h3{font-size:12px;color:#63716a;margin:14px 0 5px;font-weight:500}.more p{font-size:12.5px;line-height:1.6;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.more dl{font-size:12px;margin:8px 0;line-height:1.55}.more dt{color:#747c77;margin-top:6px}.more dd{margin:0;overflow-wrap:anywhere}.more code{font-size:11px;overflow-wrap:anywhere}.metrics{display:flex;flex-wrap:wrap;gap:4px 14px;color:#65706d;font-size:12px;margin-top:10px}.screening{display:flex;gap:8px;align-items:flex-start}.screening .badge{flex:none}#rewrite-question{font-weight:600;color:#1e614a}.text-views{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}.text-views button{height:26px;font-size:12px;padding:0 8px}#source-passage{max-height:40dvh;overflow:auto;padding:8px 10px;background:#fafbfa;border:1px solid #e3e8e5;border-radius:3px}.source-links{display:flex;gap:14px;margin-top:10px;font-size:12px}
+.human-review{border-top:1px solid #d5dbda;padding:10px 18px 12px;background:#fbfcfb}.review-options{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.review-options button{height:auto;min-height:34px;gap:5px;padding:4px 6px;font-size:12.5px;line-height:1.2}.review-options button[data-decision=accepted_no_location][aria-pressed=true]{background:#efeaf7;border-color:#6c4fa3;color:#53388a}.review-options button[data-decision=needs_changes][aria-pressed=true],.review-options button[data-decision=needs_evidence][aria-pressed=true]{background:#fff2dd;border-color:#a76a12;color:#754806}.review-options button[data-decision=rejected][aria-pressed=true]{background:#fcebee;border-color:#b54156;color:#953247}.review-options button[data-decision=modified_accepted][aria-pressed=true]{background:#e6f2fa;border-color:#126eaa;color:#125d8b}
+#review-notes{display:block;width:100%;margin-top:8px;border:1px solid #cbd3ce;border-radius:4px;padding:6px 8px;font-size:13px;line-height:1.45;resize:vertical;min-height:40px;background:#fff;color:#252a2c}.review-actions{display:flex;gap:6px;margin-top:8px}.review-actions button{font-size:13px}.review-actions .primary{flex:1;background:#226a4c;color:#fff;border-color:#226a4c}.review-actions .primary:hover{background:#195b40}.review-summary{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:6px}#review-message{font-size:11.5px;line-height:1.4;margin:0;color:#58665b;min-width:0;overflow-wrap:anywhere}#review-message[data-kind=error]{color:#a2213b}#review-message[data-kind=success]{color:#216a48}#review-progress{font-size:11.5px;white-space:nowrap;color:#5e6b62}#review-progress:not(:empty)::before{content:attr(data-prefix) " "}#live-review-link{display:block;margin-top:4px;font-size:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.hidden{display:none!important}button:focus-visible,select:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #146d60;outline-offset:2px}
+@media(max-width:1366px){.workspace{grid-template-columns:minmax(0,1fr) 400px}}@media(max-width:1100px){.workspace{grid-template-columns:minmax(0,1fr) 360px}}
+@media(max-width:700px){header{height:auto;flex-wrap:wrap;padding:8px 12px;gap:6px 10px}#round-counts{order:3;flex-basis:100%}.workspace{display:flex;flex-direction:column;height:auto}.map-pane{height:70dvh;min-height:520px}.details{border-left:0;border-top:1px solid #d5dbda}.detail-scroll{overflow:visible}#map-filter{flex-basis:100%}.edit-toolbar{min-width:0;flex-wrap:wrap}#event-select,#review-filter,#status-filter,#screening-filter{flex:1 1 130px}.tool-row .divider{display:none}input[type=range]{width:70px}.review-options{grid-template-columns:repeat(2,1fr)}#source-passage{max-height:none}}
+</style>
+</head>
+<body>
+<header><h1><a href="/" title="Home / 主页">HE Grounding</a></h1><span id="round-counts"></span><label class="sr-only" for="language-select">界面语言 / Interface language</label><select id="language-select" title="界面语言 / Interface language"><option value="zh">中文</option><option value="en">English</option></select><label class="reviewer-box" for="reviewer">审核者<input id="reviewer" type="text" maxlength="100" autocomplete="name" disabled></label><a class="report" href="REPORT.md" title="Round report / 本轮说明"><i data-lucide="file-text"></i><span>说明</span></a></header>
+<main class="workspace">
+<section class="map-pane" aria-label="Event map">
+<div class="filters">
+<button class="icon" id="previous" title="上一题" aria-label="Previous event"><i data-lucide="chevron-left"></i></button>
+<span id="position"></span>
+<button class="icon" id="next" title="下一题" aria-label="Next event"><i data-lucide="chevron-right"></i></button>
+<label class="sr-only" for="map-filter">Map</label><select id="map-filter"></select>
+<label class="sr-only" for="event-select">Event</label><select id="event-select"></select>
+<label class="sr-only" for="review-filter">Human review</label><select id="review-filter"><option value="all">审核：全部</option><option value="pending">未审核</option><option value="stale">待重审</option><option value="accepted">已接受</option><option value="modified_accepted">修改后接受</option><option value="accepted_no_location">确认图上没有</option><option value="needs_changes">需修改</option><option value="needs_evidence">待补证据</option><option value="rejected">剔除</option></select>
+<label class="sr-only" for="status-filter">Status</label><select id="status-filter"><option value="all">候选：全部</option><option value="proposed">有候选</option><option value="ambiguous">有歧义</option><option value="source_conflict">史料冲突</option><option value="unreadable">地图不可读</option><option value="outside_map">不在图内</option></select>
+<label class="sr-only" for="screening-filter">Screening advice</label><select id="screening-filter"><option value="all">筛查：全部</option></select>
+</div>
+<div class="tool-row">
+<div class="toolbar">
+<div class="view-mode" role="group" aria-label="Map layer"><button id="annotation-mode" aria-pressed="true">标注图</button><button id="reference-mode" aria-pressed="false">参考图</button></div>
+<button class="icon" id="fit" title="适合窗口 / Fit map" aria-label="Fit map"><i data-lucide="maximize"></i></button>
+<button class="icon" id="native" title="原始像素 / Original pixel scale" aria-label="Original pixel scale"><i data-lucide="scan"></i></button>
+<button class="icon" id="focus" title="定位到候选 / Focus candidate" aria-label="Focus candidate"><i data-lucide="locate-fixed"></i></button>
+<label class="sr-only" for="zoom">Zoom</label><input id="zoom" type="range" min="10" max="400" value="100"><output id="zoom-value" for="zoom">100%</output>
+<label title="显示 AI 候选"><input id="show-overlay" type="checkbox" checked><span class="layer-swatch"></span>AI</label>
+<label title="显示人工标注"><input id="show-human" type="checkbox" checked><span class="layer-swatch human"></span>人工</label>
+</div>
+<div class="toolbar edit-toolbar" aria-label="Geometry editor">
+<span class="divider"></span>
+<div class="mode-tools" role="group" aria-label="Editing mode">
+<button class="icon" data-tool="pan" title="Pan / 平移" aria-label="Pan" aria-pressed="true"><i data-lucide="hand"></i></button>
+<button class="icon" data-tool="edit" title="Move vertices; click an edge to add a vertex / 拖动顶点，点击边线插入顶点" aria-label="Edit vertices" aria-pressed="false" disabled><i data-lucide="mouse-pointer-2"></i></button>
+<button class="icon" data-tool="point" title="New point / 新建点" aria-label="New point" aria-pressed="false" disabled><i data-lucide="map-pin"></i></button>
+<button class="icon" data-tool="line" title="New line / 新建线" aria-label="New line" aria-pressed="false" disabled><i data-lucide="route"></i></button>
+<button class="icon" data-tool="polygon" title="New polygon / 新建区域" aria-label="New polygon" aria-pressed="false" disabled><i data-lucide="pentagon"></i></button>
+<button class="icon" data-tool="rect" title="New rectangle: drag across the map / 新建矩形：在图上拖出" aria-label="New rectangle" aria-pressed="false" disabled><i data-lucide="square"></i></button>
+</div>
+<button class="icon" id="finish-geometry" title="Finish drawing / 完成绘制" aria-label="Finish drawing" disabled><i data-lucide="check"></i></button>
+<button class="icon" id="undo-geometry" title="Undo / 撤销" aria-label="Undo geometry" disabled><i data-lucide="undo-2"></i></button>
+<button class="icon" id="redo-geometry" title="Redo / 重做" aria-label="Redo geometry" disabled><i data-lucide="redo-2"></i></button>
+<button class="icon" id="delete-vertex" title="Delete selected vertex / 删除选中顶点" aria-label="Delete vertex" disabled><i data-lucide="minus"></i></button>
+<button class="icon" id="clear-geometry" title="Clear geometry / 清空标注" aria-label="Clear geometry" disabled><i data-lucide="eraser"></i></button>
+<button class="icon" id="to-box" title="Turn into a horizontal box around it / 转成外接水平矩形" aria-label="Convert to box" disabled><i data-lucide="square-dashed"></i></button>
+<button class="icon" id="restore-candidate" title="Restore original AI candidate / 恢复原始候选" aria-label="Restore AI candidate" disabled><i data-lucide="rotate-ccw"></i></button>
+<span id="editor-state" class="editor-state" role="status"></span>
+</div>
+</div>
+<div class="viewport" id="viewport"><div id="stage"><img id="map-image" alt="Historical map" draggable="false"><canvas id="overlay"></canvas></div><div id="map-note"></div></div>
+</section>
+<aside class="details" aria-label="Annotation evidence">
+<div id="empty" class="hidden">没有符合筛选条件的题目。</div>
+<div id="event-detail">
+<div class="detail-head">
+<div class="event-heading"><h2 id="event-title"></h2><span id="event-status" class="badge"></span></div>
+<p id="question"></p>
+<div class="candidate"><span class="k">AI 候选</span><span id="location"></span><span id="caveat"></span></div>
+</div>
+<div class="detail-scroll" id="detail-scroll">
+<p class="section-label">模型看到的原文</p>
+<p id="input-text" class="input-text"></p>
+<p id="source-cite" class="source-cite"></p>
+<p id="source-note"></p>
+<details class="more" id="more-info"><summary>更多信息（AI 依据、筛查、对照、元数据）</summary>
+<h3>AI 文本依据</h3><p id="text-evidence"></p>
+<h3>AI 地图依据</h3><p id="map-evidence"></p>
+<div class="metrics"><span id="confidence"></span><span id="geometry-type"></span></div>
+<section id="source-review" class="hidden" aria-label="Source text check">
+<h3>筛查</h3>
+<div id="screening" class="screening"><span id="screening-advice" class="badge"></span><p id="screening-issue"></p></div>
+<div id="rewrite-box" class="hidden"><h3>建议改写的问题</h3><p id="rewrite-question"></p></div>
+<h3 id="compare-heading">对照</h3>
+<div class="text-views" role="group" aria-label="Text version"><button data-view="original" aria-pressed="false">原文语言</button><button data-view="ai" aria-pressed="false">旧 AI 改写</button></div>
+<p id="source-passage"></p>
+</section>
+<h3>史料与来源信息</h3><p id="original-text" class="hidden"></p><dl id="source-meta"></dl><div class="source-links"><a id="text-link" target="_blank" rel="noopener noreferrer">文本来源</a><a id="map-link" target="_blank" rel="noopener noreferrer">地图来源</a></div>
+<h3>坐标与版本</h3><p id="map-version"></p><dl id="coordinate-meta"></dl><p><code id="coordinates"></code></p>
+</details>
+</div>
+<section class="human-review" aria-label="Human review">
+<div class="review-options" role="group" aria-label="Review decision">
+<button type="button" data-decision="accepted" aria-pressed="false" title="Accept / 接受" disabled><i data-lucide="check"></i><span>接受</span></button>
+<button type="button" data-decision="modified_accepted" aria-pressed="false" title="Modified &amp; accepted: edit the geometry on the map first / 修改后接受：先在地图上改几何" disabled><i data-lucide="check-check"></i><span>改后接受</span></button>
+<button type="button" data-decision="accepted_no_location" aria-pressed="false" title="Not on map: the asked location is not on this map, kept as an abstention item; clear any candidate geometry first / 图上没有：这张图上没有所问的位置，留作拒答题；有候选几何时先清空" disabled><i data-lucide="map-pin-off"></i><span>图上没有</span></button>
+<button type="button" data-decision="needs_changes" aria-pressed="false" title="Needs changes / 需修改" disabled><i data-lucide="square-pen"></i><span>需修改</span></button>
+<button type="button" data-decision="needs_evidence" aria-pressed="false" title="Needs evidence / 待补证据" disabled><i data-lucide="circle-help"></i><span>待补证据</span></button>
+<button type="button" data-decision="rejected" aria-pressed="false" title="Reject / 剔除" disabled><i data-lucide="ban"></i><span>剔除</span></button>
+</div>
+<label class="sr-only" for="review-notes">Notes</label><textarea id="review-notes" rows="2" maxlength="10000" placeholder="备注：修改要求或理由（除“接受”外必填）" disabled></textarea>
+<div class="review-actions"><button id="review-save-next" class="primary" disabled><i data-lucide="arrow-right"></i>保存并下一题</button><button id="review-save" disabled><i data-lucide="save"></i>保存</button><button class="icon" id="review-reset" title="Reset to pending / 恢复未审核" aria-label="Reset to pending" disabled><i data-lucide="rotate-ccw"></i></button><button class="icon" id="review-reload" title="Reload saved reviews / 重新读取审核" aria-label="Reload saved reviews" disabled><i data-lucide="refresh-cw"></i></button></div>
+<div class="review-summary"><p id="review-message" role="status" aria-live="polite">连接中…</p><span id="review-progress"></span></div>
+<a id="live-review-link" class="hidden" href="http://127.0.0.1:8771/review.html">Open review workspace / 打开审核工作台</a>
+</section>
+</div>
+</aside>
+</main>
+<script id="round-data" type="application/json">__ROUND_DATA__</script>
+<script>__LUCIDE_SOURCE__</script>
+<script>
+"use strict";
+const data = JSON.parse(document.getElementById("round-data").textContent);
+const $ = (id) => document.getElementById(id);
+// Interface language. Only labels are translated; questions, source passages and saved reviews are shown as stored.
+const L10N = (() => {
+  const en = {
+    "HE Grounding | 审核":"HE Grounding | Review","审核者":"Reviewer","说明":"Report","上一题":"Previous question","下一题":"Next question",
+    "审核：全部":"Review: all","未审核":"Not reviewed","待重审":"Needs re-review","已接受":"Accepted","修改后接受":"Modified & accepted",
+    "确认图上没有":"Confirmed not on map","需修改":"Needs changes","待补证据":"Needs evidence","剔除":"Reject",
+    "候选：全部":"Candidate: all","有候选":"Has candidate","有歧义":"Ambiguous","史料冲突":"Source conflict","地图不可读":"Map unreadable","不在图内":"Not on map",
+    "筛查：全部":"Screening: all","标注图":"Annotation map","参考图":"Reference map","显示 AI 候选":"Show AI candidate","显示人工标注":"Show human annotation","人工":"Human",
+    "没有符合筛选条件的题目。":"No questions match these filters.","AI 候选":"AI candidate","模型看到的原文":"Source text the model sees",
+    "更多信息（AI 依据、筛查、对照、元数据）":"More (AI evidence, screening, comparison, metadata)","AI 文本依据":"AI text evidence","AI 地图依据":"AI map evidence",
+    "筛查":"Screening","建议改写的问题":"Suggested rewrite","对照":"Compare","原文语言":"Original language","旧 AI 改写":"Old AI paraphrase",
+    "史料与来源信息":"Source details","文本来源":"Text source","地图来源":"Map source","坐标与版本":"Coordinates and version",
+    "接受":"Accept","改后接受":"Accept with edits","图上没有":"Not on map","保存并下一题":"Save and next","保存":"Save","连接中…":"Connecting…",
+    "备注：修改要求或理由（除“接受”外必填）":"Notes: the required change or your reason (required unless you accept)",
+    "已审":"Reviewed","无候选几何":"No candidate geometry","出处：":"Source: ","打开来源":"Open source",
+    "参考图 · 不显示候选":"Reference map · candidate hidden","候选只是假设，范围未定":"Candidate is a hypothesis; extent not settled",
+    "模型输入已换成史料原文（2026-10-19）。":"Model input replaced with the source passage (2026-10-19).",
+    "注意：这段文本由地图推导，没有对应的叙述原文。":"Note: this text was derived from the map and has no narrative source.",
+    "注意：这段文本仍是 AI 改写，原文尚未取回。":"Note: this text is still an AI paraphrase; the source passage has not been retrieved yet.",
+    "保留":"Keep","保留，几何需人工定":"Keep; geometry to be drawn by hand","小改题目":"Minor question edit","重写题目":"Rewrite question",
+    "需换叙述原文":"Replace with a narrative source","建议剔除":"Suggest dropping","已换原文并重写":"Source replaced, question rewritten",
+    "已按规范重写":"Rewritten to the question spec","新题（先找原文再出题）":"New item (source first, then question)",
+    "Marengo · 上午部署":"Marengo · morning deployment","兹诺伊莫战役":"Battle of Znaim","别列津纳河渡河":"Crossing of the Berezina",
+    "四臂村 · 东侧部署":"Quatre Bras · eastern deployment","图卢兹战役":"Battle of Toulouse","埃伯斯贝格 · 上午部署":"Ebelsberg · morning deployment",
+    "埃劳战役":"Battle of Eylau","奥尔施泰特战役":"Battle of Auerstadt","奥尔泰兹战役":"Battle of Orthez","布萨科 · 雷尼耶进攻":"Bussaco · Reynier attack",
+    "库尔姆 · 次日部署":"Kulm · second-day deployment","弗利辛恩围城":"Siege of Flushing","弗里德兰 · 白天部署":"Friedland · daytime deployment",
+    "普乌图斯克战役":"Battle of Pultusk","海尔斯贝格 · 前卫战":"Heilsberg · advance-guard action","滑铁卢 · 开战部署":"Waterloo · opening deployment",
+    "瓦格拉姆 · 战后夜间部署":"Wagram · post-battle night deployment","第一次波洛茨克 · 次日":"First Polotsk · second day",
+    "第一次苏黎世战役":"First Battle of Zurich","耶拿战役":"Battle of Jena","贝亨奥普佐姆攻城":"Storming of Bergen op Zoom",
+    "阿尔武埃拉 · 初始部署":"Albuera · initial deployment","第二次苏黎世战役":"Second Battle of Zurich","圣塞巴斯蒂安围城":"Siege of San Sebastian"
+  };
+  // English for the Chinese AI notes (display_en.json); the records themselves keep the Chinese text.
+  Object.assign(en, data.display_en || {});
+  // Generated screening notes ("原文：<citation>（Claude 英译，待审）") keep the citation and translate the frame.
+  const patterns = [[/^原文：(.*?)（Claude 英译，待审）$/s, "Source: $1 (Claude's English translation, review pending)"], [/^原文：/, "Source: "], [/^原题：/, "Original question: "], [/^替换来源：/, "Replacement source: "]];
+  const han = /[㐀-鿿＀-￯]/;
+  let lang = "zh";
+  try {if (localStorage.getItem("he-language") === "en") lang = "en";} catch {}
+  const listeners = [], statics = [];
+  // "English / 中文" labels show one side; dictionary labels are written in Chinese.
+  function t(value) {
+    if (value == null) return value;
+    const text = String(value), cut = text.indexOf(" / ");
+    if (cut > 0 && han.test(text.slice(cut + 3)) !== han.test(text.slice(0, cut))) {
+      const [a, b] = [text.slice(0, cut), text.slice(cut + 3)], zhFirst = han.test(a);
+      return lang === "en" ? (zhFirst ? b : a) : (zhFirst ? a : b);
+    }
+    if (lang === "zh") return text;
+    if (Object.hasOwn(en, text)) return en[text];
+    if (text.includes(" · ")) {const parts = text.split(" · "); if (parts.some(p => Object.hasOwn(en, p))) return parts.map(p => en[p] ?? p).join(" · ");}
+    for (const [pattern, out] of patterns) if (pattern.test(text)) return text.replace(pattern, out);
+    return text;
+  }
+  const pick = (english, chinese) => lang === "en" ? english : chinese;
+  function capture(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const node = walker.currentNode, source = node.nodeValue.trim();
+      if (source && han.test(source) && !node.parentElement.closest("script,style,textarea,#language-select")) statics.push([node, null, node.nodeValue]);
+    }
+    for (const el of root.querySelectorAll("[title],[placeholder]")) for (const attr of ["title", "placeholder"]) {
+      const value = el.getAttribute(attr); if (value && han.test(value) && el.id !== "language-select") statics.push([el, attr, value]);
+    }
+  }
+  function apply() {
+    document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+    for (const [node, attr, source] of statics) {
+      if (attr) node.setAttribute(attr, t(source));
+      else node.nodeValue = source.replace(source.trim(), t(source.trim()));
+    }
+    $("language-select").value = lang;
+  }
+  function set(value) {
+    if (!["zh", "en"].includes(value) || value === lang) return;
+    lang = value; try {localStorage.setItem("he-language", value);} catch {}
+    apply(); for (const fn of listeners) fn();
+  }
+  capture(document.head); capture(document.body); apply();
+  $("language-select").onchange = () => set($("language-select").value);
+  window.addEventListener("storage", e => {if (e.key === "he-language" && e.newValue) set(e.newValue);});
+  return {t, pick, set, onChange: fn => listeners.push(fn), get lang() {return lang;}};
+})();
+const {t, pick} = L10N;
+const labels = {proposed:"有候选", ambiguous:"有歧义", source_conflict:"史料冲突", unreadable:"地图不可读", outside_map:"不在图内"};
+const statusLabel = status => t(labels[status]);
+let filtered = [], current = null, referenceMode = false, scale = 1, tx = 0, ty = 0;
+let imageLoadId = 0, currentImage = null, drag = null;
+const ctx = $("overlay").getContext("2d");
+const groups = new Map();
+for (const record of data.records) {
+  const key = record.annotation_image.path;
+  if (!groups.has(key)) groups.set(key, {name:record.source_record.battle_name || record.source_record.battle_id, n:0});
+  groups.get(key).n++;
+}
+$("map-filter").add(new Option("", "all"));
+for (const [path] of groups) $("map-filter").add(new Option("", path));
+function labelMaps() {
+  for (const option of $("map-filter").options) {
+    const group = groups.get(option.value);
+    option.textContent = group ? `${t(group.name)} (${group.n})` : pick(`All maps (${groups.size})`, `全部地图 (${groups.size})`);
+  }
+  $("round-counts").textContent = pick(`AI candidates, human review, not gold · ${data.records.length} questions · ${groups.size} maps`, `AI 候选，人工审核，非金标准 · ${data.records.length} 题 · ${groups.size} 张图`);
+  $("review-progress").dataset.prefix = t("已审");
+}
+labelMaps();
+
+function addMeta(container, entries) {
+  container.replaceChildren();
+  for (const [key, value] of entries) {
+    const dt = document.createElement("dt"), dd = document.createElement("dd");
+    dt.textContent = key; dd.textContent = value ?? "Not supplied";
+    container.append(dt, dd);
+  }
+}
+function sourceLink(id, url) {
+  const link = $(id);
+  try {const parsed = new URL(url); if (!['https:', 'http:'].includes(parsed.protocol)) throw Error(); link.href = parsed.href; link.classList.remove("hidden");}
+  catch {link.removeAttribute("href"); link.classList.add("hidden");}
+}
+// The model input is shown as plain text; quoted evidence that occurs verbatim in it is marked, nothing else changes.
+function evidenceSpans(text, evidence) {
+  const spans = [];
+  for (const part of (evidence || "").split(/["“”‘’]|\.\.\.|…|；|;/).map(s => s.trim().replace(/[.,，。]$/, ""))) {
+    if (part.length < 12) continue;
+    let at = text.indexOf(part);
+    while (at >= 0) {spans.push([at, at + part.length]); at = text.indexOf(part, at + part.length);}
+  }
+  spans.sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  for (const s of spans) if (merged.length && s[0] <= merged.at(-1)[1]) merged.at(-1)[1] = Math.max(merged.at(-1)[1], s[1]); else merged.push([...s]);
+  return merged;
+}
+function renderInputText(text, evidence) {
+  const box = $("input-text"); box.replaceChildren();
+  let pos = 0;
+  for (const [a, b] of evidenceSpans(text, evidence)) {
+    box.append(text.slice(pos, a));
+    const mark = document.createElement("mark"); mark.textContent = text.slice(a, b); box.append(mark); pos = b;
+  }
+  box.append(text.slice(pos));
+  const scroller = $("detail-scroll"), first = box.querySelector("mark");
+  scroller.scrollTop = first ? Math.max(0, first.offsetTop - scroller.offsetTop - 60) : 0;
+}
+const sourceReview = data.source_review || {};
+const adviceBadge = {"保留":"", "保留，几何需人工定":"ambiguous", "小改题目":"ambiguous", "重写题目":"ambiguous", "需换叙述原文":"source_conflict", "剔除":"source_conflict"};
+const adviceCounts = new Map();
+for (const r of data.records) {const advice = sourceReview[r.event_id]?.screening?.advice; if (advice) adviceCounts.set(advice, (adviceCounts.get(advice) || 0) + 1);}
+for (const [advice] of adviceCounts) $("screening-filter").add(new Option("", advice));
+function labelScreening() {
+  for (const option of [...$("screening-filter").options].slice(1)) {
+    const n = adviceCounts.get(option.value);
+    option.textContent = pick(`Screening: ${t(option.value)} (${n})`, `筛查：${option.value} (${n})`);
+  }
+}
+labelScreening();
+$("screening-filter").classList.toggle("hidden", !adviceCounts.size);
+let textView = null, preferredView = "original";
+function textVersions(record) {
+  // The model input is always event_text; these are only the other versions to compare against it.
+  const src = record.source_record;
+  return {original: src.source_text && src.source_text !== src.event_text ? src.source_text : null, ai: src.event_text_ai_paraphrase || null};
+}
+function showTextView(view) {
+  const versions = textVersions(current);
+  textView = [view, "original", "ai"].find(v => versions[v]) || null;
+  for (const button of document.querySelectorAll(".text-views button")) {
+    button.classList.toggle("hidden", !versions[button.dataset.view]);
+    button.setAttribute("aria-pressed", String(button.dataset.view === textView));
+  }
+  for (const id of ["compare-heading","source-passage"]) $(id).classList.toggle("hidden", !textView);
+  $("source-passage").textContent = textView ? versions[textView] : "";
+  $("source-passage").lang = textView === "original" ? (current.source_record.source_language || "") : "en";
+}
+function renderSourceReview() {
+  const info = sourceReview[current.event_id] || {}, s = info.screening, o = info.original, src = current.source_record;
+  $("source-review").classList.toggle("hidden", !s && !o);
+  $("screening").classList.toggle("hidden", !s);
+  $("screening-advice").textContent = t(s?.advice || ""); $("screening-advice").className = `badge ${adviceBadge[s?.advice] ?? ""}`;
+  const issue = (s?.issue || "").split("；").filter(part => !(src.event_text_ai_paraphrase && part.includes("AI 改写"))).join("；");
+  const issueText = issue.split("；").map(t).join(pick("; ", "；"));
+  $("screening-issue").textContent = src.event_text_ai_paraphrase ? `${issueText}\n${t("模型输入已换成史料原文（2026-10-19）。")}`.trim() : issueText;
+  $("rewrite-box").classList.toggle("hidden", !s?.rewritten_question); $("rewrite-question").textContent = s?.rewritten_question || "";
+  showTextView(preferredView);
+  const cite = $("source-cite"); cite.replaceChildren();
+  const citation = o ? [o.source, o.location].filter(Boolean).join(", ") : ([src.source_citation || [src.source_author, src.source_title, src.source_publication_year].filter(Boolean).join(", ")].filter(Boolean)[0] || `Map caption: ${src.source_section || "not recorded"}`);
+  const rights = o?.rights || src.rights_status;
+  cite.append(t("出处：") + citation + (rights ? ` · ${rights}` : "") + (src.translation_by ? ` · English translation: ${src.translation_by}` : ""));
+  const url = o?.url || src.article_url;
+  try {const parsed = new URL(url); if (['https:','http:'].includes(parsed.protocol)) {const a = document.createElement("a"); a.href = parsed.href; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = t("打开来源"); cite.append(a);}} catch {}
+  // Only warnings that change how the text should be judged stay visible; the rest is under 更多信息.
+  const notes = [];
+  if (s?.text_origin === "地图推导") notes.push(t("注意：这段文本由地图推导，没有对应的叙述原文。"));
+  else if (s?.ai_paraphrase && !src.event_text_ai_paraphrase) notes.push(t("注意：这段文本仍是 AI 改写，原文尚未取回。"));
+  if (o?.note) notes.push(t(o.note));
+  if (o && !o.extracted && o.suggested_public_domain_source && o.suggested_public_domain_source !== o.note) notes.push(t(`替换来源：${o.suggested_public_domain_source}`));
+  $("source-note").textContent = notes.join("\n");
+}
+function filterEvents(preferred) {
+  window.reviewFeature?.stash();
+  filtered = data.records.filter(r => ($("map-filter").value === "all" || r.annotation_image.path === $("map-filter").value) && ($("status-filter").value === "all" || r.status === $("status-filter").value) && ($("screening-filter").value === "all" || sourceReview[r.event_id]?.screening?.advice === $("screening-filter").value) && (!window.reviewFeature || window.reviewFeature.matches(r)));
+  $("event-select").replaceChildren(...filtered.map(r => new Option(`${r.event_id} · ${statusLabel(r.status)}`, r.event_id)));
+  const selected = filtered.find(r => r.event_id === preferred) || filtered[0];
+  if (selected) selectEvent(selected.event_id);
+  else {
+    imageLoadId++; current = null;
+    $("stage").classList.add("hidden"); $("event-detail").classList.add("hidden"); $("empty").classList.remove("hidden");
+    $("position").textContent = "0"; $("map-note").textContent = ""; $("map-version").textContent = "";
+    for (const id of ["previous","next","focus","fit","native","zoom","show-overlay","reference-mode","annotation-mode","event-select"]) $(id).disabled = true;
+    window.geometryEditor?.refresh();
+  }
+}
+function selectEvent(eventId) {
+  window.reviewFeature?.stash();
+  current = filtered.find(r => r.event_id === eventId);
+  if (!current) return;
+  $("stage").classList.remove("hidden"); $("event-detail").classList.remove("hidden"); $("empty").classList.add("hidden");
+  for (const id of ["fit","native","zoom","reference-mode","annotation-mode","event-select"]) $(id).disabled = false;
+  $("event-select").value = eventId;
+  const index = filtered.indexOf(current);
+  $("previous").disabled = index === 0; $("next").disabled = index === filtered.length - 1;
+  $("event-title").textContent = eventId;
+  $("event-status").textContent = statusLabel(current.status); $("event-status").className = `badge ${current.status}`;
+  $("confidence").textContent = `Confidence ${current.confidence}/5`;
+  $("geometry-type").textContent = `${current.geometry ? current.geometry.type : "No geometry"} · ${current.feature_type}`;
+  for (const [id, text] of Object.entries({question:current.source_record.target_question, location:t(current.location) || (current.geometry ? "" : t("无候选几何")),"text-evidence":t(current.text_evidence),"map-evidence":t(current.map_evidence),caveat:t(current.caveat),"original-text":current.source_record.source_text || ""})) $(id).textContent = text || "";
+  renderInputText(current.source_record.event_text || "", current.text_evidence);
+  addMeta($("source-meta"), [["Source kind",current.source_record.source_kind],["Text kind",current.source_record.text_kind],["Source section",current.source_record.source_section],["Checked this round",current.source_check],["Independence","Not established"],["Source caution",t(current.source_record.annotation_caution)],["Prior prediction exposure",current.prior_prediction_exposure ? "Yes; not blind" : "No previous prediction coordinates consulted this round"]]);
+  addMeta($("coordinate-meta"), [["Coordinate frame",current.annotation_image.path],["Dimensions",`${current.annotation_image.width} × ${current.annotation_image.height}`],["SHA-256",current.annotation_image.sha256],["Feature type (v1)",current.feature_type],["Target kind",current.target_kind],["Geometry semantics",current.geometry_semantics],["Tolerance","Not assigned"],["Human review","Pending"],["Eligible for scoring","No"]]);
+  $("coordinates").textContent = JSON.stringify(current.geometry);
+  sourceLink("text-link", current.source_record.article_url); sourceLink("map-link", current.source_record.map_url);
+  renderSourceReview();
+  $("position").textContent = `${index + 1} / ${filtered.length}`;
+  history.replaceState(null, "", `#${eventId}`);
+  showMap();
+  window.reviewFeature?.render();
+}
+function drawOverlay() {
+  const canvas = $("overlay"); ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if(window.geometryEditor){window.geometryEditor.draw(ctx);return;}
+  if (!current || referenceMode || !$("show-overlay").checked || !current.geometry) return;
+  const geom = current.geometry, points = geom.coordinates;
+  const color = current.status === "ambiguous" ? "#a85500" : "#cc0066";
+  ctx.beginPath(); points.forEach((p,i) => i ? ctx.lineTo(p[0],p[1]) : ctx.moveTo(p[0],p[1]));
+  if (geom.type === "polygon") {ctx.closePath(); ctx.fillStyle = current.status === "ambiguous" ? "#a855001c" : "#cc00661c"; ctx.fill();}
+  ctx.strokeStyle = "#fffffff0"; ctx.lineWidth = 5 / scale; ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.stroke();
+  ctx.strokeStyle = color; ctx.lineWidth = 2.5 / scale; ctx.setLineDash(current.status === "ambiguous" ? [7/scale,5/scale] : []); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(points[0][0],points[0][1],3.5/scale,0,Math.PI*2); ctx.fill();
+}
+function transform() {
+  $("stage").style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+  $("zoom").value = Math.round(scale * 100); $("zoom-value").textContent = `${Math.round(scale*100)}%`; drawOverlay();
+}
+function fit() {
+  if (!currentImage || !current) return;
+  const box = $("viewport").getBoundingClientRect();
+  scale = Math.min((box.width-24)/currentImage.width,(box.height-24)/currentImage.height,1);
+  scale = Math.max(.1, scale); tx = (box.width-currentImage.width*scale)/2; ty = (box.height-currentImage.height*scale)/2; transform();
+}
+function zoomTo(next, cx, cy) {
+  if (!currentImage || !current) return;
+  const box = $("viewport").getBoundingClientRect(); cx ??= box.width/2; cy ??= box.height/2;
+  next = Math.max(.1,Math.min(4,next)); tx = cx-(cx-tx)*next/scale; ty = cy-(cy-ty)*next/scale; scale = next; transform();
+}
+function focusCandidate() {
+  const geom=window.geometryEditor?.geometry() || current?.geometry;
+  if (!geom || referenceMode) return;
+  const points=geom.coordinates, xs=points.map(p=>p[0]), ys=points.map(p=>p[1]);
+  const minX=Math.min(...xs), maxX=Math.max(...xs), minY=Math.min(...ys), maxY=Math.max(...ys), box=$("viewport").getBoundingClientRect();
+  scale=Math.min(3,box.width/(maxX-minX+200),box.height/(maxY-minY+200)); scale=Math.max(.1,scale);
+  tx=box.width/2-(minX+maxX)*scale/2; ty=box.height/2-(minY+maxY)*scale/2; transform();
+}
+function showMap() {
+  if (!current) return;
+  $("annotation-mode").setAttribute("aria-pressed",String(!referenceMode)); $("reference-mode").setAttribute("aria-pressed",String(referenceMode));
+  $("focus").disabled=referenceMode || !current.geometry; $("show-overlay").disabled=referenceMode || !current.geometry;
+  const meta=referenceMode ? current.reference_image : current.annotation_image;
+  const asset=data.images[meta.path], ticket=++imageLoadId;
+  $("map-version").textContent=`${referenceMode ? "Reference" : "Annotation"} · ${meta.width} × ${meta.height} · ${meta.sha256.slice(0,12)}`;
+  let note="";
+  if (referenceMode) note=t("参考图 · 不显示候选");
+  else if (current.status==="ambiguous" && current.geometry) note=t("候选只是假设，范围未定");
+  else if (!current.geometry) note=`${statusLabel(current.status)} · ${pick("no candidate geometry","没有候选几何")}`;
+  $("map-note").textContent=note;
+  $("map-image").alt=`${current.source_record.battle_name || current.source_record.battle_id}: ${referenceMode ? "reference map" : "annotation map"}`;
+  const img=$("map-image");
+  currentImage=null;
+  window.geometryEditor?.refresh();
+  img.onload=() => {if(ticket!==imageLoadId) return;currentImage=asset;img.width=meta.width;img.height=meta.height;$("overlay").width=meta.width;$("overlay").height=meta.height;$("stage").style.width=`${meta.width}px`;$("stage").style.height=`${meta.height}px`;fit();window.geometryEditor?.refresh();};
+  img.onerror=() => {if(ticket===imageLoadId) $("map-note").textContent="Image failed to load";};
+  img.src=asset.url;
+}
+$("map-filter").onchange=() => filterEvents(current?.event_id);
+$("status-filter").onchange=() => filterEvents(current?.event_id);
+$("screening-filter").onchange=() => filterEvents(current?.event_id);
+for (const button of document.querySelectorAll(".text-views button")) button.onclick=() => {preferredView = button.dataset.view; renderSourceReview();};
+$("event-select").onchange=() => selectEvent($("event-select").value);
+$("previous").onclick=() => {const index=filtered.indexOf(current);if(index>0) selectEvent(filtered[index-1].event_id);};
+$("next").onclick=() => {const index=filtered.indexOf(current);if(index>=0 && index<filtered.length-1) selectEvent(filtered[index+1].event_id);};
+$("annotation-mode").onclick=() => {referenceMode=false;showMap();};
+$("reference-mode").onclick=() => {referenceMode=true;showMap();};
+$("fit").onclick=fit; $("native").onclick=() => zoomTo(1); $("focus").onclick=focusCandidate;
+$("zoom").oninput=() => zoomTo(Number($("zoom").value)/100); $("show-overlay").onchange=drawOverlay;
+$("show-human").onchange=drawOverlay;
+$("viewport").addEventListener("wheel",e => {if(!current) return;e.preventDefault();const b=$("viewport").getBoundingClientRect();zoomTo(scale*Math.exp(-e.deltaY*.0015),e.clientX-b.left,e.clientY-b.top);},{passive:false});
+$("viewport").addEventListener("pointerdown",e=>{if(!current || e.button!==0 || window.geometryEditor?.active())return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,tx,ty};$("viewport").setPointerCapture(e.pointerId);$("viewport").classList.add("dragging");});
+$("viewport").addEventListener("pointermove",e=>{if(!drag || drag.id!==e.pointerId)return;tx=drag.tx+e.clientX-drag.x;ty=drag.ty+e.clientY-drag.y;transform();});
+function endDrag(){drag=null;$("viewport").classList.remove("dragging");}
+$("viewport").addEventListener("pointerup",endDrag);$("viewport").addEventListener("pointercancel",endDrag);
+new ResizeObserver(() => {if(current && currentImage) fit();}).observe($("viewport"));
+window.addEventListener("hashchange",()=>{const id=location.hash.slice(1);if(data.records.some(r=>r.event_id===id)){$("map-filter").value="all";$("status-filter").value="all";$("screening-filter").value="all";filterEvents(id);}});
+const battleMap=data.records.find(r=>r.source_record.battle_id===new URLSearchParams(location.search).get("battle"))?.annotation_image.path;
+if(battleMap) $("map-filter").value=battleMap;
+lucide.createIcons(); filterEvents(location.hash.slice(1));
+// A language switch relabels the lists and redraws the open question; drafts are stashed and kept.
+L10N.onChange(() => {labelMaps(); labelScreening(); filterEvents(current?.event_id);});
+</script>
+<script>__GEOMETRY_EDITOR_SOURCE__</script>
+<script>__REVIEW_UI_SOURCE__</script>
+</body>
+</html>

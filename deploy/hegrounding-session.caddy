@@ -1,0 +1,34 @@
+experiment.chanlukaka.com {
+    encode zstd gzip
+    header X-Robots-Tag "noindex, nofollow"
+    header Strict-Transport-Security "max-age=31536000"
+    request_body {
+        max_size 537MB
+    }
+    @login path /login.html /login.js /login.css /i18n.js /i18n.css /auth/login /auth/logout /auth/session
+    handle @login {
+        reverse_proxy 127.0.0.1:8880 {
+            header_up X-Real-IP {remote_host}
+        }
+    }
+    handle {
+        route {
+            forward_auth 127.0.0.1:8880 {
+                uri /auth/check
+            }
+            redir /labels /labels/ 308
+            handle_path /labels/* {
+                reverse_proxy 127.0.0.1:8879 {
+                    header_up -Authorization
+                    header_up -Cookie
+                }
+            }
+            handle {
+                reverse_proxy 127.0.0.1:8877 {
+                    header_up -Authorization
+                    header_up -Cookie
+                }
+            }
+        }
+    }
+}

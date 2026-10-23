@@ -1,6 +1,8 @@
 # Napoleon Pilot Annotation
 
-这是一组待审核的 20 条候选，不是已经验证的 benchmark。原 HLS 数据保留。
+当前默认是 Maps 目录选图后的 100 条候选，不是已经验证的 benchmark。
+本轮新增 88 条中 64 条来自地图推导，需补独立文字；见 `MAP_EXPANSION_REVIEW.md`。
+旧 20 条及三张配图已归档；新资料和审核事项见 [Maps 候选清单](MAP_FIRST_CANDIDATES.md)。
 
 ## 启动
 
@@ -11,7 +13,7 @@ bash benchmark/run_napoleon_annotation.sh --annotator eric
 ```
 
 默认跳过已保存记录。复查使用 `--review`；`--start 5` 从原始输入第六条开始。
-第二位标注者使用独立文件，例如 `--output benchmark/napoleon_annotations_reviewer2.jsonl`。
+第二位标注者使用独立文件，例如 `--output benchmark/map_first_annotations_reviewer2.jsonl`。
 窗口需要本地图形桌面。依赖为现有环境中的 matplotlib 和 Pillow。
 
 ## 标注操作
@@ -66,7 +68,9 @@ bash benchmark/run_napoleon_annotation.sh --annotator eric
 点/线容差记录原图像素数，目前尚未接入正式评测；不确定时可填 `0`，表示不加额外容差。
 证据本身只能支持大致范围时，应选择区域标注或歧义状态，不通过任意放大容差解决。
 
-## 数据来源与限制
+## 旧数据来源与限制（已归档）
+
+本节仅追溯旧 N 系列；当前 MF 系列以 [新资料清单](MAP_FIRST_CANDIDATES.md) 为准。
 
 | ID | 数量 | 文章及地图 |
 |---|---:|---|
@@ -79,7 +83,8 @@ bash benchmark/run_napoleon_annotation.sh --annotator eric
 这批数据有意包含精度不足的候选，用来衡量可标注性；不能为了凑 20 个 accepted 而猜测。
 先标前 5 条，讨论规则，再继续其余样本。若大多数无法定位，应寻找更详细的地图。
 
-已目视检查的三张图片均为低分辨率示意地图，不应声称为拿破仑时期原始地图。
+以下关于旧三图的说明仅供归档追溯，不描述当前默认候选：
+已目视检查的旧三张图片均为低分辨率示意地图，不应声称为拿破仑时期原始地图。
 Borkowo 650x431，Sochocin 600x393，Wavre 292x358；放大不会增加原始细节。
 河流和聚落可辨认，但高地、单个桥端、渡口及营地边界未必能确定。
 Wavre 图有 French advance 箭头，可能泄露答案。当前只收录原图，未生成遮挡版。
@@ -91,15 +96,15 @@ split_group 都是 wkra_1806，未来必须一起分组，不能随机跨训练/
 
 ## 保存与导出
 
-`napoleon_annotations.jsonl` 按追加方式保留修改历史，同一 event_id 最后一条为当前版本。
+`map_first_annotations.jsonl` 按追加方式保留修改历史，同一 event_id 最后一条为当前版本。
 保存原图左上角为原点的像素坐标，x 向右、y 向下；不虚构经纬度或米/像素。
 区域坐标不重复首顶点。只有点标注保留兼容字段 geo_gold_px，线/面该字段为 null。
 
 ```bash
 .venv/bin/python benchmark/assemble_geo_benchmark.py \
-  --candidates benchmark/napoleon_pilot_20.jsonl \
-  --annotations benchmark/napoleon_annotations.jsonl \
-  --output benchmark/napoleon_reviewed.jsonl
+  --candidates benchmark/map_first_candidates.jsonl \
+  --annotations benchmark/map_first_annotations.jsonl \
+  --output benchmark/map_first_reviewed.jsonl
 ```
 
 导出仅包含最新 accepted 标注。该文件是审核后的数据，不代表已能运行旧 VLM eval：

@@ -1,0 +1,69 @@
+{
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_path": "/Users/ericchen/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "source_input": "benchmark/atlas/runs/zurich10_20260916_162847/input.zip",
+  "input_zip_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "selected_event_ids": [
+    "Z0001",
+    "Z0002",
+    "Z0003",
+    "Z0004",
+    "Z0005",
+    "Z0006",
+    "Z0007",
+    "Z0008",
+    "Z0009",
+    "Z0010"
+  ],
+  "padding": {
+    "policy": "native_pixels_right_bottom_padding_no_resize",
+    "original_size_wh": [
+      1538,
+      1754
+    ],
+    "canvas_size_wh": [
+      1568,
+      1760
+    ],
+    "padding_ltrb": [
+      0,
+      0,
+      30,
+      6
+    ],
+    "content_scale_xy": [
+      1.0,
+      1.0
+    ],
+    "original_rgb_sha256": "bb1a0ac2cd0e6fe155ea07aed6913f9a4e6996406bed65eb36c061e65bbd5e22",
+    "canvas_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+    "original_pixels_verified": true
+  },
+  "image_grid_thw": [
+    [
+      1,
+      110,
+      98
+    ]
+  ],
+  "processor_size": {
+    "longest_edge": 16777216,
+    "shortest_edge": 65536
+  },
+  "processor_do_resize": false,
+  "prompt_and_questions_unchanged": true,
+  "gold_not_loaded": true,
+  "spatial_exclusions_declared_before_run": [
+    "Z0009",
+    "Z0010"
+  ],
+  "outside_map_diagnostic": "Z0003",
+  "max_output_tokens": 4096,
+  "comparison": "Historical default-resize run vs new right/bottom-padding no-resize run; not a fresh paired baseline"
+}

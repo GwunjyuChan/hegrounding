@@ -1,0 +1,11 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "predictions": [],
+  "errors": [
+    {
+      "event_id": "Z0009",
+      "error_type": "JSONDecodeError"
+    }
+  ]
+}

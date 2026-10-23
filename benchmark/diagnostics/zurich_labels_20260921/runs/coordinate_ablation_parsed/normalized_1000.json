@@ -1,0 +1,112 @@
+{
+  "map_version": "1e7f8c48bababd0f6cd342da",
+  "model": "Qwen/Qwen3-VL-8B-Instruct [label-normalized_1000]",
+  "coordinate_system": "image_pixels_top_left",
+  "predictions": [
+    {
+      "event_id": "P001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1076.6,
+            368.34
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            845.9000000000001,
+            254.32999999999998
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P003",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            856.666,
+            357.816
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1135.044,
+            762.99
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1207.3300000000002,
+            996.2719999999999
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P006",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1230.4,
+            1543.52
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            615.2,
+            754.22
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            1076.6,
+            368.34
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    }
+  ],
+  "errors": []
+}

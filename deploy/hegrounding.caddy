@@ -1,0 +1,23 @@
+experiment.chanlukaka.com {
+    encode zstd gzip
+    header X-Robots-Tag "noindex, nofollow"
+    header Strict-Transport-Security "max-age=31536000"
+    request_body {
+        max_size 537MB
+    }
+    # Caddy 2.6 calls this basicauth (renamed basic_auth in 2.8).
+    basicauth {
+        eric PASSWORD_HASH
+    }
+    redir /labels /labels/ 308
+    handle_path /labels/* {
+        reverse_proxy 127.0.0.1:8879 {
+            header_up -Authorization
+        }
+    }
+    handle {
+        reverse_proxy 127.0.0.1:8877 {
+            header_up -Authorization
+        }
+    }
+}

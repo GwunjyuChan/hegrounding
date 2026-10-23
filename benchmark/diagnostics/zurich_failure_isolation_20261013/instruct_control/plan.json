@@ -1,0 +1,72 @@
+{
+  "calls": [
+    {
+      "id": "instruct_labels_synthetic_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "image": "synthetic.png",
+      "mode": "normalized_1000",
+      "system": "Locate the center of each requested printed place-name label in the supplied image. Locate the printed text itself, not a settlement symbol, geographic center or event. Case and diacritics may differ; do not substitute a different or qualified name. Use null if the complete requested label cannot be identified in this image. Return JSON only: {\"labels\":[{\"name\":\"requested name\",\"point\":[x,y]}]}. Include exactly one entry per requested name; point may be null. The origin is top left; x increases rightward and y downward. Use relative coordinates from 0 to 1000 on each axis, NOT pixel coordinates. The right image edge is x=1000 and the bottom edge is y=1000.",
+      "user": {
+        "width": 1568,
+        "height": 1760,
+        "names": [
+          "Altstetten"
+        ]
+      }
+    },
+    {
+      "id": "instruct_labels_synthetic_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "image": "synthetic.png",
+      "mode": "pixels",
+      "system": "Locate the center of each requested printed place-name label in the supplied image. Locate the printed text itself, not a settlement symbol, geographic center or event. Case and diacritics may differ; do not substitute a different or qualified name. Use null if the complete requested label cannot be identified in this image. Return JSON only: {\"labels\":[{\"name\":\"requested name\",\"point\":[x,y]}]}. Include exactly one entry per requested name; point may be null. The origin is top left; x increases rightward and y downward. Use image pixel coordinates: 0 <= x < width, 0 <= y < height.",
+      "user": {
+        "width": 1568,
+        "height": 1760,
+        "names": [
+          "Altstetten"
+        ]
+      }
+    },
+    {
+      "id": "instruct_labels_full_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "image": "full.png",
+      "mode": "normalized_1000",
+      "system": "Locate the center of each requested printed place-name label in the supplied image. Locate the printed text itself, not a settlement symbol, geographic center or event. Case and diacritics may differ; do not substitute a different or qualified name. Use null if the complete requested label cannot be identified in this image. Return JSON only: {\"labels\":[{\"name\":\"requested name\",\"point\":[x,y]}]}. Include exactly one entry per requested name; point may be null. The origin is top left; x increases rightward and y downward. Use relative coordinates from 0 to 1000 on each axis, NOT pixel coordinates. The right image edge is x=1000 and the bottom edge is y=1000.",
+      "user": {
+        "width": 1568,
+        "height": 1760,
+        "names": [
+          "Altstetten"
+        ]
+      }
+    },
+    {
+      "id": "instruct_labels_full_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "image": "full.png",
+      "mode": "pixels",
+      "system": "Locate the center of each requested printed place-name label in the supplied image. Locate the printed text itself, not a settlement symbol, geographic center or event. Case and diacritics may differ; do not substitute a different or qualified name. Use null if the complete requested label cannot be identified in this image. Return JSON only: {\"labels\":[{\"name\":\"requested name\",\"point\":[x,y]}]}. Include exactly one entry per requested name; point may be null. The origin is top left; x increases rightward and y downward. Use image pixel coordinates: 0 <= x < width, 0 <= y < height.",
+      "user": {
+        "width": 1568,
+        "height": 1760,
+        "names": [
+          "Altstetten"
+        ]
+      }
+    }
+  ],
+  "model": [
+    "Qwen/Qwen3-VL-8B-Instruct",
+    "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"
+  ],
+  "do_sample": false,
+  "max_new_tokens": 4096,
+  "runner_sha256": "320869b122365ee3d39d9ca90c82c10540c290bb5549c5121c70785ee6dd56c0",
+  "scope": "positive control, not model ranking"
+}

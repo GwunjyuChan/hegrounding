@@ -1,0 +1,30 @@
+{
+  "map_version": "1e7f8c48bababd0f6cd342da",
+  "gold_snapshot": [],
+  "methods": {
+    "pixels": {
+      "all_reviewed": {
+        "n": 0,
+        "hits": 0,
+        "hit_rate": null
+      },
+      "confidence_5": {
+        "n": 0,
+        "hits": 0,
+        "hit_rate": null
+      }
+    },
+    "normalized_1000": {
+      "all_reviewed": {
+        "n": 0,
+        "hits": 0,
+        "hit_rate": null
+      },
+      "confidence_5": {
+        "n": 0,
+        "hits": 0,
+        "hit_rate": null
+      }
+    }
+  }
+}

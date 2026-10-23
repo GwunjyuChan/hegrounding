@@ -1,0 +1,1527 @@
+{
+  "reference_status": "assistant_provisional_not_human_verified",
+  "reference_sha256": "80d14acc7adf324f73ba6df4def104d6c94babc8e389ea7ea79b1c19aa467999",
+  "audit_sha256": "e7d62d0728d8e53c2211a5aa3eb935931f44db9ca687792947a2abea1b86d977",
+  "plan_sha256": "a82b83c90d0085c2ff8db4dcb890e3ad38336f0bb8429ad24eb5cfe1370d4c21",
+  "single_audit_sha256": "956269107d7cb7ea99d6f67520c959549af081ebaf0bb212844c21c4f937a81f",
+  "single_plan_sha256": "f4ea88745439466210d0cc1d3ea7eea1d9149bc8ceda55ee5db592bb36c84108",
+  "instruct_control_audit_sha256": "f4e10e99fc379c12e9bfe29ef2ddb5e0b95fe315f5bc4912726031f1b6bdb404",
+  "original_interruption": {
+    "status": "stopped_adaptively",
+    "completed_calls": 4,
+    "planned_calls": 16,
+    "interrupted_unscored_call": "labels_full_pixels_s0",
+    "reason": "Both multi-target synthetic calibration calls exhausted the token budget; isolate target count before continuing the map matrix.",
+    "new_protocol": "../ADAPTATION.md",
+    "interrupted_call_is_not_a_model_failure": true
+  },
+  "followup_completion": {
+    "completed_all_tasks": true,
+    "stop_reason": null,
+    "finished_at": "2026-10-13T17:05:27.959925+00:00",
+    "attempted": 12,
+    "unattempted": []
+  },
+  "uncompleted_original_calls": [
+    "labels_full_pixels_s0",
+    "labels_full_normalized_1000_s0",
+    "labels_full_normalized_1000_s1",
+    "labels_full_pixels_s1",
+    "labels_tile_TL",
+    "labels_tile_TR",
+    "labels_tile_BL",
+    "labels_tile_BR",
+    "event_Z0003_pixels",
+    "event_Z0003_normalized_1000",
+    "event_Z0004_pixels",
+    "event_Z0004_normalized_1000"
+  ],
+  "text": {
+    "Z0003": {
+      "status": "valid",
+      "answer": "Regensdorf",
+      "expected": "Regensdorf",
+      "exact_match": true
+    },
+    "Z0004": {
+      "status": "valid",
+      "answer": "Altstetten",
+      "expected": "Altstetten",
+      "exact_match": true
+    }
+  },
+  "labels": {
+    "labels_synthetic_pixels_s0": {
+      "Altstetten": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      },
+      "ZURICH": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      },
+      "Regensdorf": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      }
+    },
+    "labels_synthetic_normalized_1000_s0": {
+      "Altstetten": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      },
+      "ZURICH": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      },
+      "Regensdorf": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      }
+    },
+    "single_labels_synthetic_normalized_1000_s0": {
+      "Altstetten": {
+        "error_type": "IncompleteThinking",
+        "expected_present": true
+      }
+    },
+    "single_labels_synthetic_pixels_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          114,
+          184
+        ],
+        "reference_box": [
+          156,
+          305,
+          323,
+          334
+        ],
+        "abstained": false,
+        "center_error_px": 184.69028128193426,
+        "distance_to_box_px": 128.08200498118384,
+        "inside_reference_box": false
+      }
+    },
+    "single_labels_full_normalized_1000_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          784.0,
+          352.0
+        ],
+        "reference_box": [
+          836,
+          247,
+          952,
+          284
+        ],
+        "abstained": false,
+        "center_error_px": 139.9365927840177,
+        "distance_to_box_px": 85.60373823613078,
+        "inside_reference_box": false
+      }
+    },
+    "single_labels_full_pixels_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          550,
+          128
+        ],
+        "reference_box": [
+          836,
+          247,
+          952,
+          284
+        ],
+        "abstained": false,
+        "center_error_px": 370.46221129826455,
+        "distance_to_box_px": 309.7692689728921,
+        "inside_reference_box": false
+      }
+    },
+    "single_labels_tile_TL": {
+      "Altstetten": {
+        "expected_present": false,
+        "point": null,
+        "correct_abstention": true
+      }
+    },
+    "single_labels_tile_TR": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          76.80000000000001,
+          179.20000000000002
+        ],
+        "reference_box": [
+          36,
+          247,
+          152,
+          284
+        ],
+        "abstained": false,
+        "center_error_px": 87.99732950493438,
+        "distance_to_box_px": 67.79999999999998,
+        "inside_reference_box": false
+      }
+    },
+    "single_labels_tile_BL": {
+      "Altstetten": {
+        "expected_present": false,
+        "point": null,
+        "correct_abstention": true
+      }
+    },
+    "single_labels_tile_BR": {
+      "Altstetten": {
+        "expected_present": false,
+        "point": [
+          249.60000000000002,
+          399.168
+        ],
+        "correct_abstention": false
+      }
+    },
+    "instruct_labels_synthetic_normalized_1000_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          225.79199999999997,
+          332.64
+        ],
+        "reference_box": [
+          156,
+          305,
+          323,
+          334
+        ],
+        "abstained": false,
+        "center_error_px": 18.988650926277,
+        "distance_to_box_px": 0.0,
+        "inside_reference_box": true
+      }
+    },
+    "instruct_labels_synthetic_pixels_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          150,
+          185
+        ],
+        "reference_box": [
+          156,
+          305,
+          323,
+          334
+        ],
+        "abstained": false,
+        "center_error_px": 161.55649166777545,
+        "distance_to_box_px": 120.14990636700472,
+        "inside_reference_box": false
+      }
+    },
+    "instruct_labels_full_normalized_1000_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          862.4000000000001,
+          260.47999999999996
+        ],
+        "reference_box": [
+          836,
+          247,
+          952,
+          284
+        ],
+        "abstained": false,
+        "center_error_px": 31.99625603097954,
+        "distance_to_box_px": 0.0,
+        "inside_reference_box": true
+      }
+    },
+    "instruct_labels_full_pixels_s0": {
+      "Altstetten": {
+        "expected_present": true,
+        "point": [
+          568,
+          148
+        ],
+        "reference_box": [
+          836,
+          247,
+          952,
+          284
+        ],
+        "abstained": false,
+        "center_error_px": 346.5288588270824,
+        "distance_to_box_px": 285.70089254323307,
+        "inside_reference_box": false
+      }
+    }
+  },
+  "events": {
+    "single_event_Z0003_pixels": {
+      "status": "valid",
+      "error_type": null,
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            860,
+            280
+          ]
+        ]
+      },
+      "reference": {
+        "outside_map": true,
+        "point": null
+      },
+      "mode": "pixels",
+      "outside_map_abstention": false
+    },
+    "single_event_Z0003_normalized_1000": {
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "geometry": null,
+      "reference": {
+        "outside_map": true,
+        "point": null
+      },
+      "mode": "normalized_1000"
+    },
+    "single_event_Z0004_pixels": {
+      "status": "valid",
+      "error_type": null,
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            534,
+            217
+          ]
+        ]
+      },
+      "reference": {
+        "outside_map": false,
+        "point": [
+          820,
+          290
+        ],
+        "status": "unchanged_provisional_human_event_point"
+      },
+      "mode": "pixels",
+      "distance_to_provisional_event_point_px": 295.16944286290885
+    },
+    "single_event_Z0004_normalized_1000": {
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "geometry": null,
+      "reference": {
+        "outside_map": false,
+        "point": [
+          820,
+          290
+        ],
+        "status": "unchanged_provisional_human_event_point"
+      },
+      "mode": "normalized_1000"
+    }
+  },
+  "calls": [
+    {
+      "id": "text_Z0003",
+      "kind": "text",
+      "seed": 0,
+      "mode": null,
+      "image": null,
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 26.4799391659908,
+      "usage": {
+        "input_tokens": 468,
+        "output_tokens": 330,
+        "thinking_tokens": 305,
+        "answer_tokens": 25,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 0,
+        "image_preprocessing": null
+      },
+      "final_answer": "{\n  \"event_id\": \"Z0003\",\n  \"place\": \"Regensdorf\"\n}",
+      "prediction": {
+        "event_id": "Z0003",
+        "place": "Regensdorf"
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "text_Z0004",
+      "kind": "text",
+      "seed": 0,
+      "mode": null,
+      "image": null,
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 28.376486832741648,
+      "usage": {
+        "input_tokens": 278,
+        "output_tokens": 375,
+        "thinking_tokens": 350,
+        "answer_tokens": 25,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 0,
+        "image_preprocessing": null
+      },
+      "final_answer": "{\n  \"event_id\": \"Z0004\",\n  \"place\": \"Altstetten\"\n}",
+      "prediction": {
+        "event_id": "Z0004",
+        "place": "Altstetten"
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "labels_synthetic_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "synthetic.png",
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "elapsed_seconds": 352.44329741597176,
+      "usage": {
+        "input_tokens": 2877,
+        "output_tokens": 4096,
+        "thinking_tokens": 4096,
+        "answer_tokens": 0,
+        "thinking_completed": false,
+        "reached_token_limit": true,
+        "stop_reason": "token_limit",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -1.0,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": null,
+      "prediction": null,
+      "model_edition": "thinking"
+    },
+    {
+      "id": "labels_synthetic_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "synthetic.png",
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "elapsed_seconds": 351.1637739590369,
+      "usage": {
+        "input_tokens": 2901,
+        "output_tokens": 4096,
+        "thinking_tokens": 4096,
+        "answer_tokens": 0,
+        "thinking_completed": false,
+        "reached_token_limit": true,
+        "stop_reason": "token_limit",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -1.0,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": null,
+      "prediction": null,
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_synthetic_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "synthetic.png",
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "elapsed_seconds": 347.31086487462744,
+      "usage": {
+        "input_tokens": 2891,
+        "output_tokens": 4096,
+        "thinking_tokens": 4096,
+        "answer_tokens": 0,
+        "thinking_completed": false,
+        "reached_token_limit": true,
+        "stop_reason": "token_limit",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -1.0,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": null,
+      "prediction": null,
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_synthetic_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "synthetic.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 116.97370595810935,
+      "usage": {
+        "input_tokens": 2867,
+        "output_tokens": 1310,
+        "thinking_tokens": 1288,
+        "answer_tokens": 22,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -1.0,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[114,184]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              114,
+              184
+            ]
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_full_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 283.9400418330915,
+      "usage": {
+        "input_tokens": 2891,
+        "output_tokens": 3318,
+        "thinking_tokens": 3296,
+        "answer_tokens": 22,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[500,200]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              784.0,
+              352.0
+            ]
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_full_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 112.12879520794377,
+      "usage": {
+        "input_tokens": 2867,
+        "output_tokens": 1269,
+        "thinking_tokens": 1247,
+        "answer_tokens": 22,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[550,128]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              550,
+              128
+            ]
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_tile_TL",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "tile_TL.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 30.01190962502733,
+      "usage": {
+        "input_tokens": 894,
+        "output_tokens": 365,
+        "thinking_tokens": 349,
+        "answer_tokens": 16,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 700,
+        "image_preprocessing": {
+          "original_size_wh": [
+            800,
+            896
+          ],
+          "processed_size_wh": [
+            800,
+            896
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 700,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "e9898515fdeeb7de39860d865c50b5db668458222d79a9cb78962ea4e795b5ec",
+          "pixel_values_shape": [
+            2800,
+            1536
+          ],
+          "tensor_min": -0.9215686321258545,
+          "tensor_max": 0.9843137264251709
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":null}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": null
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_tile_TR",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "tile_TR.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 147.7712956671603,
+      "usage": {
+        "input_tokens": 866,
+        "output_tokens": 1899,
+        "thinking_tokens": 1877,
+        "answer_tokens": 22,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 672,
+        "image_preprocessing": {
+          "original_size_wh": [
+            768,
+            896
+          ],
+          "processed_size_wh": [
+            768,
+            896
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 672,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "dabb622d2018a7acb687e59df25977003ce6c1f09083a0c2493fc352ffab9c4f",
+          "pixel_values_shape": [
+            2688,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[100,200]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              76.80000000000001,
+              179.20000000000002
+            ]
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_tile_BL",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "tile_BL.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 16.040253708139062,
+      "usage": {
+        "input_tokens": 869,
+        "output_tokens": 182,
+        "thinking_tokens": 166,
+        "answer_tokens": 16,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 675,
+        "image_preprocessing": {
+          "original_size_wh": [
+            800,
+            864
+          ],
+          "processed_size_wh": [
+            800,
+            864
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 675,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "5ca35ce1442b4d1c40eb11401e5daa97dc27cd3a3f2104b7136266106a7d2ba2",
+          "pixel_values_shape": [
+            2700,
+            1536
+          ],
+          "tensor_min": -0.8352941274642944,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":null}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": null
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_labels_tile_BR",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "tile_BR.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 149.38205937528983,
+      "usage": {
+        "input_tokens": 842,
+        "output_tokens": 1933,
+        "thinking_tokens": 1911,
+        "answer_tokens": 22,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 648,
+        "image_preprocessing": {
+          "original_size_wh": [
+            768,
+            864
+          ],
+          "processed_size_wh": [
+            768,
+            864
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 648,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "bf6679095498a769418ed5e72173d9881dbcca564c0a4c0c56e3e99f4472763e",
+          "pixel_values_shape": [
+            2592,
+            1536
+          ],
+          "tensor_min": -0.8823529481887817,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[325,462]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              249.60000000000002,
+              399.168
+            ]
+          }
+        ]
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_event_Z0003_pixels",
+      "kind": "event",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 205.23772633401677,
+      "usage": {
+        "input_tokens": 3256,
+        "output_tokens": 2419,
+        "thinking_tokens": 2371,
+        "answer_tokens": 48,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\n  \"event_id\": \"Z0003\",\n  \"geometry\": {\n    \"type\": \"point\",\n    \"coordinates\": [\n      [860, 280]\n    ]\n  }\n}",
+      "prediction": {
+        "event_id": "Z0003",
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              860,
+              280
+            ]
+          ]
+        }
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_event_Z0003_normalized_1000",
+      "kind": "event",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "full.png",
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "elapsed_seconds": 349.0683441250585,
+      "usage": {
+        "input_tokens": 3280,
+        "output_tokens": 4096,
+        "thinking_tokens": 4096,
+        "answer_tokens": 0,
+        "thinking_completed": false,
+        "reached_token_limit": true,
+        "stop_reason": "token_limit",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": null,
+      "prediction": null,
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_event_Z0004_pixels",
+      "kind": "event",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 299.0035131247714,
+      "usage": {
+        "input_tokens": 3066,
+        "output_tokens": 3513,
+        "thinking_tokens": 3465,
+        "answer_tokens": 48,
+        "thinking_completed": true,
+        "reached_token_limit": false,
+        "stop_reason": "eos",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": "{\n  \"event_id\": \"Z0004\",\n  \"geometry\": {\n    \"type\": \"point\",\n    \"coordinates\": [\n      [534, 217]\n    ]\n  }\n}",
+      "prediction": {
+        "event_id": "Z0004",
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              534,
+              217
+            ]
+          ]
+        }
+      },
+      "model_edition": "thinking"
+    },
+    {
+      "id": "single_event_Z0004_normalized_1000",
+      "kind": "event",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "full.png",
+      "status": "error",
+      "error_type": "IncompleteThinking",
+      "elapsed_seconds": 346.19462545774877,
+      "usage": {
+        "input_tokens": 3090,
+        "output_tokens": 4096,
+        "thinking_tokens": 4096,
+        "answer_tokens": 0,
+        "thinking_completed": false,
+        "reached_token_limit": true,
+        "stop_reason": "token_limit",
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ],
+          "tensor_min": -0.9764705896377563,
+          "tensor_max": 1.0
+        }
+      },
+      "final_answer": null,
+      "prediction": null,
+      "model_edition": "thinking"
+    },
+    {
+      "id": "instruct_labels_synthetic_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "synthetic.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 13.75469054095447,
+      "usage": {
+        "input_tokens": 2889,
+        "output_tokens": 21,
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ]
+        },
+        "reached_token_limit": false
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[144,189]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              225.79199999999997,
+              332.64
+            ]
+          }
+        ]
+      },
+      "model_edition": "instruct"
+    },
+    {
+      "id": "instruct_labels_synthetic_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "synthetic.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 12.34731529140845,
+      "usage": {
+        "input_tokens": 2865,
+        "output_tokens": 21,
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "d01c0875c479e9eaa766e9a7e75680ed6b916c3d6043aa9a925090a535788989",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ]
+        },
+        "reached_token_limit": false
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[150,185]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              150,
+              185
+            ]
+          }
+        ]
+      },
+      "model_edition": "instruct"
+    },
+    {
+      "id": "instruct_labels_full_normalized_1000_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "normalized_1000",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 12.332486541941762,
+      "usage": {
+        "input_tokens": 2889,
+        "output_tokens": 21,
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ]
+        },
+        "reached_token_limit": false
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[550,148]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              862.4000000000001,
+              260.47999999999996
+            ]
+          }
+        ]
+      },
+      "model_edition": "instruct"
+    },
+    {
+      "id": "instruct_labels_full_pixels_s0",
+      "kind": "labels",
+      "seed": 0,
+      "mode": "pixels",
+      "image": "full.png",
+      "status": "valid",
+      "error_type": null,
+      "elapsed_seconds": 12.241984583903104,
+      "usage": {
+        "input_tokens": 2865,
+        "output_tokens": 21,
+        "image_tokens": 2695,
+        "image_preprocessing": {
+          "original_size_wh": [
+            1568,
+            1760
+          ],
+          "processed_size_wh": [
+            1568,
+            1760
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "patch_size": 16,
+          "merge_size": 2,
+          "visual_tokens": 2695,
+          "processor_size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "image_rgb_sha256": "0a2de5a82e62fb78bff28727296b1531987a48e413f1b6a14c077b78035de5f9",
+          "pixel_values_shape": [
+            10780,
+            1536
+          ]
+        },
+        "reached_token_limit": false
+      },
+      "final_answer": "{\"labels\":[{\"name\":\"Altstetten\",\"point\":[568,148]}]}",
+      "prediction": {
+        "labels": [
+          {
+            "name": "Altstetten",
+            "point": [
+              568,
+              148
+            ]
+          }
+        ]
+      },
+      "model_edition": "instruct"
+    }
+  ],
+  "tile_reconstruction": {
+    "Altstetten": {
+      "status": "ambiguous",
+      "candidates": [
+        {
+          "tile": "TR",
+          "point": [
+            876.8,
+            179.20000000000002
+          ]
+        },
+        {
+          "tile": "BR",
+          "point": [
+            1049.6,
+            1295.1680000000001
+          ]
+        }
+      ],
+      "failed_tiles": []
+    }
+  },
+  "summary": {
+    "calls": 20,
+    "original_completed_calls": 4,
+    "followup_completed_calls": 12,
+    "instruct_control_calls": 4,
+    "original_interrupted_calls": 1,
+    "valid_final_answers": 15,
+    "errors": {
+      "IncompleteThinking": 5
+    },
+    "text_exact_matches": 2,
+    "seconds": 3212.203109622933,
+    "output_tokens": 37477,
+    "label_groups": {
+      "multi_synthetic::pixels": {
+        "visible_queries": 3,
+        "returned_points": 0,
+        "in_reference_box": 0,
+        "mean_center_error_px": null,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "multi_synthetic::normalized_1000": {
+        "visible_queries": 3,
+        "returned_points": 0,
+        "in_reference_box": 0,
+        "mean_center_error_px": null,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "single_synthetic::pixels": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 0,
+        "mean_center_error_px": 184.69028128193426,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "single_synthetic::normalized_1000": {
+        "visible_queries": 1,
+        "returned_points": 0,
+        "in_reference_box": 0,
+        "mean_center_error_px": null,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "single_full::pixels": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 0,
+        "mean_center_error_px": 370.46221129826455,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "single_full::normalized_1000": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 0,
+        "mean_center_error_px": 139.9365927840177,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "instruct_synthetic::pixels": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 0,
+        "mean_center_error_px": 161.55649166777545,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "instruct_synthetic::normalized_1000": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 1,
+        "mean_center_error_px": 18.988650926277,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "instruct_full::pixels": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 0,
+        "mean_center_error_px": 346.5288588270824,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      },
+      "instruct_full::normalized_1000": {
+        "visible_queries": 1,
+        "returned_points": 1,
+        "in_reference_box": 1,
+        "mean_center_error_px": 31.99625603097954,
+        "absent_queries": 0,
+        "correct_abstentions": 0
+      }
+    }
+  }
+}

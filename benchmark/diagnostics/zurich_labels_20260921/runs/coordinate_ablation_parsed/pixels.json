@@ -1,0 +1,112 @@
+{
+  "map_version": "1e7f8c48bababd0f6cd342da",
+  "model": "Qwen/Qwen3-VL-8B-Instruct [label-pixels]",
+  "coordinate_system": "image_pixels_top_left",
+  "predictions": [
+    {
+      "event_id": "P001",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            700,
+            212
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P002",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            557,
+            148
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P003",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            557,
+            204
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P004",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            732,
+            437
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P005",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            787,
+            567
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P006",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            812,
+            644
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P007",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            107,
+            427
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    },
+    {
+      "event_id": "P008",
+      "geometry": {
+        "type": "point",
+        "coordinates": [
+          [
+            702,
+            214
+          ]
+        ]
+      },
+      "format_normalization": "flat_point_to_singleton"
+    }
+  ],
+  "errors": []
+}

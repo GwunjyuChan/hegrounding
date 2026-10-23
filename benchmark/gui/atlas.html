@@ -1,34 +1,41 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
+  <base href="/">
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HE · 地图集编辑</title><link rel="icon" href="data:,">
-  <link rel="stylesheet" href="/vendor/leaflet.css"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/atlas.css">
-  <script defer src="/vendor/leaflet.js"></script><script defer src="/vendor/lucide.js"></script><script defer src="/atlas-api.js"></script><script defer src="/atlas.js"></script>
+  <title>HE · 事件标注</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="atlas.css">
+  <link rel="stylesheet" href="i18n.css"><script defer src="i18n.js"></script><script defer src="vendor/leaflet.js"></script><script defer src="vendor/lucide.js"></script><script defer src="workspace-url.js"></script><script defer src="atlas-api.js"></script><script defer src="session-ui.js"></script><script defer src="atlas.js"></script>
 </head>
 <body class="atlas-app">
-  <header class="app-header"><a class="brand" href="/"><span class="brand-mark">HE</span></a><h1>地图集编辑</h1><span id="atlas-count" class="muted"></span><div class="header-end"><span id="dirty" aria-live="polite"></span><button id="refresh-atlas" class="icon-button" title="刷新" aria-label="刷新"><i data-lucide="refresh-cw"></i></button></div></header>
+  <header class="app-header"><a class="brand" href="./" aria-label="返回战场地图"><span class="brand-mark">HE</span></a><h1>事件标注</h1><span id="atlas-count" class="muted"></span><div class="header-end"><span id="dirty" aria-live="polite"></span><button id="refresh-atlas" class="icon-button" title="刷新" aria-label="刷新"><i data-lucide="refresh-cw"></i></button></div></header>
   <main class="atlas-layout">
     <aside class="atlas-nav"><h2>参考地图</h2><div id="atlas-list"></div><h2>事件</h2><select id="scope-filter" aria-label="事件筛选"><option value="all">全部事件</option><option value="pending">待审核</option><option value="accepted">已通过</option><option value="outside_map">范围外</option></select><div id="atlas-events"></div></aside>
     <section class="atlas-center">
-      <div class="atlas-top"><h2 id="map-title">选择参考地图</h2><div class="atlas-tabs" role="tablist"><button data-view="prepare" role="tab" aria-selected="true">编辑底图</button><button data-view="annotate" role="tab" aria-selected="false">事件标注</button></div></div>
+      <div class="atlas-top"><div class="task-heading"><h2 id="map-title">选择战役</h2><ol class="workflow-steps" aria-label="标注进度"><li id="step-map">1 选定底图</li><li id="step-annotate">2 事件标注</li></ol></div><button id="edit-basemap" class="secondary"><i data-lucide="crop"></i>编辑底图</button></div>
       <div class="atlas-canvases">
         <section class="map-pane" id="reference-pane"><div class="pane-heading"><span>参考地图</span><button id="fit-reference" class="icon-button" title="参考图全图" aria-label="参考图全图"><i data-lucide="scan"></i></button></div><div id="reference-canvas" class="atlas-canvas" aria-label="作战部署参考地图"></div></section>
         <section class="map-pane"><div class="pane-heading"><span id="working-label">裁切原图</span><span id="working-dimensions" class="mono"></span><button id="fit-working" class="icon-button" title="底图全图" aria-label="底图全图"><i data-lucide="scan"></i></button></div><div class="canvas-wrap"><div id="working-canvas" class="atlas-canvas" aria-label="标注底图画布"></div><div id="map-empty">尚未导入底图</div><div class="atlas-toolbar" role="toolbar" aria-label="地图工具"><button id="hand-tool" class="icon-button active" title="平移" aria-label="平移"><i data-lucide="hand"></i></button><button id="crop-tool" class="icon-button" title="框选裁切区域" aria-label="框选裁切区域"><i data-lucide="crop"></i></button><button data-geometry="point" class="icon-button" title="点" aria-label="点"><i data-lucide="map-pin"></i></button><button data-geometry="line" class="icon-button" title="线" aria-label="线"><i data-lucide="route"></i></button><button data-geometry="polygon" class="icon-button" title="区域" aria-label="区域"><i data-lucide="pentagon"></i></button><button id="undo-atlas" class="icon-button" title="撤销" aria-label="撤销"><i data-lucide="undo-2"></i></button><button id="redo-atlas" class="icon-button" title="重做" aria-label="重做"><i data-lucide="redo-2"></i></button><button id="clear-atlas" class="icon-button" title="清空当前几何" aria-label="清空当前几何"><i data-lucide="trash-2"></i></button></div></div><div class="pane-footer"><span id="map-version"></span><span id="cursor"></span></div></section>
       </div>
-      <div class="atlas-bottom"><label><input id="show-reference" type="checkbox" checked>参考地图</label><label id="gold-toggle"><input id="show-gold" type="checkbox" checked><span class="legend-gold">人工标注</span></label><div id="prediction-toggle" role="group" aria-label="模型预测图层"></div><a id="clean-download" class="secondary" hidden download="annotation-map.png"><i data-lucide="download"></i>干净底图</a></div>
+      <div class="atlas-bottom"><label id="reference-toggle"><input id="show-reference" type="checkbox">对照参考图</label><span id="map-role" class="muted"></span><label id="gold-toggle"><input id="show-gold" type="checkbox" checked><span class="legend-gold">人工标注</span></label><div id="prediction-toggle" role="group" aria-label="模型预测图层"></div><a id="clean-download" class="secondary" hidden download="annotation-map.png"><i data-lucide="download"></i>底图</a></div>
     </section>
     <aside class="atlas-inspector">
-      <div id="prepare-fields">
-        <h2>标注底图</h2>
+      <div id="choose-fields">
+        <h2>选定标注底图</h2><p class="map-choice-name">当前：战役参考地图</p>
+        <button id="use-reference" class="primary full"><i data-lucide="check"></i>使用当前参考图并开始标注</button>
+        <button id="choose-upload" class="secondary full"><i data-lucide="upload"></i>上传其他底图</button>
+        <div class="selection-event"><span id="preview-event" class="mono"></span><h2 id="preview-question"></h2><p id="preview-passage" class="passage"></p></div>
+      </div>
+      <div id="prepare-fields" hidden>
+        <div class="pane-heading"><h2>编辑标注底图</h2><button id="cancel-map" class="icon-button" title="取消底图编辑" aria-label="取消底图编辑"><i data-lucide="x"></i></button></div>
         <div class="field"><label for="source-select">底图来源</label><select id="source-select"><option value="">选择已导入图像</option></select></div>
-        <div class="field"><label for="source-file">导入 PDF / 图像</label><input id="source-file" type="file" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.webp,.gif"></div>
-        <div class="form-row"><div class="field"><label for="pdf-page">PDF 页码（含封面）</label><input id="pdf-page" type="number" min="1" max="1000" value="3"></div><button id="upload-source" class="secondary"><i data-lucide="upload"></i>导入</button></div>
+        <div class="field"><label for="source-file">导入 PDF / 图像</label><input id="source-file" type="file" accept=".pdf,.png,.jpg,.jpeg,.jp2,.j2k,.tif,.tiff,.webp,.gif"></div>
+        <div class="form-row"><div class="field"><label for="pdf-page">PDF 页码（含封面）</label><input id="pdf-page" type="number" min="1" max="1000" value="1"></div><button id="upload-source" class="secondary"><i data-lucide="upload"></i>导入</button></div>
         <div class="field"><label for="map-name">底图名称</label><input id="map-name" maxlength="200"></div>
         <div class="crop-grid"><div class="field"><label for="crop-x0">左 x</label><input id="crop-x0" type="number" min="0" step="1"></div><div class="field"><label for="crop-y0">上 y</label><input id="crop-y0" type="number" min="0" step="1"></div><div class="field"><label for="crop-x1">右 x</label><input id="crop-x1" type="number" min="1" step="1"></div><div class="field"><label for="crop-y1">下 y</label><input id="crop-y1" type="number" min="1" step="1"></div></div>
-        <div class="form-row"><div class="field"><label for="rotation">顺时针旋转</label><select id="rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></div><div class="field"><label for="max-side">长边上限 px</label><input id="max-side" type="number" min="256" max="6000" value="3200"></div></div>
+        <div class="form-row"><div class="field"><label for="rotation">顺时针旋转</label><select id="rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></div><div class="field"><label for="max-side">长边上限 px（0 = 原尺寸）</label><input id="max-side" type="number" min="0" value="0"></div></div>
         <div class="field"><label for="provenance">来源 / 年代 / 范围备注</label><textarea id="provenance" rows="4" maxlength="4000"></textarea></div>
-        <button id="save-map" class="primary full"><i data-lucide="save"></i>保存底图版本</button>
+        <button id="save-map" class="primary full"><i data-lucide="check"></i>确认底图并开始标注</button>
         <div class="field"><label for="map-history">底图历史</label><select id="map-history"></select></div><button id="restore-map" class="secondary full"><i data-lucide="history"></i>恢复选定底图</button>
       </div>
       <div id="annotate-fields" hidden>
@@ -36,6 +43,7 @@
         <h2 id="target-question"></h2><div id="event-passage" class="passage"></div><details><summary>原文与资料</summary><p id="original-text"></p><p id="event-caution"></p><a id="source-link" target="_blank" rel="noopener noreferrer">原文网站</a></details>
         <div class="field"><label for="atlas-status">审核状态</label><select id="atlas-status"><option value="accepted">通过</option><option value="ambiguous">有歧义</option><option value="unlocatable">无法定位</option><option value="outside_map">范围外</option><option value="rejected">剔除</option></select></div>
         <div class="form-row"><div class="field"><label for="atlas-feature">要素类型</label><select id="atlas-feature"></select></div><div class="field"><label for="atlas-tolerance">容差 px</label><input id="atlas-tolerance" type="number" min="0" value="0"></div></div>
+        <div class="field"><label for="atlas-confidence">人工标注置信度</label><select id="atlas-confidence"><option value="">未审核</option><option value="1">1 · 非常不确定</option><option value="2">2 · 不确定</option><option value="3">3 · 尚可</option><option value="4">4 · 较有把握</option><option value="5">5 · 非常有把握</option></select></div>
         <div class="field"><label for="atlas-evidence">证据 / 审核理由</label><textarea id="atlas-evidence" rows="4"></textarea></div><div class="field"><label for="atlas-annotator">标注者</label><input id="atlas-annotator" value="eric" maxlength="100"></div>
         <button id="save-gold" class="primary full"><i data-lucide="save"></i>保存人工标注</button>
         <div class="field"><label for="prediction-model">结果图模型</label><select id="prediction-model"></select></div>

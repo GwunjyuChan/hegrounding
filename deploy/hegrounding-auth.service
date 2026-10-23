@@ -1,0 +1,26 @@
+[Unit]
+Description=HE Grounding login session gateway
+After=network.target
+
+[Service]
+Type=simple
+User=hegrounding
+Group=hegrounding
+WorkingDirectory=/opt/hegrounding/current
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/hegrounding/venv/bin/python /opt/hegrounding/current/benchmark/web_auth.py --origin https://experiment.chanlukaka.com --credentials /etc/hegrounding-auth.json
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+TasksMax=48
+MemoryMax=256M
+CPUQuota=100%
+
+[Install]
+WantedBy=multi-user.target

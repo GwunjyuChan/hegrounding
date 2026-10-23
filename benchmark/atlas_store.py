@@ -15,6 +15,10 @@ import zipfile
 from PIL import Image, ImageDraw, ImageOps, PngImagePlugin
 from annotate_geo import FEATURE_TYPES, load_jsonl, validate_geometry
 
+# Archive scans routinely exceed Pillow's default pixel threshold. Keep their
+# native dimensions; upload byte limits remain enforced by the HTTP handler.
+Image.MAX_IMAGE_PIXELS = None
+
 
 class Conflict(ValueError):
     pass
@@ -66,8 +70,11 @@ class AtlasStore:
         for eid, record in legacy.records.items():
             key = digest(record["image"].encode())[:16]
             group = self.groups.setdefault(key, {"id": key, "reference_image": record["image"],
-                "reference_event": eid, "battle_id": record["battle_id"], "events": []})
+                "reference_event": eid, "battle_id": record["battle_id"],
+                "battle_name": record.get("battle_name", ""), "events": []})
             group["events"].append(eid)
+        for group in load_jsonl(self.base / "place_lab/maps.jsonl"):
+            self.groups[group['id']] = group
 
     def history(self, mid):
         if mid not in self.groups:
@@ -94,7 +101,8 @@ class AtlasStore:
             active = history[-1] if history else None
             labels = self.labels(mid, active["version"]) if active else {}
             result.append({**group, "active": active, "revision": token(active),
-                           "reviewed": len(labels), "total": len(group["events"])})
+                           "reviewed": len(labels), "total": len(group["events"]),
+                           "accepted": sum(r["status"] == "accepted" for r in labels.values())})
         return {"maps": result, "sources": load_jsonl(self.base / "sources.jsonl"),
                 "feature_types": [k for k, _ in FEATURE_TYPES]}
 
@@ -127,8 +135,8 @@ class AtlasStore:
                 "history": list(reversed(history))}
 
     def import_source(self, data, name, page=1):
-        if not 0 < len(data) <= 80 * 1024 * 1024:
-            raise ValueError("文件必须小于 80 MB。")
+        if not 0 < len(data) <= 512 * 1024 * 1024:
+            raise ValueError("文件必须非空且不超过 512 MiB。")
         filename = Path(name).name[:180]
         pdf = data.startswith(b"%PDF-")
         source_hash = digest(data)
@@ -152,8 +160,8 @@ class AtlasStore:
         else:
             try:
                 with Image.open(io.BytesIO(data)) as im:
-                    if im.format not in {"PNG", "JPEG", "TIFF", "WEBP", "GIF"} or im.width * im.height > 60_000_000:
-                        raise ValueError("不支持的图像格式或尺寸超过 6000 万像素。")
+                    if im.format not in {"PNG", "JPEG", "TIFF", "WEBP", "GIF", "JPEG2000"}:
+                        raise ValueError("不支持的图像格式。")
                     im.load()
                     image = ImageOps.exif_transpose(im).convert("RGB")
             except (OSError, Image.DecompressionBombError) as exc:
@@ -193,14 +201,15 @@ class AtlasStore:
         angle = body.get("rotation", 0)
         if type(angle) is not int or angle not in (0, 90, 180, 270):
             raise ValueError("旋转角度须为 0、90、180、270。")
-        max_side = body.get("max_side", 3200)
-        if type(max_side) is not int or not 256 <= max_side <= 6000:
-            raise ValueError("输出长边须在 256–6000 像素之间。")
+        max_side = body.get("max_side", 0)
+        if type(max_side) is not int or (max_side != 0 and max_side < 256):
+            raise ValueError("输出长边须为 0（原始分辨率），或不小于 256 像素。")
         title = text_field(body, "title", 200)
         provenance = text_field(body, "provenance", 4000)
         with Image.open(self.base / "assets" / f"{source['id']}.png") as im:
             image = im.crop(crop).rotate(-angle, expand=True)
-            image.thumbnail((max_side, max_side), Image.Resampling.LANCZOS)
+            if max_side:
+                image.thumbnail((max_side, max_side), Image.Resampling.LANCZOS)
             output = io.BytesIO()
             image.save(output, format="PNG")
         png = output.getvalue()
@@ -210,9 +219,31 @@ class AtlasStore:
         (self.base / "assets" / f"{version}.png").write_bytes(png)
         rec = {**config, "version": version, "map_id": mid, "title": title,
                "provenance": provenance, "max_side": max_side, "created_at": stamp(),
-               "coordinate_system": "image_pixels_top_left", "source_name": source["name"], "source_page": source["page"]}
+               "coordinate_system": "image_pixels_top_left", "source_name": source["name"], "source_page": source["page"],
+               "base_map_role": "reference_map" if self.groups[mid].get("reference_event") and source["original_sha256"] == digest(
+                   self.legacy.images[self.groups[mid]["reference_event"]].read_bytes()) else "uploaded_map"}
         append(self.base / "maps.jsonl", rec)
         return self.detail(mid)
+
+    def reference_source(self, mid, body):
+        current = self.detail(mid)
+        if "base_revision" not in body or body["base_revision"] != current["revision"]:
+            raise Conflict("底图已更新，请刷新后再选择参考地图。")
+        eid = self.groups[mid]["reference_event"]
+        path = self.legacy.images[eid]
+        return self.import_source(path.read_bytes(), path.name)
+
+    def use_reference(self, mid, body):
+        source = self.reference_source(mid, body)
+        current = self.detail(mid)
+        eid = self.groups[mid]["reference_event"]
+        # Opening a task is read-only; only explicit confirmation creates a map version.
+        record = self.legacy.records[eid]
+        return self.save_map(mid, {"base_revision": current["revision"], "source_id": source["id"],
+            "crop": [0, 0, source["width"], source["height"]], "rotation": 0, "max_side": 0,
+            "title": (record.get("battle_name") or record["battle_id"]) + " · 参考底图",
+            "provenance": "Reference map selected for annotation. Deployment markings may be present. "
+                          + (record.get("map_provenance") or record.get("map_url") or record["image"])[:3600]})
 
     @staticmethod
     def geometry(value, width, height):
@@ -243,6 +274,10 @@ class AtlasStore:
             raise ValueError("请选择审核状态。")
         evidence = text_field(body, "evidence")
         annotator = text_field(body, "annotator", 100)
+        # Older clients omit confidence; do not erase an existing review score.
+        confidence = body.get("confidence", (event["gold"] or {}).get("confidence"))
+        if confidence is not None and (type(confidence) is not int or not 1 <= confidence <= 5):
+            raise ValueError("置信度须为 1–5 的整数，或留空表示未审核。")
         feature = body.get("geo_feature_type")
         if feature not in {k for k, _ in FEATURE_TYPES}:
             raise ValueError("要素类型不在统一词表中。")
@@ -261,6 +296,7 @@ class AtlasStore:
         record = {"schema_version": 1, "map_id": mid, "map_version": active["version"],
                   "image_sha256": active["image_sha256"], "event_id": eid, "status": status,
                   "geometry": geometry, "evidence": evidence, "annotator": annotator,
+                  "confidence": confidence,
                   "geo_feature_type": feature, "tolerance_px": tolerance,
                   "coordinate_system": "image_pixels_top_left", "width": active["width"],
                   "height": active["height"], "created_at": stamp()}
@@ -323,7 +359,7 @@ class AtlasStore:
         if kind == "gold":
             records = list(self.labels(mid, active["version"]).values())
             return json.dumps({"map": active, "annotations": records}, ensure_ascii=False, indent=2).encode()
-        # Allowlist only: neither reference maps nor evidence/gold metadata enter this archive.
+        # Only the selected raster enters the archive; gold and evidence stay separate.
         rows = []
         for event in current["events"]:
             if not event["gold"] or event["gold"]["status"] != "accepted":
@@ -345,7 +381,7 @@ class AtlasStore:
             archive.writestr("prompt.txt", prompt)
             archive.writestr("manifest.json", json.dumps({"map_version": active["version"],
                 "image_sha256": active["image_sha256"], "coordinate_system": "image_pixels_top_left",
-                "event_count": len(rows)}))
+                "event_count": len(rows), "base_map_role": active.get("base_map_role", "unspecified")}))
         return output.getvalue()
 
     def overlay(self, mid, eid, kind, model=None):

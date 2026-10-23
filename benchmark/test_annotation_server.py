@@ -2,10 +2,11 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from types import SimpleNamespace
 
 from PIL import Image
 
-from annotation_server import Conflict, DATASETS, Store
+from annotation_server import Conflict, DATASETS, ROOT, Store, workspace_info
 
 
 class AnnotationServerTests(unittest.TestCase):
@@ -31,6 +32,19 @@ class AnnotationServerTests(unittest.TestCase):
     def test_catalog_unifies_files_and_uses_actual_image_dimensions(self):
         self.assertEqual(sum(b["total"] for b in self.store.catalog()["battles"]), 2)
         self.assertEqual(self.store.event("Z0001")["dimensions"], (100, 80))
+
+    def test_workspace_navigation_keeps_datasets_separate(self):
+        main = workspace_info(SimpleNamespace(root=ROOT, records={"N1": {}}), 8801, 8802)
+        self.assertEqual(main["events_url"], "/")
+        self.assertEqual(main["place_lab_url"], "http://127.0.0.1:8802/place-lab.html")
+        self.assertEqual(main["kind"], "main")
+        isolated = workspace_info(SimpleNamespace(root=self.root, records={"P1": {"place_name": "Zurich"}}), 8801, 8802)
+        self.assertEqual(isolated["name"], "地名实验工作区")
+        self.assertEqual(isolated["item_label"], "地名样本")
+        self.assertEqual(isolated["events_url"], "http://127.0.0.1:8801/")
+        self.assertEqual(isolated["place_lab_url"], "/place-lab.html")
+        with self.assertRaises(ValueError):
+            workspace_info(self.store, event_port=0)
 
     def test_roundtrip_and_append_only_revisions(self):
         first = self.store.save("N0001", self.payload())

@@ -1,0 +1,32 @@
+{
+  "status": "assistant_provisional_not_human_verified",
+  "declared_before_new_predictions": true,
+  "prior_experiment_predictions_already_seen": true,
+  "image": "../inputs/full.png",
+  "coordinate_system": "padded_canvas_pixels_top_left",
+  "width": 1568,
+  "height": 1760,
+  "task": "printed_label_center_not_event_location",
+  "labels": {
+    "Altstetten": {
+      "present": true,
+      "box": [836, 247, 952, 284],
+      "note": "Standalone Altstetten label, not the qualified unter Altstetten label above it."
+    },
+    "ZURICH": {
+      "present": true,
+      "box": [1025, 360, 1145, 390],
+      "note": "Printed ZURICH city-name text, not the orange city footprint."
+    },
+    "Regensdorf": {
+      "present": false,
+      "box": null,
+      "note": "Outside the frozen crop; no matching label identified on the full supplied map."
+    }
+  },
+  "text_answers": {"Z0003": "Regensdorf", "Z0004": "Altstetten"},
+  "event_reference": {
+    "Z0003": {"outside_map": true, "point": null},
+    "Z0004": {"outside_map": false, "point": [820, 290], "status": "unchanged_provisional_human_event_point"}
+  }
+}

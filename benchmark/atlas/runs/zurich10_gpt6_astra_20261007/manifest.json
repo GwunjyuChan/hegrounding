@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-07T21:58:33.129709+00:00",
+  "model": "gpt-6-astra",
+  "api": "responses",
+  "base_url": "https://api.openai.com/v1/",
+  "input_sha256": "c612c645322b5486d99dc9035e68a58ab9ca4aabc366ef8bf334f860419de11c",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "event_ids": [
+    "Z0001",
+    "Z0002",
+    "Z0003",
+    "Z0004",
+    "Z0005",
+    "Z0006",
+    "Z0007",
+    "Z0008",
+    "Z0009",
+    "Z0010"
+  ],
+  "max_output_tokens": 4096,
+  "reasoning_effort": "provider default (not explicitly set)",
+  "image_detail": "provider default (not explicitly set)",
+  "image_policy": "Original PNG bytes, no client resize; provider preprocessing unverified",
+  "timeout_seconds": 120,
+  "max_retries": 0,
+  "store": false,
+  "spatial_exclusions_declared_before_run": [
+    "Z0009",
+    "Z0010"
+  ],
+  "outside_map_diagnostic": [
+    "Z0003"
+  ],
+  "runner_sha256": "c23e5df681ab4ef558e64b9a357a0842d35d8ce5cb12ab322a1964a86748952e"
+}

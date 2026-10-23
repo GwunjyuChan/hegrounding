@@ -1,4 +1,5 @@
 """Run with MPLBACKEND=Agg .venv/bin/python -m unittest discover -s benchmark -p test_annotation.py."""
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -83,17 +84,69 @@ class AnnotationTests(unittest.TestCase):
             self.assertEqual({r["event_id"]: r for r in rows}["N1"]["status"], "rejected")
 
     def test_pilot_assets(self):
-        rows = load_jsonl(ROOT / "benchmark/napoleon_pilot_20.jsonl")
-        self.assertEqual(len(rows), 20)
-        self.assertEqual(len({r['event_id'] for r in rows}), 20)
+        rows = load_jsonl(ROOT / "benchmark/map_first_candidates.jsonl")
+        self.assertEqual(len(rows), 100)
+        self.assertEqual(len({r['event_id'] for r in rows}), 100)
         for row in rows:
             with Image.open(ROOT / row["image"]) as image:
+                self.assertEqual(image.size, (row["img_w"], row["img_h"]))
                 image.verify()
             self.assertNotIn("gold_px", row)
             self.assertTrue(row["target_question"] and row["article_url"])
+            self.assertTrue(row["source_section"] and row["map_provenance"])
+            self.assertIn("/images/military/maps/", row["map_url"])
+            self.assertEqual(row["input_image_status"], "reference_only_not_eval_ready")
+            self.assertEqual(row["gold_status"], "not_annotated")
+
+    def test_bussaco_preserves_both_map_sources(self):
+        rows = load_jsonl(ROOT / "benchmark/map_first_candidates.jsonl")
+        rows = [r for r in rows if r["battle_id"] == "bussaco_1810"]
+        self.assertEqual({r["event_id"] for r in rows}, {f"MF{i:04d}" for i in range(9, 13)})
+        for row in rows:
+            self.assertIn("gutenberg.org", row["map_asset_url"])
+            self.assertIn("napoleon-series.org", row["map_url"])
+            for path, checksum in ((row["image"], row["map_asset_sha256"]),
+                                   (row["map_original_image"], row["map_original_sha256"])):
+                self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), checksum)
+
+    def test_san_sebastian_source_and_no_inherited_gold(self):
+        rows = load_jsonl(ROOT / "benchmark/map_first_candidates.jsonl")
+        rows = [r for r in rows if r["battle_id"] == "san_sebastian_1813"]
+        self.assertEqual({r["event_id"] for r in rows}, {f"MF{i:04d}" for i in range(13, 17)})
+        self.assertEqual(len({r["image"] for r in rows}), 1)
+        for row in rows:
+            self.assertEqual(row["split_group"], "san_sebastian_1813")
+            self.assertEqual(row["map_url"], row["map_asset_url"])
+            self.assertEqual(hashlib.sha256((ROOT / row["image"]).read_bytes()).hexdigest(),
+                             row["map_asset_sha256"])
+            self.assertNotIn("geometry", row)
+            self.assertNotIn("geo_gold_px", row)
+            self.assertTrue(row["source_section"] and row["annotation_caution"])
+
+    def test_current_catalog_replaces_old_candidates_without_migrating_gold(self):
+        from annotation_server import Store
+        from atlas_store import AtlasStore
+        store = Store(ROOT)
+        self.assertEqual(len(store.records), 110)
+        self.assertEqual(sum(eid.startswith("Z") for eid in store.records), 10)
+        self.assertFalse(any(eid.startswith("N") for eid in store.records))
+        self.assertTrue(all(f"MF{i:04d}" not in store.records for i in range(1, 5)))
+        new_battles = json.loads((ROOT / "benchmark/map_expansion_battles.json").read_text())
+        self.assertEqual({r["battle_id"] for r in store.records.values()},
+                         {"bussaco_1810", "marengo_1800", "zurich_second_1799", "san_sebastian_1813"}
+                         | {b["id"] for b in new_battles})
+        catalog = AtlasStore(store).catalog()
+        self.assertEqual(len(catalog["maps"]), 26)
+        for group in catalog["maps"]:
+            if group["battle_id"] != "zurich_second_1799":
+                self.assertEqual(group["total"], 4)
+                self.assertTrue(group["reference_image"].startswith("maps/napoleon_maps/"))
+                detail = AtlasStore(store).detail(group["id"])
+                self.assertTrue(all(e["id"].startswith("MF") for e in detail["events"]))
 
     def test_point_save_through_gui(self):
-        rec = load_jsonl(ROOT / "benchmark/napoleon_pilot_20.jsonl")[0]
+        rec = load_jsonl(ROOT / "benchmark/map_first_candidates.jsonl")[0]
+        rec = {**rec, "suggested_geometry": "point"}
 
         def interact():
             fig = plt.gcf()
@@ -114,7 +167,7 @@ class AnnotationTests(unittest.TestCase):
         self.assertEqual(ann["geo_feature_vocab_version"], 1)
 
     def test_polygon_and_empty_ambiguity(self):
-        rec = load_jsonl(ROOT / "benchmark/napoleon_pilot_20.jsonl")[0]
+        rec = load_jsonl(ROOT / "benchmark/map_first_candidates.jsonl")[0]
         for ambiguous in (False, True):
             def interact():
                 fig = plt.gcf()

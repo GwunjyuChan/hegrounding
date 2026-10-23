@@ -1,0 +1,47 @@
+{
+  "map_version": "2ae3fca4eb15dced41f82401",
+  "model": "Qwen/Qwen3-VL-8B-Thinking",
+  "predictions": [],
+  "errors": [
+    {
+      "event_id": "Z0001",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0002",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0003",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0004",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0005",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0006",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0007",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0008",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0009",
+      "error_type": "IncompleteThinking"
+    },
+    {
+      "event_id": "Z0010",
+      "error_type": "IncompleteThinking"
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "metrics_kind": "provisional_pixel_diagnostics_not_benchmark_accuracy",
+  "map": {
+    "map_version": "2ae3fca4eb15dced41f82401",
+    "image_sha256": "fc5f835f11cd6f7cafefc7183b57d10c0911372149a1c2077f662a6d70570aec",
+    "coordinate_system": "image_pixels_top_left",
+    "event_count": 10
+  },
+  "gold_sha256": "c36a7e78f2391bc9a21068e7a7ecfbbb5da3799509f9b6c14c6c8e51c974e53b",
+  "excluded": [
+    "Z0009",
+    "Z0010"
+  ],
+  "summaries": {
+    "qwen_native": {
+      "valid": 9,
+      "abstained": 0,
+      "errors": 1,
+      "point_n": 5,
+      "point_mean_px": 418.93197333094963,
+      "point_median_px": 346.1444785057245,
+      "point_in_polygon": {
+        "hits": 0,
+        "n": 2
+      },
+      "cost": {
+        "calls": 10,
+        "seconds": 501.5037554150913,
+        "input_tokens": 31381,
+        "output_tokens": 4519,
+        "total_tokens": 35900
+      },
+      "returned_models": [
+        "Qwen/Qwen3-VL-8B-Instruct"
+      ],
+      "incomplete_responses": []
+    },
+    "gpt5": {
+      "valid": 9,
+      "abstained": 0,
+      "errors": 1,
+      "point_n": 4,
+      "point_mean_px": 534.6520094788028,
+      "point_median_px": 515.6166382163025,
+      "point_in_polygon": {
+        "hits": 0,
+        "n": 2
+      },
+      "cost": {
+        "calls": 10,
+        "seconds": 461.8282482920913,
+        "input_tokens": 10583,
+        "output_tokens": 27696,
+        "total_tokens": 38279
+      },
+      "returned_models": [
+        "gpt-5"
+      ],
+      "incomplete_responses": []
+    },
+    "gpt6_astra": {
+      "valid": 8,
+      "abstained": 1,
+      "errors": 1,
+      "point_n": 3,
+      "point_mean_px": 28.88945263491154,
+      "point_median_px": 20.8806130178211,
+      "point_in_polygon": {
+        "hits": 2,
+        "n": 2
+      },
+      "cost": {
+        "calls": 10,
+        "seconds": 108.03683858481236,
+        "input_tokens": 36633,
+        "output_tokens": 2286,
+        "total_tokens": 38919
+      },
+      "returned_models": [
+        "gpt-6-astra"
+      ],
+      "incomplete_responses": []
+    }
+  },
+  "paired_points": {
+    "qwen_native": {
+      "event_ids": [
+        "Z0002",
+        "Z0004",
+        "Z0006"
+      ],
+      "n": 3,
+      "qwen_native": {
+        "mean_px": 323.06569938934547,
+        "median_px": 342.4675167077894
+      },
+      "gpt6_astra": {
+        "mean_px": 28.88945263491154,
+        "median_px": 20.8806130178211
+      },
+      "mean_error_reduction_percent": 91.05771591056617,
+      "improved": 3,
+      "worsened": 0
+    },
+    "gpt5": {
+      "event_ids": [
+        "Z0004",
+        "Z0006"
+      ],
+      "n": 2,
+      "gpt5": {
+        "mean_px": 484.4029823608407,
+        "median_px": 484.4029823608407
+      },
+      "gpt6_astra": {
+        "mean_px": 34.21003515691998,
+        "median_px": 34.21003515691998
+      },
+      "mean_error_reduction_percent": 92.9376910542148,
+      "improved": 2,
+      "worsened": 0
+    }
+  },
+  "rows": {
+    "qwen_native": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 383.3131878764413,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              502,
+              428
+            ]
+          ]
+        }
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 346.1444785057245,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              528,
+              378
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              278,
+              300
+            ]
+          ]
+        }
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 280.58510295452254,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              578,
+              148
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 742.1495806102703,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              678,
+              220
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 342.4675167077894,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              400,
+              450
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 419.3149174546501,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              738,
+              430
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 375.9494646890723,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              500,
+              350
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "JSONDecodeError",
+        "geometry": null
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "point",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              620,
+              420
+            ]
+          ]
+        }
+      }
+    },
+    "gpt5": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 924.8918855736599,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              930,
+              780
+            ]
+          ]
+        }
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "JSONDecodeError",
+        "geometry": null
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "valid",
+        "prediction_type": "point",
+        "outside_map_abstention": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              930,
+              250
+            ]
+          ]
+        }
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 182.4828759089466,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1000,
+              260
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 244.91018761987016,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1225,
+              310
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 786.3230888127348,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              830,
+              690
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 85.4748948350264,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1105,
+              620
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 103.87011119662864,
+        "point_inside_gold": false,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              956,
+              248
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "line",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "line",
+          "coordinates": [
+            [
+              1168,
+              319
+            ],
+            [
+              1241,
+              278
+            ]
+          ]
+        }
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "point",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1178,
+              274
+            ]
+          ]
+        }
+      }
+    },
+    "gpt6_astra": {
+      "Z0001": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "error",
+        "error_type": "ValueError",
+        "geometry": null
+      },
+      "Z0002": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 18.24828759089466,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              520,
+              35
+            ]
+          ]
+        }
+      },
+      "Z0003": {
+        "gold_status": "outside_map",
+        "gold_type": null,
+        "status": "abstained",
+        "prediction_type": null,
+        "outside_map_abstention": true,
+        "geometry": null
+      },
+      "Z0004": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 20.8806130178211,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              826,
+              270
+            ]
+          ]
+        }
+      },
+      "Z0005": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "polygon",
+        "unscored_geometry_pair": [
+          "point",
+          "polygon"
+        ],
+        "geometry": {
+          "type": "polygon",
+          "coordinates": [
+            [
+              1280,
+              220
+            ],
+            [
+              1340,
+              160
+            ],
+            [
+              1430,
+              145
+            ],
+            [
+              1490,
+              210
+            ],
+            [
+              1480,
+              315
+            ],
+            [
+              1425,
+              400
+            ],
+            [
+              1330,
+              375
+            ],
+            [
+              1270,
+              295
+            ]
+          ]
+        }
+      },
+      "Z0006": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 47.53945729601885,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              260,
+              86
+            ]
+          ]
+        }
+      },
+      "Z0007": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 0.0,
+        "point_inside_gold": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              1194,
+              790
+            ]
+          ]
+        }
+      },
+      "Z0008": {
+        "gold_status": "accepted",
+        "gold_type": "polygon",
+        "status": "valid",
+        "prediction_type": "point",
+        "distance_to_gold_px": 0.0,
+        "point_inside_gold": true,
+        "geometry": {
+          "type": "point",
+          "coordinates": [
+            [
+              888,
+              105
+            ]
+          ]
+        }
+      },
+      "Z0009": {
+        "gold_status": "accepted",
+        "gold_type": "point",
+        "status": "valid",
+        "prediction_type": "line",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "line",
+          "coordinates": [
+            [
+              1252,
+              329
+            ],
+            [
+              1256,
+              293
+            ],
+            [
+              1268,
+              249
+            ],
+            [
+              1284,
+              210
+            ],
+            [
+              1308,
+              173
+            ],
+            [
+              1339,
+              133
+            ],
+            [
+              1380,
+              105
+            ]
+          ]
+        }
+      },
+      "Z0010": {
+        "gold_status": "accepted",
+        "gold_type": "line",
+        "status": "valid",
+        "prediction_type": "polygon",
+        "excluded_from_spatial_scoring": true,
+        "geometry": {
+          "type": "polygon",
+          "coordinates": [
+            [
+              1212,
+              346
+            ],
+            [
+              1250,
+              368
+            ],
+            [
+              1270,
+              410
+            ],
+            [
+              1300,
+              450
+            ],
+            [
+              1292,
+              505
+            ],
+            [
+              1300,
+              546
+            ],
+            [
+              1278,
+              557
+            ],
+            [
+              1255,
+              519
+            ],
+            [
+              1235,
+              465
+            ],
+            [
+              1215,
+              406
+            ],
+            [
+              1201,
+              376
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

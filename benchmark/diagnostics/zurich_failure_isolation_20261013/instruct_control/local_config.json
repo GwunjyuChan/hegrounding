@@ -1,0 +1,15 @@
+{
+  "backend": "qwen-transformers-offline",
+  "device": "mps",
+  "dtype": "torch.float16",
+  "model_path": "/Users/ericchen/thesis/hegrounding/.venv/qwen-thinking/hf-cache/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "do_sample": false,
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "actual_generation_kwargs": {
+    "do_sample": false,
+    "max_new_tokens": 4096
+  }
+}

@@ -204,8 +204,8 @@ def annotate_record(rec, previous, index, total):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, default=ROOT / "benchmark/napoleon_pilot_20.jsonl")
-    parser.add_argument("--output", type=Path, default=ROOT / "benchmark/napoleon_annotations.jsonl")
+    parser.add_argument("--input", type=Path, default=ROOT / "benchmark/map_first_candidates.jsonl")
+    parser.add_argument("--output", type=Path, default=ROOT / "benchmark/map_first_annotations.jsonl")
     parser.add_argument("--start", type=int, default=0, help="Index in original input (0-based)")
     parser.add_argument("--review", action="store_true", help="Reopen previously saved records")
     parser.add_argument("--annotator", default="anonymous")
