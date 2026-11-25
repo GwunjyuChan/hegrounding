@@ -275,3 +275,4 @@
 {"schema_version": 2, "kind": "difficulty_cue_20261123", "event_id": "Z0002", "cue": "convert", "reviewer": "Guanyu Chen", "notes": "", "revision": 2, "reviewed_at": "2026-11-24T23:38:49.540893+00:00"}
 {"schema_version": 2, "kind": "difficulty_cue_20261123", "event_id": "Z0002", "cue": "convert", "reviewer": "Guanyu Chen", "notes": "", "revision": 3, "reviewed_at": "2026-11-24T23:38:51.262353+00:00"}
 {"schema_version": 2, "kind": "difficulty_cue_20261123", "event_id": "Z0009", "cue": "convert", "reviewer": "Guanyu Chen", "notes": "", "revision": 3, "reviewed_at": "2026-11-24T23:39:05.873452+00:00"}
+{"schema_version": 2, "kind": "difficulty_cue_20261123", "event_id": "Z0009", "cue": "relational", "reviewer": "Guanyu Chen", "notes": "", "revision": 4, "reviewed_at": "2026-11-25T01:39:45.052925+00:00"}
