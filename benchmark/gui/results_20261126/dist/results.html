@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>评测结果 · HE Grounding</title>
+<link rel="icon" href="data:,">
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#253330;background:#f8faf9;font-size:14px;
+--accent:#167b6a;--border:#dce3df;--muted:#6b7872;--card:#fff;--soft:#eef4f1;
+--m0:#0f766e;--m1:#ea580c;--m2:#7c3aed;--m3:#2563eb;--m4:#be185d;--m5:#a16207;--gold:#eab308}
+*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}a{color:var(--accent)}
+.he-head{height:56px;display:flex;align-items:center;gap:14px;padding:0 20px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:20}
+.he-brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:#253330;text-decoration:none;white-space:nowrap}
+.he-brand b{background:#233e35;color:#fff;padding:5px 6px;border-radius:4px;font-size:13px;letter-spacing:.02em}
+.he-nav{display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid #c9d6d0;border-radius:6px;color:var(--accent);background:#fff;text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap}
+.he-nav:hover{background:#eef6f3;border-color:var(--accent)}
+.tabs{display:flex;gap:4px;margin-left:8px}.tabs a{padding:6px 10px;border-radius:6px;color:#3d4a45;text-decoration:none;font-size:13px}.tabs a:hover{background:var(--soft)}
+.he-end{margin-left:auto}
+main{max-width:1320px;margin:0 auto;padding:20px 20px 40px}
+h1{font-size:22px;margin:4px 0 4px}h2{font-size:17px;margin:0 0 4px}
+.lede{color:var(--muted);margin:0 0 18px;line-height:1.6}
+section{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:18px}
+.sub{color:var(--muted);font-size:12.5px;margin:0 0 12px;line-height:1.55}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 9px;border-bottom:1px solid #edf1ef;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+th{font-weight:600;color:#3d4a45;background:#f6f9f8;position:sticky;top:0}
+th:first-child,td:first-child{text-align:left}
+.ci{color:var(--muted);font-size:11.5px;display:block}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:12px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:7px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:6px 11px;cursor:pointer;color:#3d4a45;font-size:13px}
+.seg button+button{border-left:1px solid var(--border)}
+.seg button[aria-pressed=true]{background:var(--accent);color:#fff}
+label.ctl{display:flex;align-items:center;gap:6px;font-size:13px;color:#3d4a45}
+select{height:32px;border:1px solid var(--border);border-radius:6px;background:#fff;padding:0 6px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#3d4a45}
+.legend span{display:flex;align-items:center}
+#chart svg{width:100%;height:auto;display:block}
+#chart text{font-family:inherit}
+.browser{display:grid;grid-template-columns:minmax(330px,430px) 1fr;gap:16px;align-items:start}
+.browser>div{min-width:0}
+.listbox{border:1px solid var(--border);border-radius:8px;max-height:78vh;overflow:auto}
+.listbox table{font-size:12.5px}.listbox td,.listbox th{padding:6px 7px}
+.listbox th{cursor:pointer;user-select:none}.listbox th.sorted::after{content:attr(data-dir);margin-left:3px;color:var(--accent)}
+.listbox tbody tr{cursor:pointer}.listbox tbody tr:hover{background:#f4f8f6}.listbox tbody tr.sel{background:#e3f1ec}
+.iou{display:inline-block;min-width:38px;padding:1px 5px;border-radius:4px;text-align:center}
+.np{color:#9aa49f}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.filters select{height:30px;font-size:12.5px}
+#count{color:var(--muted);font-size:12.5px;margin-bottom:6px}
+.detail{min-width:0}
+.dhead{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;margin-bottom:8px}
+.dhead h3{margin:0;font-size:16px}.tag{font-size:12px;background:var(--soft);border-radius:10px;padding:1px 8px;color:#3d4a45}
+.mapbar{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:8px;font-size:12.5px}
+.mapbar label{display:flex;align-items:center;gap:5px;cursor:pointer}
+.mapbar .zoom{margin-left:auto;display:flex;gap:4px}
+.mapbar .zoom button{border:1px solid var(--border);background:#fff;border-radius:5px;width:30px;height:28px;cursor:pointer}
+.mapbox{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:70vh;background:#e9efec;position:relative}
+.mapinner{position:relative;margin:0 auto}
+.mapinner img{display:block;width:100%;height:auto;user-select:none}
+.mapinner svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.imgerr{padding:30px;color:#a33;text-align:center}
+.texts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.texts div{background:#f6f9f8;border:1px solid #e6ece9;border-radius:8px;padding:10px 12px;line-height:1.6;font-size:13px;max-height:260px;overflow:auto;white-space:pre-wrap}
+.texts b{display:block;font-size:12px;color:var(--muted);margin-bottom:4px;font-weight:600}
+.mtable{margin-top:12px}
+.raw{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:#4a5752;white-space:pre-wrap;word-break:break-all;text-align:left;max-width:360px}
+details summary{cursor:pointer;color:var(--accent);font-size:12.5px;margin-top:10px}
+footer{color:var(--muted);font-size:12.5px;line-height:1.7}
+footer code,.sub code{word-break:break-all;background:#eef2f0;padding:0 4px;border-radius:3px;font-size:12px}
+.empty{color:var(--muted);padding:30px;text-align:center}
+@media(max-width:900px){.browser{grid-template-columns:1fr}.listbox{max-height:45vh}.texts{grid-template-columns:1fr}.tabs{display:none}}
+@media(max-width:600px){main{padding:12px 16px 30px}.he-head{padding:0 12px}.he-brand span{display:none}section{padding:14px}}
+</style>
+</head>
+<body>
+<header class="he-head">
+  <a class="he-brand" href="./"><b>HE</b><span>历史事件定位数据集</span></a>
+  <nav class="tabs"><a href="#summary">总表</a><a href="#groups">分组对比</a><a href="#items">逐题查看</a><a href="#notes">口径</a></nav>
+  <div class="he-end"><a class="he-nav" href="./">← 返回主页</a></div>
+</header>
+<main>
+  <h1>评测结果</h1>
+  <p class="lede" id="lede">加载中…</p>
+
+  <section id="summary">
+    <h2>总表</h2>
+    <p class="sub">260 题。IoU、hit@0.5 和 Boundary IoU 来自 <code>score_polygon</code>，失败（答 none / 无法解析）记 0；中心距离只算有预测的题；≤5% 命中、召回率的分母是全部题，无预测算未命中 / 记 0；精确率只算有预测的题。方括号是 bootstrap 95% CI。</p>
+    <div class="tablewrap"><table id="sumtable"></table></div>
+  </section>
+
+  <section id="groups">
+    <h2>分组对比</h2>
+    <p class="sub">误差线是 bootstrap 95% CI（10 000 次）。中心距离和面积比是中位数，其余是均值。</p>
+    <div class="controls">
+      <label class="ctl">分组 <span class="seg" id="g-group"></span></label>
+      <label class="ctl">指标 <select id="g-metric"></select></label>
+      <label class="ctl">题型 <span class="seg" id="g-sub"></span></label>
+    </div>
+    <div class="legend" id="g-legend"></div>
+    <div id="chart"></div>
+    <div id="g-tests" class="sub" style="margin-top:8px"></div>
+  </section>
+
+  <section id="items">
+    <h2>逐题查看</h2>
+    <p class="sub">点一题查看地图：黄色是金标准，彩色是各模型的预测（线按评测缓冲宽度画成带子），圆点是几何中心。可在地址后加 <code>#items/题号</code> 直接打开某题。</p>
+    <div class="browser">
+      <div>
+        <div class="filters">
+          <select id="f-cat"><option value="">全部类别</option></select>
+          <select id="f-level"><option value="">全部难度</option><option value="1">第1档 直接</option><option value="2">第2档 转换</option><option value="3">第3档 关系</option></select>
+          <select id="f-scale"><option value="">全部尺度</option><option>局地</option><option>区域</option><option>国家</option></select>
+          <select id="f-shape"><option value="">全部形状</option><option>矩形</option><option>多边形</option><option>线</option></select>
+          <select id="f-model"></select>
+          <select id="f-cond"><option value="">任意得分</option><option value="zero">IoU = 0</option><option value="low">0 &lt; IoU &lt; 0.5</option><option value="hit">IoU ≥ 0.5</option><option value="nopred">无预测</option></select>
+        </div>
+        <div id="count"></div>
+        <div class="listbox"><table id="list"></table></div>
+      </div>
+      <div class="detail" id="detail"><div class="empty">从左侧选一题</div></div>
+    </div>
+  </section>
+
+  <section id="notes"><h2>数据来源与口径</h2><footer id="foot"></footer></section>
+</main>
+<script>
+(function(){
+"use strict";
+const DATA_URL="results_20261126.json";
+const COLORS=["var(--m0)","var(--m1)","var(--m2)","var(--m3)","var(--m4)","var(--m5)"];
+const HEX=["#0f766e","#ea580c","#7c3aed","#2563eb","#be185d","#a16207"];
+const MODEL_NAMES={"Sol":"gpt-6.2-sol","Qwen":"Qwen3.8-27B 4bit","Gemma":"Gemma-4-26B q4（严格）","Gemma宽松":"Gemma-4-26B q4（宽松解析）","Claude":"claude-opus-5-5","Gemini":"gemini-4-neon（thinking LOW）"};
+let D=null;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct=(x,d=1)=>x==null?"—":(100*x).toFixed(d)+"%";
+const num=(x,d=3)=>x==null?"—":Number(x).toFixed(d);
+const metres=x=>x==null?"—":(x>=10000?(x/1000).toFixed(1)+" km":Math.round(x)+" m");
+const ci=(c,f)=>c?`<span class="ci">[${f(c[0])}, ${f(c[1])}]</span>`:"";
+
+fetch(DATA_URL,{credentials:"same-origin"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>{D=d;init()})
+ .catch(e=>{$("#lede").textContent="数据加载失败（"+e.message+"），请刷新或重新登录。"});
+
+function init(){
+  const s=D.summary;
+  $("#lede").innerHTML=`数据包 <b>${esc(D.package)}</b>，260 题（难度 133 / 51 / 76），4 个模型的 11-19 回复，没有重跑模型。页面生成于 ${esc(D.built)}。`;
+  summaryTable();groupsInit();itemsInit();footer();
+  window.addEventListener("hashchange",openFromHash);openFromHash();
+}
+
+/* ---------------- summary ---------------- */
+function summaryTable(){
+  const cols=[
+    ["mean IoU",m=>num(m.mean_iou)+ci(m.mean_iou_ci,num)],
+    ["hit@0.5",m=>pct(m.hit50)+ci(m.hit50_ci,pct)],
+    ["Boundary IoU<br><small>面状 185</small>",m=>num(m.biou)],
+    ["中心距离中位数<br><small>占对角线</small>",m=>m.dist_pct_median==null?"—":m.dist_pct_median.toFixed(2)+"%"+ci(m.dist_pct_ci,x=>x.toFixed(2))],
+    ["中心距离中位数<br><small>地面</small>",m=>metres(m.dist_m_median)+ci(m.dist_m_ci,metres)],
+    ["≤5% 对角线命中",m=>pct(m.hit5)+ci(m.hit5_ci,pct)],
+    ["面状召回率",m=>num(m.poly_recall)+ci(m.poly_recall_ci,num)],
+    ["面状精确率",m=>num(m.poly_precision)+ci(m.poly_precision_ci,num)],
+    ["线状完整度",m=>num(m.line_recall)+ci(m.line_recall_ci,num)],
+    ["线状正确度",m=>num(m.line_precision)+ci(m.line_precision_ci,num)],
+    ["无预测<br><small>none / 无法解析</small>",m=>`${m.no_pred}<span class="ci">${m.n_none} / ${m.n_invalid}</span>`]];
+  let h="<thead><tr><th>模型</th>"+cols.map(c=>`<th>${c[0]}</th>`).join("")+"</tr></thead><tbody>";
+  D.models.forEach((k,i)=>{const m=D.summary[k];h+=`<tr><td><span class="dot" style="background:${COLORS[i]}"></span><b>${esc(k)}</b><span class="ci">${esc(MODEL_NAMES[k]||"")}</span></td>`+cols.map(c=>`<td>${c[1](m)}</td>`).join("")+"</tr>"});
+  $("#sumtable").innerHTML=h+"</tbody>";
+}
+
+/* ---------------- grouped chart ---------------- */
+const METRICS={iou:["mean IoU",num,1],hit50:["hit@0.5",pct,1],dist_pct:["中心距离中位数（对角线 %）",x=>x==null?"—":x.toFixed(2)+"%",null],
+  hit5:["≤5% 对角线命中",pct,1],recall:["召回率 / 完整度（无预测记 0）",num,1],precision:["精确率 / 正确度（有预测的题）",num,1],area_ratio:["面积比 P/G 中位数",x=>x==null?"—":x.toFixed(2),null]};
+const G={group:"难度",metric:"iou",sub:"全部题型"};
+function seg(el,opts,key){el.innerHTML=opts.map(o=>`<button type="button" data-v="${esc(o)}" aria-pressed="${G[key]===o}">${esc(o)}</button>`).join("");
+  el.onclick=e=>{const b=e.target.closest("button");if(!b)return;G[key]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));drawChart()}}
+function groupsInit(){
+  seg($("#g-group"),Object.keys(D.groups),"group");seg($("#g-sub"),["全部题型","面状","线状"],"sub");
+  $("#g-metric").innerHTML=Object.entries(METRICS).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("");
+  $("#g-metric").onchange=e=>{G.metric=e.target.value;drawChart()};
+  $("#g-legend").innerHTML=D.models.map((m,i)=>`<span><span class="dot" style="background:${COLORS[i]}"></span>${esc(m)}</span>`).join("");
+  drawChart();window.addEventListener("resize",()=>{clearTimeout(window._rt);window._rt=setTimeout(drawChart,150)});
+}
+function drawChart(){
+  const grp=D.groups[G.group],order=grp.order,[label,fmt,fixedMax]=METRICS[G.metric];
+  const W=Math.max(320,$("#chart").clientWidth||900),H=340,ml=56,mr=10,mt=16,mb=58;
+  const cells=[];let vmax=0;
+  order.forEach(v=>D.models.forEach((m,i)=>{const c=grp.data[`${m}|${v}|${G.sub}`];if(!c)return;const [val,cc]=c[G.metric];
+    cells.push({v,m,i,val,cc,n:c.n,np:c.no_pred});[val,cc&&cc[1]].forEach(x=>{if(x!=null&&x>vmax)vmax=x})}));
+  const ymax=fixedMax||niceMax(vmax*1.05||1);
+  const pw=W-ml-mr,ph=H-mt-mb,present=order.filter(v=>cells.some(c=>c.v===v));
+  const gw=pw/Math.max(1,present.length),bw=Math.min(34,(gw-18)/D.models.length);
+  const y=v=>mt+ph-(Math.min(v,ymax)/ymax)*ph;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(G.group)} × ${esc(label)}">`;
+  for(let k=0;k<=5;k++){const t=ymax*k/5,yy=y(t);s+=`<line x1="${ml}" x2="${W-mr}" y1="${yy}" y2="${yy}" stroke="#e6ece9"/><text x="${ml-6}" y="${yy+4}" text-anchor="end" font-size="11" fill="#6b7872">${esc(fmt(t))}</text>`}
+  present.forEach((v,gi)=>{const x0=ml+gi*gw+(gw-bw*D.models.length)/2;
+    const cs=cells.filter(c=>c.v===v);
+    s+=`<text x="${ml+gi*gw+gw/2}" y="${H-mb+18}" text-anchor="middle" font-size="12.5" fill="#253330">${esc(v)}</text><text x="${ml+gi*gw+gw/2}" y="${H-mb+34}" text-anchor="middle" font-size="11" fill="#6b7872">n = ${cs[0]?cs[0].n:0}</text>`;
+    cs.forEach(c=>{const x=x0+c.i*bw;if(c.val==null){s+=`<text x="${x+bw/2}" y="${y(0)-4}" text-anchor="middle" font-size="10" fill="#9aa49f">—</text>`;return}
+      const tip=`${c.m} · ${v}：${fmt(c.val)}${c.cc?` [${fmt(c.cc[0])}, ${fmt(c.cc[1])}]`:""}，n = ${c.n}，无预测 ${c.np}`;
+      s+=`<g><title>${esc(tip)}</title><rect x="${x+2}" y="${y(c.val)}" width="${bw-4}" height="${Math.max(0,y(0)-y(c.val))}" rx="2" fill="${HEX[c.i]}" opacity=".85"/>`;
+      if(c.cc){const xm=x+bw/2;s+=`<line x1="${xm}" x2="${xm}" y1="${y(c.cc[0])}" y2="${y(c.cc[1])}" stroke="#253330" stroke-width="1.2"/><line x1="${xm-4}" x2="${xm+4}" y1="${y(c.cc[0])}" y2="${y(c.cc[0])}" stroke="#253330"/><line x1="${xm-4}" x2="${xm+4}" y1="${y(c.cc[1])}" y2="${y(c.cc[1])}" stroke="#253330"/>`}
+      s+="</g>"})});
+  s+=`<line x1="${ml}" x2="${W-mr}" y1="${y(0)}" y2="${y(0)}" stroke="#9aa49f"/><text x="12" y="${mt+ph/2}" font-size="11.5" fill="#3d4a45" transform="rotate(-90 12 ${mt+ph/2})" text-anchor="middle">${esc(label)}</text></svg>`;
+  $("#chart").innerHTML=s;
+  // difficulty tests
+  const tmap={dist_pct:"中心距离%（仅有预测）",hit5:"命中≤5%",recall:"召回率",precision:"精确率"};
+  const subk={"全部题型":"全部","面状":"面状","线状":"线状"}[G.sub];
+  if(G.group==="难度"&&tmap[G.metric]){
+    $("#g-tests").innerHTML="难度三档检验（Kruskal-Wallis / Jonckheere-Terpstra 单侧“随档位变差”，置换 10 000 次）："+D.models.map(m=>{const t=(D.level_tests[m][subk]||{})[tmap[G.metric]];return t?`${esc(m)} KW p = ${t.kw_p.toFixed(4)}，JT p = ${t.jt_p_worse_with_level.toFixed(4)}`:""}).filter(Boolean).join("；")+"。";
+  } else $("#g-tests").innerHTML=G.group==="难度"?"KW / JT 检验报告了中心距离、≤5% 命中、召回率和精确率四个指标，详见 docs/design/eval_final260_results_20261126.md。":"";
+}
+function niceMax(v){const p=Math.pow(10,Math.floor(Math.log10(v))),f=v/p;return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p}
+
+/* ---------------- item browser ---------------- */
+const F={sort:"id",dir:1};let selected=null;
+function iouBg(v){if(v==null)return"";const a=Math.min(1,v);return `background:rgba(22,123,106,${(0.08+0.6*a).toFixed(2)});color:${a>0.55?"#fff":"#253330"}`}
+function itemsInit(){
+  const cats=[...new Set(D.events.map(e=>e.category_zh))];
+  $("#f-cat").innerHTML+=["武装冲突","社会政治","灾害","公共卫生"].map(c=>`<option value="4:${c}">${c}（四类）</option>`).join("")+cats.map(c=>`<option value="6:${c}">· ${c}</option>`).join("");
+  $("#f-model").innerHTML=D.models.map(m=>`<option>${esc(m)}</option>`).join("");
+  ["#f-cat","#f-level","#f-scale","#f-shape","#f-model","#f-cond"].forEach(s=>$(s).onchange=renderList);
+  renderList();
+}
+function filtered(){
+  const cat=$("#f-cat").value,lv=$("#f-level").value,sc=$("#f-scale").value,sh=$("#f-shape").value,mm=$("#f-model").value,cond=$("#f-cond").value;
+  return D.events.filter(e=>{
+    if(cat){const [k,v]=cat.split(":");if(k==="4"?e.category4!==v:e.category_zh!==v)return false}
+    if(lv&&e.level!=lv)return false;if(sc&&e.scale!==sc)return false;if(sh&&e.shape!==sh)return false;
+    const r=e.models[mm];
+    if(cond==="zero"&&!(r.iou===0))return false;if(cond==="low"&&!(r.iou>0&&r.iou<0.5))return false;
+    if(cond==="hit"&&!(r.iou>=0.5))return false;if(cond==="nopred"&&r.center)return false;return true});
+}
+function renderList(){
+  const rows=filtered();
+  const key=e=>F.sort==="id"?e.id:F.sort==="cat"?e.category_zh:F.sort==="level"?e.level:F.sort==="scale"?e.scale:F.sort==="shape"?e.shape:(e.models[F.sort]||{}).iou;
+  rows.sort((a,b)=>{const x=key(a),y=key(b);return (x<y?-1:x>y?1:a.id<b.id?-1:1)*F.dir});
+  const hd=[["id","题号"],["cat","类别"],["level","档"],["scale","尺度"],["shape","形状"],...D.models.map(m=>[m,m])];
+  let h="<thead><tr>"+hd.map(([k,l])=>`<th data-k="${esc(k)}" class="${F.sort===k?"sorted":""}" data-dir="${F.dir>0?"▲":"▼"}">${esc(l)}</th>`).join("")+"</tr></thead><tbody>";
+  rows.forEach(e=>{h+=`<tr data-id="${esc(e.id)}" class="${e.id===selected?"sel":""}"><td>${esc(e.id)}</td><td>${esc(e.category_zh)}</td><td>${e.level}</td><td>${esc(e.scale)}</td><td>${esc(e.shape)}</td>`+
+    D.models.map(m=>{const r=e.models[m];return r.center?`<td><span class="iou" style="${iouBg(r.iou)}">${r.iou.toFixed(2)}</span></td>`:`<td class="np" title="${esc(r.status)}">无</td>`}).join("")+"</tr>"});
+  $("#list").innerHTML=h+"</tbody>";
+  $("#count").textContent=`${rows.length} / ${D.events.length} 题（表中数字是 IoU，“无”= 无预测）`;
+  $("#list").querySelector("thead").onclick=ev=>{const th=ev.target.closest("th");if(!th)return;const k=th.dataset.k;
+    if(F.sort===k)F.dir=-F.dir;else{F.sort=k;F.dir=D.models.includes(k)?-1:1}renderList()};
+  $("#list").querySelector("tbody").onclick=ev=>{const tr=ev.target.closest("tr");if(tr)location.hash="items/"+tr.dataset.id};
+}
+function openFromHash(){const m=location.hash.match(/^#items\/(.+)$/);if(!m)return;const e=D.events.find(x=>x.id===decodeURIComponent(m[1]));if(e)showItem(e)}
+
+const MAP={zoom:1,show:null};
+function showItem(e){
+  selected=e.id;document.querySelectorAll("#list tbody tr").forEach(tr=>tr.classList.toggle("sel",tr.dataset.id===e.id));
+  if(!MAP.show)MAP.show=Object.fromEntries([["gold",true],...D.models.map(m=>[m,m!=="Gemma"])]);
+  const toggles=[["gold","金标准","var(--gold)"],...D.models.map((m,i)=>[m,m,COLORS[i]])];
+  let h=`<div class="dhead"><h3>${esc(e.id)}</h3><span class="tag">${esc(e.category_zh)}</span><span class="tag">第${e.level}档（${esc({direct:"直接",convert:"转换",relational:"关系"}[e.cue]||e.cue)}）</span><span class="tag">${esc(e.scale)}</span><span class="tag">${esc(e.shape)}</span><span class="tag">${esc(e.image_name)} · ${e.w}×${e.h}${e.mpp?` · ${e.mpp.toFixed(2)} m/px`:" · 无统一比例尺"}</span></div>`;
+  h+=`<div class="mapbar">`+toggles.map(([k,l,c])=>`<label><input type="checkbox" data-k="${esc(k)}" ${MAP.show[k]?"checked":""}><span class="dot" style="background:${c}"></span>${esc(l)}</label>`).join("")+
+     `<span class="zoom"><button type="button" data-z="-1" aria-label="缩小">−</button><button type="button" data-z="0" aria-label="适应宽度">⤢</button><button type="button" data-z="1" aria-label="放大">+</button></span></div>`;
+  h+=`<div class="mapbox" id="mapbox"><div class="mapinner" id="mapinner"><img id="mapimg" alt="${esc(e.image_name)}" src="${esc(e.image)}" width="${e.w}" height="${e.h}"><svg id="overlay" viewBox="0 0 ${e.w} ${e.h}" preserveAspectRatio="none"></svg></div></div>`;
+  h+=`<div class="tablewrap mtable"><table><thead><tr><th>模型</th><th>预测</th><th>IoU</th><th>Boundary IoU</th><th>中心距离</th><th>地面距离</th><th>召回率</th><th>精确率</th><th>面积比</th></tr></thead><tbody>`+
+     D.models.map((m,i)=>{const r=e.models[m];const st={polygon:"框",line:"线",none:"答 none",unparseable:"无法解析",missing:"缺失"}[r.status]||r.status;
+       return `<tr><td><span class="dot" style="background:${COLORS[i]}"></span>${esc(m)}</td><td>${esc(st)}</td><td>${num(r.iou)}</td><td>${e.gold_type==="polygon"&&r.center?num(r.biou):"—"}</td><td>${r.dist_pct==null?"—":r.dist_pct.toFixed(2)+"%"}</td><td>${metres(r.dist_m)}</td><td>${num(r.recall)}</td><td>${num(r.precision)}</td><td>${r.area_ratio==null?"—":r.area_ratio.toFixed(2)}</td></tr>`}).join("")+`</tbody></table></div>`;
+  h+=`<div class="texts"><div><b>问题</b>${esc(e.question)}</div><div><b>原文（模型输入，${esc(e.lang)}）</b>${esc(e.text)}</div></div>`;
+  h+=`<details><summary>模型原始回复</summary><table><tbody>`+D.models.map((m,i)=>`<tr><td><span class="dot" style="background:${COLORS[i]}"></span>${esc(m)}</td><td class="raw">${esc(e.models[m].raw)}</td></tr>`).join("")+`</tbody></table></details>`;
+  $("#detail").innerHTML=h;
+  $("#mapimg").onerror=()=>{$("#mapbox").insertAdjacentHTML("afterbegin",`<div class="imgerr">地图图片加载失败：${esc(e.image)}</div>`)};
+  $("#detail").querySelector(".mapbar").onchange=ev=>{const k=ev.target.dataset.k;if(k){MAP.show[k]=ev.target.checked;drawOverlay(e)}};
+  $("#detail").querySelector(".zoom").onclick=ev=>{const b=ev.target.closest("button");if(!b)return;const z=+b.dataset.z;MAP.zoom=z===0?1:Math.max(1,Math.min(8,MAP.zoom*(z>0?1.5:1/1.5)));applyZoom(e)};
+  applyZoom(e);drawOverlay(e);
+  if(window.innerWidth<=900)$("#detail").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function applyZoom(e){const box=$("#mapbox"),inner=$("#mapinner");const fit=Math.min(box.clientWidth-2,(window.innerHeight*0.7-2)*e.w/e.h);inner.style.width=Math.max(200,fit*MAP.zoom)+"px"}
+function drawOverlay(e){
+  const diag=Math.hypot(e.w,e.h),u=diag/900; // ~1 screen px at fit
+  const pts=c=>c.map(p=>p[0]+","+p[1]).join(" ");
+  const shape=(g,col,isGold,buf)=>{if(!g)return"";
+    if(g.type==="polygon")return `<polygon points="${pts(g.coordinates)}" fill="${col}" fill-opacity="${isGold?.28:.14}" stroke="${col}" stroke-width="${(isGold?3:2.4)*u}" ${isGold?"":`stroke-dasharray="${8*u} ${4*u}"`} stroke-linejoin="round"/>`;
+    if(g.type==="line")return `<polyline points="${pts(g.coordinates)}" fill="none" stroke="${col}" stroke-opacity="${isGold?.32:.22}" stroke-width="${Math.max(2*buf,4*u)}" stroke-linecap="round" stroke-linejoin="round"/><polyline points="${pts(g.coordinates)}" fill="none" stroke="${col}" stroke-width="${(isGold?2.6:2)*u}" ${isGold?"":`stroke-dasharray="${8*u} ${4*u}"`}/>`;
+    return ""};
+  const lineBuf=e.gold_type==="line"?e.line_px:0.01*diag;
+  const center=(c,col)=>c&&c[0]!=null?`<circle cx="${c[0]}" cy="${c[1]}" r="${5*u}" fill="${col}" stroke="#fff" stroke-width="${1.6*u}"/>`:"";
+  let s="";
+  D.models.forEach((m,i)=>{if(!MAP.show[m])return;const r=e.models[m];s+=shape(r.geom,HEX[i],false,lineBuf)+center(r.center,HEX[i])});
+  if(MAP.show.gold)s=shape(e.gold,"#eab308",true,e.gold_type==="line"?e.line_px:0)+s+center(e.gold_center,"#a16207");
+  $("#overlay").innerHTML=s;
+}
+
+/* ---------------- footer ---------------- */
+function footer(){
+  $("#foot").innerHTML=`
+  <p><b>数据来源</b>：评测包 <code>benchmark/exports/eval_v2_20261119</code>（最终 260 题：<code>final260_20261126/</code>；Sol 11-19、Gemma 11-25 的回复 + 11-26 重跑的 37 题，Claude / Gemini / Qwen 11-26；<code>runs/*.raw.jsonl</code>、<code>*.pred.json</code>、<code>*.score_polygon.json</code>）；中心距离与面积指标 <code>benchmark/diagnostics/center_area_20261126</code>（2026-11-26）；难度三档 <code>benchmark/diagnostics/difficulty_cue_20261125/item_levels.csv</code>；尺度三档 <code>difficulty_scale_20261121/item_labels.csv</code>。完整报告 <code>docs/design/eval_final260_results_20261126.md</code>。地图图片直接用复核站已有的图片。页面生成于 ${esc(D.built)}。</p>
+  <p><b>题目</b>：260 题（293 题评测包中去掉 excluded 的题），面状 185 / 线状 75；难度 133 / 51 / 76；四类：武装冲突 = 拿破仑 + 一战，公共卫生 = 公共卫生 + 疫病。</p>
+  <p><b>模型</b>：Sol = gpt-6.2-sol，Qwen = Qwen3.8-27B 4bit，Gemma = Gemma-4-26B q4 按严格规则解析；Gemma宽松 = 只把缺少 "type" 的 <code>{"box":…}</code> / <code>{"line":…}</code> 改成规定格式后再解析；Claude = claude-opus-5-5（Anthropic API，effort 默认 medium，思考不可关），Gemini = gemini-4-neon（Google API，thinking_level = LOW，其余默认）。所有模型用同一提示词 grounding-v2-20261119、同一解析和评分；其中 37 题原问法结尾为 “Mark the area/route/line…”，11-26 统一改为 “Mark the location.” 后全部模型重跑；Qwen 260 题于 11-26 在 MacBook 上重跑。</p>
+  <p><b>口径</b>：预测坐标（0–1000）换成原图像素；答 none、无法解析都算"无预测"。IoU / hit@0.5 / Boundary IoU 与 <code>score_polygon</code> 相同，失败记 0，Boundary IoU 只算 185 道面状题。线按每张图的线规则缓冲成带子（金标准是线时预测也用同一宽度；金标准是面、预测是线时按对角线 1% 缓冲）。中心 = 框中心 / 多边形面积质心 / 折线按长度加权的中点质心；中心距离只算有预测的题，报占图像对角线的百分比和地面米数（${D.scale_missing_items} 题在示意图上，没有统一比例尺，不报米数：${D.scale_missing_maps.map(esc).join("、")}；部分米数来自地图范围估计，只能当量级看）。≤5% 命中的分母是全部题，无预测算未命中。召回率 = |P∩G|/|G|，无预测记 0；精确率 = |P∩G|/|P|，只算有预测的题；面积比 = |P|/|G| 的中位数。方括号和误差线是 bootstrap 95% CI（${D.n_boot} 次，seed 0）。</p>`;
+}
+})();
+</script>
+</body>
+</html>
