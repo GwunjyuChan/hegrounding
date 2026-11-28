@@ -1,0 +1,76 @@
+event_id,level,category,gold_type,raw_nonone,status_strict,status_lenient,iou_strict,iou_lenient,hit@0.5,center_in_region,center_dist_pct
+MF0016,2,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [498, 278, 592, 410]}",polygon,polygon,0.0177,0.0177,0,0,8.367
+MF0021,2,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [652, 508, 743, 617]}",polygon,polygon,0.0,0.0,0,0,13.353
+MF0022,1,napoleonic_war,polygon,"{""type"": ""line"", ""points"": [[662, 518], [706, 498]]}",line,line,0.0,0.0,0,0,13.655
+MF0026,3,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [300, 660, 480, 780]}",polygon,polygon,0.2154,0.2154,0,0,9.463
+MF0035,3,napoleonic_war,polygon,"{""type"": ""line"", ""points"": [[586, 462], [606, 523], [626, 583], [646, 644], [666, 705]]}",line,line,0.0,0.0,0,0,17.504
+MF0048,1,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [268, 331, 368, 462]}",polygon,polygon,0.0,0.0,0,0,8.822
+MF0064,1,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [765, 235, 835, 285]}",polygon,polygon,0.0,0.0,0,0,32.547
+MF0077,1,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [240, 631, 320, 791]}",polygon,polygon,0.2842,0.2842,0,1,3.818
+MF0082,2,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [513, 50, 806, 300]}",polygon,polygon,0.0,0.0,0,0,22.565
+MF0117,2,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [422, 278, 432, 308]}",polygon,polygon,0.0538,0.0538,0,0,1.266
+MF0118,1,napoleonic_war,polygon,"{""type"": ""line"", ""points"": [[438, 537], [462, 528], [487, 519], [512, 510], [537, 501], [562, 492], [587, 483], [612, 474], [637, 465], [662, 456]]}",line,line,0.0,0.0,0,0,14.001
+MF0127,3,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [688, 658, 708, 688]}",polygon,polygon,0.0,0.0,0,0,5.714
+NC-EPI-004,1,epidemic,polygon,"{""type"": ""box"", ""bbox"": [735, 816, 765, 826]}",polygon,polygon,0.4387,0.4387,0,1,0.129
+NC-EPI-005,1,epidemic,line,"{""type"": ""box"", ""bbox"": [546, 213, 640, 276]}",polygon,polygon,0.5387,0.5387,1,1,1.665
+NC-EPI-006,1,epidemic,line,"{""type"": ""line"", ""points"": [[413, 390], [438, 438]]}",line,line,0.2689,0.2689,0,1,4.605
+NC-EPI-007,1,epidemic,line,"{""type"": ""box"", ""bbox"": [303, 706, 358, 745]}",polygon,polygon,0.2664,0.2664,0,1,0.217
+NC-EPI-009,1,epidemic,polygon,"{""type"": ""box"", ""bbox"": [726, 416, 756, 456]}",polygon,polygon,0.0,0.0,0,0,25.207
+NC-EPI-013,3,epidemic,polygon,"{""type"": ""line"", ""points"": [[563, 463], [568, 461]]}",line,line,0.5156,0.5156,1,1,0.612
+NC-SF-005,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [672, 348, 700, 378]}",polygon,polygon,0.0,0.0,0,0,19.324
+NC-SF-006,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [663, 451, 676, 464]}",polygon,polygon,0.0,0.0,0,0,14.368
+NC-SF-007,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [662, 452, 682, 472]}",polygon,polygon,0.0,0.0,0,0,15.406
+NC-SF-008,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [734, 356, 739, 361]}",polygon,polygon,0.0,0.0,0,0,4.008
+NC-SF-009,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [431, 442, 473, 471]}",polygon,polygon,0.0,0.0,0,0,33.775
+NC-SF-010,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [774, 393, 840, 458]}",polygon,polygon,0.0,0.0,0,0,11.303
+NC-SF-011,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [564, 518, 572, 530]}",polygon,polygon,0.0,0.0,0,0,20.243
+NC2-DS-001,1,disaster,line,"{""type"": ""box"", ""bbox"": [593, 413, 607, 424]}",polygon,polygon,0.0,0.0,0,0,7.649
+NC2-DS-002,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [593, 468, 603, 480]}",polygon,polygon,0.0,0.0,0,0,5.969
+NC2-DS-004,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [376, 428, 426, 458]}",polygon,polygon,0.0,0.0,0,0,31.545
+NC2-DS-006,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [710, 610, 721, 628]}",polygon,polygon,0.5316,0.5316,1,1,0.228
+NC2-DS-008,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [826, 531, 983, 725]}",polygon,polygon,0.1407,0.1407,0,0,5.071
+NC2-DS-009,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [375, 448, 400, 470]}",polygon,polygon,0.0,0.0,0,0,27.568
+NC2-DS-011,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [536, 333, 628, 351]}",polygon,polygon,0.0,0.0,0,0,6.153
+NC2-DS-014,3,disaster,polygon,"{""type"": ""point"", ""coordinates"": [582, 418]}",unparseable,unparseable,0.0,0.0,0,0,
+NC2-DS-017,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [620, 536, 667, 583]}",polygon,polygon,0.0,0.0,0,0,9.143
+NC2-DS-019,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [118, 283, 743, 582]}",polygon,polygon,0.0,0.0,0,0,21.465
+NC2-DS-036,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [606, 630, 663, 664]}",polygon,polygon,0.3102,0.3102,0,0,0.902
+NC2-DS-039,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [118, 438, 148, 458]}",polygon,polygon,0.0,0.0,0,0,14.969
+NC2-DS-043,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [858, 318, 872, 328]}",polygon,polygon,0.151,0.151,0,1,0.965
+NC2-DS-045,1,disaster,polygon,"{""type"": ""box"", ""bbox"": [738, 480, 750, 511]}",polygon,polygon,0.0,0.0,0,0,2.78
+NC2-DS-047,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [650, 668, 826, 718]}",polygon,polygon,0.0,0.0,0,0,15.716
+NC2-DS-048,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [710, 583, 798, 607]}",polygon,polygon,0.0121,0.0121,0,0,3.073
+NC2-DS-049,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [613, 452, 652, 478]}",polygon,polygon,0.0,0.0,0,0,17.469
+NC2-DS-051,3,disaster,polygon,"{""type"": ""box"", ""bbox"": [536, 218, 616, 338]}",polygon,polygon,0.0,0.0,0,0,24.438
+NC2-DS-052,2,disaster,polygon,"{""type"": ""box"", ""bbox"": [178, 413, 314, 493]}",polygon,polygon,0.1462,0.1462,0,0,1.986
+NC2-PH-001,1,public_health,line,"{""type"": ""line"", ""points"": [[268, 518], [306, 488], [343, 458], [381, 428], [418, 398]]}",line,line,0.0846,0.0846,0,0,6.186
+NC2-PH-002,1,public_health,polygon,"{""type"": ""box"", ""bbox"": [340, 780, 415, 875]}",polygon,polygon,0.2385,0.2385,0,1,0.864
+NC2-PH-003,1,public_health,line,"{""type"": ""line"", ""points"": [[233, 562], [300, 588]]}",line,line,0.6045,0.6045,1,1,0.412
+NC2-PH-005,3,public_health,polygon,"{""type"": ""box"", ""bbox"": [513, 483, 583, 527]}",polygon,polygon,0.0,0.0,0,0,36.248
+NC2-PH-010,3,public_health,polygon,"{""type"": ""box"", ""bbox"": [431, 531, 462, 556]}",polygon,polygon,0.0,0.0,0,0,3.383
+NC2-PH-013,1,public_health,polygon,"{""type"": ""box"", ""bbox"": [122, 652, 213, 876]}",polygon,polygon,0.6996,0.6996,1,1,1.426
+NC2-PH-014,1,public_health,line,"{""type"": ""box"", ""bbox"": [453, 600, 500, 650]}",polygon,polygon,0.0,0.0,0,0,4.629
+NC2-PH-015,1,public_health,polygon,"{""type"": ""box"", ""bbox"": [453, 613, 471, 631]}",polygon,polygon,0.0,0.0,0,0,6.373
+NC2-PH-020,3,public_health,polygon,"{""type"": ""box"", ""bbox"": [405, 385, 435, 425]}",polygon,polygon,0.0,0.0,0,0,10.531
+NC2-PH-028,2,public_health,polygon,"{""type"": ""box"", ""bbox"": [100, 536, 1000, 961]}",polygon,polygon,0.0004,0.0004,0,0,15.389
+NC2-PH-035,2,public_health,polygon,"{""type"": ""box"", ""bbox"": [519, 318, 563, 438]}",polygon,polygon,0.2862,0.2862,0,0,1.357
+NC2-PH-037,1,public_health,polygon,"{""type"": ""box"", ""bbox"": [335, 562, 378, 608]}",polygon,polygon,0.0973,0.0973,0,0,2.951
+NC2-PH-038,2,public_health,polygon,"{""type"": ""box"", ""bbox"": [546, 691, 561, 708]}",polygon,polygon,0.365,0.365,0,1,0.188
+NC2-PH-046,1,public_health,polygon,"{""type"": ""box"", ""bbox"": [578, 553, 633, 594]}",polygon,polygon,0.0,0.0,0,0,14.198
+NC2-SP-003,2,social_political,polygon,"{""type"": ""box"", ""bbox"": [483, 151, 537, 193]}",polygon,polygon,0.0,0.0,0,0,3.676
+NC2-SP-004,2,social_political,polygon,"{""type"": ""box"", ""bbox"": [103, 637, 113, 651]}",polygon,polygon,0.2043,0.2043,0,1,0.594
+NC2-SP-006,3,social_political,line,"{""type"": ""line"", ""points"": [[733, 441], [788, 539]]}",line,line,0.0962,0.0962,0,0,3.459
+NC2-SP-008,1,social_political,line,"{""type"": ""box"", ""bbox"": [153, 519, 240, 553]}",polygon,polygon,0.5019,0.5019,1,1,0.368
+NC2-SP-009,2,social_political,line,"{""type"": ""box"", ""bbox"": [302, 330, 388, 352]}",polygon,polygon,0.303,0.303,0,1,1.09
+NC2-SP-012,1,social_political,polygon,"{""type"": ""box"", ""bbox"": [398, 446, 428, 476]}",polygon,polygon,0.636,0.636,1,1,0.08
+NC2-SP-014,1,social_political,line,"{""type"": ""line"", ""points"": [[266, 403], [288, 378], [308, 353], [328, 328], [348, 303]]}",line,line,0.0,0.0,0,0,12.882
+NC2-SP-015,1,social_political,polygon,"{""type"": ""box"", ""bbox"": [636, 148, 722, 210]}",polygon,polygon,0.6735,0.6735,1,1,0.479
+NC2-SP-018,1,social_political,polygon,"{""type"": ""box"", ""bbox"": [363, 673, 413, 713]}",polygon,polygon,0.0,0.0,0,0,16.433
+NC2-SP-019,3,social_political,polygon,"{""type"": ""line"", ""points"": [[163, 251], [172, 271], [172, 301], [183, 331], [183, 361], [194, 381], [194, 401], [183, 411], [163, 411], [143, 411], [133, 411], [123, 411], [123, 431]]}",line,line,0.0,0.0,0,0,7.004
+NC2-SP-020,3,social_political,polygon,"{""type"": ""box"", ""bbox"": [153, 413, 184, 433]}",polygon,polygon,0.0,0.0,0,0,10.911
+NC2-SP-021,1,social_political,line,"{""type"": ""line"", ""points"": [[327, 501], [327, 598]]}",line,line,0.593,0.593,1,1,0.263
+NC2-SP-038,2,social_political,polygon,"{""type"": ""box"", ""bbox"": [293, 231, 316, 293]}",polygon,polygon,0.4496,0.4496,0,1,0.695
+NC2-SP-039,3,social_political,polygon,"{""type"": ""line"", ""points"": [[301, 281], [402, 388]]}",line,line,0.1748,0.1748,0,0,3.798
+NC2-SP-041,3,social_political,polygon,"{""type"": ""line"", ""points"": [[897, 878], [882, 888], [866, 898], [851, 908], [836, 918], [821, 928], [806, 938], [791, 948], [776, 958], [761, 968], [746, 978], [731, 988]]}",line,line,0.0975,0.0975,0,0,6.991
+Z0002,2,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [588, 293, 682, 318]}",polygon,polygon,0.0,0.0,0,0,28.725
+Z0010,3,napoleonic_war,polygon,"{""type"": ""box"", ""bbox"": [728, 218, 790, 312]}",polygon,polygon,0.003,0.003,0,0,4.138

@@ -1,0 +1,7277 @@
+{
+  "predictions": [
+    {
+      "event_id": "MF0005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [899, 318, 976, 346]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1573.25,
+            391.78
+          ],
+          [
+            1708.0,
+            391.78
+          ],
+          [
+            1708.0,
+            426.27
+          ],
+          [
+            1573.25,
+            426.27
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0006",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [766, 563, 783, 583]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1340.5,
+            693.62
+          ],
+          [
+            1370.25,
+            693.62
+          ],
+          [
+            1370.25,
+            718.26
+          ],
+          [
+            1340.5,
+            718.26
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0008",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [408, 252, 478, 330]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            714.0,
+            310.46
+          ],
+          [
+            836.5,
+            310.46
+          ],
+          [
+            836.5,
+            406.56
+          ],
+          [
+            714.0,
+            406.56
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [350, 560, 520, 630]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            399.35,
+            672.0
+          ],
+          [
+            593.32,
+            672.0
+          ],
+          [
+            593.32,
+            756.0
+          ],
+          [
+            399.35,
+            756.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [600, 550, 700, 600]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            684.6,
+            660.0
+          ],
+          [
+            798.7,
+            660.0
+          ],
+          [
+            798.7,
+            720.0
+          ],
+          [
+            684.6,
+            720.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0012",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [418, 498, 468, 582]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            476.94,
+            597.6
+          ],
+          [
+            533.99,
+            597.6
+          ],
+          [
+            533.99,
+            698.4
+          ],
+          [
+            476.94,
+            698.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0013",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [410, 620, 490, 680]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            516.6,
+            474.3
+          ],
+          [
+            617.4,
+            474.3
+          ],
+          [
+            617.4,
+            520.2
+          ],
+          [
+            516.6,
+            520.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0015",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [208, 158, 306, 250]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            262.08,
+            120.87
+          ],
+          [
+            385.56,
+            120.87
+          ],
+          [
+            385.56,
+            191.25
+          ],
+          [
+            262.08,
+            191.25
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0016",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [498, 278, 592, 410]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            627.48,
+            212.67
+          ],
+          [
+            745.92,
+            212.67
+          ],
+          [
+            745.92,
+            313.65
+          ],
+          [
+            627.48,
+            313.65
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0017",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[331, 751], [581, 741]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            430.96,
+            977.8
+          ],
+          [
+            756.46,
+            964.78
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0018",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[706, 451], [783, 500], [833, 562], [883, 625], [917, 638], [867, 662], [806, 688], [756, 662], [706, 638], [656, 612], [617, 588]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            919.21,
+            587.2
+          ],
+          [
+            1019.47,
+            651.0
+          ],
+          [
+            1084.57,
+            731.72
+          ],
+          [
+            1149.67,
+            813.75
+          ],
+          [
+            1193.93,
+            830.68
+          ],
+          [
+            1128.83,
+            861.92
+          ],
+          [
+            1049.41,
+            895.78
+          ],
+          [
+            984.31,
+            861.92
+          ],
+          [
+            919.21,
+            830.68
+          ],
+          [
+            854.11,
+            796.82
+          ],
+          [
+            803.33,
+            765.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0019",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[803, 648], [762, 662], [712, 678], [662, 693], [612, 708]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1045.51,
+            843.7
+          ],
+          [
+            992.12,
+            861.92
+          ],
+          [
+            927.02,
+            882.76
+          ],
+          [
+            861.92,
+            902.29
+          ],
+          [
+            796.82,
+            921.82
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0021",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [652, 508, 743, 617]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1135.13,
+            618.24
+          ],
+          [
+            1293.56,
+            618.24
+          ],
+          [
+            1293.56,
+            750.89
+          ],
+          [
+            1135.13,
+            750.89
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0022",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[662, 518], [706, 498]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1152.54,
+            630.41
+          ],
+          [
+            1229.15,
+            606.07
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0023",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [652, 486, 746, 583]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1135.13,
+            591.46
+          ],
+          [
+            1298.79,
+            591.46
+          ],
+          [
+            1298.79,
+            709.51
+          ],
+          [
+            1135.13,
+            709.51
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0025",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [486, 572, 532, 622]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            566.68,
+            686.4
+          ],
+          [
+            620.31,
+            686.4
+          ],
+          [
+            620.31,
+            746.4
+          ],
+          [
+            566.68,
+            746.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0026",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [300, 660, 480, 780]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            349.8,
+            792.0
+          ],
+          [
+            559.68,
+            792.0
+          ],
+          [
+            559.68,
+            936.0
+          ],
+          [
+            349.8,
+            936.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0028",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[100, 738], [300, 762], [500, 778], [700, 798], [900, 818], [990, 838]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            116.6,
+            885.6
+          ],
+          [
+            349.8,
+            914.4
+          ],
+          [
+            583.0,
+            933.6
+          ],
+          [
+            816.2,
+            957.6
+          ],
+          [
+            1049.4,
+            981.6
+          ],
+          [
+            1154.34,
+            1005.6
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0029",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[306, 451], [331, 448], [356, 445], [381, 442], [406, 439], [431, 436], [456, 433], [481, 430], [506, 427]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            239.6,
+            537.59
+          ],
+          [
+            259.17,
+            534.02
+          ],
+          [
+            278.75,
+            530.44
+          ],
+          [
+            298.32,
+            526.86
+          ],
+          [
+            317.9,
+            523.29
+          ],
+          [
+            337.47,
+            519.71
+          ],
+          [
+            357.05,
+            516.14
+          ],
+          [
+            376.62,
+            512.56
+          ],
+          [
+            396.2,
+            508.98
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0030",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[308, 452], [333, 442], [358, 432], [383, 422], [408, 412], [433, 402], [458, 392], [483, 382]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            241.16,
+            538.78
+          ],
+          [
+            260.74,
+            526.86
+          ],
+          [
+            280.31,
+            514.94
+          ],
+          [
+            299.89,
+            503.02
+          ],
+          [
+            319.46,
+            491.1
+          ],
+          [
+            339.04,
+            479.18
+          ],
+          [
+            358.61,
+            467.26
+          ],
+          [
+            378.19,
+            455.34
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0032",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [415, 250, 465, 295]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            324.94,
+            298.0
+          ],
+          [
+            364.1,
+            298.0
+          ],
+          [
+            364.1,
+            351.64
+          ],
+          [
+            324.94,
+            351.64
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0033",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [200, 396, 260, 430]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            201.4,
+            254.63
+          ],
+          [
+            261.82,
+            254.63
+          ],
+          [
+            261.82,
+            276.49
+          ],
+          [
+            201.4,
+            276.49
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0034",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [438, 606, 508, 938]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            441.07,
+            389.66
+          ],
+          [
+            511.56,
+            389.66
+          ],
+          [
+            511.56,
+            603.13
+          ],
+          [
+            441.07,
+            603.13
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0035",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[586, 462], [606, 523], [626, 583], [646, 644], [666, 705]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            590.1,
+            297.07
+          ],
+          [
+            610.24,
+            336.29
+          ],
+          [
+            630.38,
+            374.87
+          ],
+          [
+            650.52,
+            414.09
+          ],
+          [
+            670.66,
+            453.31
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0037",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [578, 138, 666, 186]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            442.17,
+            156.77
+          ],
+          [
+            509.49,
+            156.77
+          ],
+          [
+            509.49,
+            211.3
+          ],
+          [
+            442.17,
+            211.3
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0039",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [468, 458, 568, 538]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            358.02,
+            520.29
+          ],
+          [
+            434.52,
+            520.29
+          ],
+          [
+            434.52,
+            611.17
+          ],
+          [
+            358.02,
+            611.17
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0040",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [220, 638, 300, 728]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            168.3,
+            724.77
+          ],
+          [
+            229.5,
+            724.77
+          ],
+          [
+            229.5,
+            827.01
+          ],
+          [
+            168.3,
+            827.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0041",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [350, 350, 450, 450]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            450.8,
+            485.45
+          ],
+          [
+            579.6,
+            485.45
+          ],
+          [
+            579.6,
+            624.15
+          ],
+          [
+            450.8,
+            624.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0042",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [418, 398, 483, 418]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            538.38,
+            552.03
+          ],
+          [
+            622.1,
+            552.03
+          ],
+          [
+            622.1,
+            579.77
+          ],
+          [
+            538.38,
+            579.77
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0046",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [364, 350, 446, 374]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            567.11,
+            527.45
+          ],
+          [
+            694.87,
+            527.45
+          ],
+          [
+            694.87,
+            563.62
+          ],
+          [
+            567.11,
+            563.62
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0047",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [526, 449, 583, 464]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            819.51,
+            676.64
+          ],
+          [
+            908.31,
+            676.64
+          ],
+          [
+            908.31,
+            699.25
+          ],
+          [
+            819.51,
+            699.25
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0048",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [268, 331, 368, 462]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            417.54,
+            498.82
+          ],
+          [
+            573.34,
+            498.82
+          ],
+          [
+            573.34,
+            696.23
+          ],
+          [
+            417.54,
+            696.23
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0049",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [308, 498, 438, 562]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            486.95,
+            961.14
+          ],
+          [
+            692.48,
+            961.14
+          ],
+          [
+            692.48,
+            1084.66
+          ],
+          [
+            486.95,
+            1084.66
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0050",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[538, 562], [562, 588], [588, 614], [612, 638]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            850.58,
+            1084.66
+          ],
+          [
+            888.52,
+            1134.84
+          ],
+          [
+            929.63,
+            1185.02
+          ],
+          [
+            967.57,
+            1231.34
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0052",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[11, 590], [113, 571], [258, 558], [362, 538], [462, 518], [538, 508]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            17.39,
+            1138.7
+          ],
+          [
+            178.65,
+            1102.03
+          ],
+          [
+            407.9,
+            1076.94
+          ],
+          [
+            572.32,
+            1038.34
+          ],
+          [
+            730.42,
+            999.74
+          ],
+          [
+            850.58,
+            980.44
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0053",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [615, 485, 805, 565]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1070.1,
+            807.04
+          ],
+          [
+            1400.7,
+            807.04
+          ],
+          [
+            1400.7,
+            940.16
+          ],
+          [
+            1070.1,
+            940.16
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0054",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[362, 327], [162, 300]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            629.88,
+            544.13
+          ],
+          [
+            281.88,
+            499.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0056",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[246, 741], [268, 692], [278, 642], [283, 592], [288, 542], [293, 492], [298, 442], [303, 392], [308, 342], [313, 292], [318, 242], [323, 192], [328, 142], [333, 92], [338, 42]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            428.04,
+            1233.02
+          ],
+          [
+            466.32,
+            1151.49
+          ],
+          [
+            483.72,
+            1068.29
+          ],
+          [
+            492.42,
+            985.09
+          ],
+          [
+            501.12,
+            901.89
+          ],
+          [
+            509.82,
+            818.69
+          ],
+          [
+            518.52,
+            735.49
+          ],
+          [
+            527.22,
+            652.29
+          ],
+          [
+            535.92,
+            569.09
+          ],
+          [
+            544.62,
+            485.89
+          ],
+          [
+            553.32,
+            402.69
+          ],
+          [
+            562.02,
+            319.49
+          ],
+          [
+            570.72,
+            236.29
+          ],
+          [
+            579.42,
+            153.09
+          ],
+          [
+            588.12,
+            69.89
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0059",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[152, 518], [250, 588], [350, 608], [450, 588], [550, 518], [650, 448]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            220.25,
+            455.84
+          ],
+          [
+            362.25,
+            517.44
+          ],
+          [
+            507.15,
+            535.04
+          ],
+          [
+            652.05,
+            517.44
+          ],
+          [
+            796.95,
+            455.84
+          ],
+          [
+            941.85,
+            394.24
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0063",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[150, 650], [250, 550], [350, 450]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            88.2,
+            497.9
+          ],
+          [
+            147.0,
+            421.3
+          ],
+          [
+            205.8,
+            344.7
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0064",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [765, 235, 835, 285]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            449.82,
+            180.01
+          ],
+          [
+            490.98,
+            180.01
+          ],
+          [
+            490.98,
+            218.31
+          ],
+          [
+            449.82,
+            218.31
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0067",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [280, 500, 600, 980]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            323.4,
+            311.0
+          ],
+          [
+            693.0,
+            311.0
+          ],
+          [
+            693.0,
+            609.56
+          ],
+          [
+            323.4,
+            609.56
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0069",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[162, 250], [398, 438]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            165.08,
+            203.75
+          ],
+          [
+            405.56,
+            356.97
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0070",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [458, 567, 590, 817]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            466.7,
+            462.1
+          ],
+          [
+            601.21,
+            462.1
+          ],
+          [
+            601.21,
+            665.85
+          ],
+          [
+            466.7,
+            665.85
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0072",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [508, 318, 570, 340]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            517.65,
+            259.17
+          ],
+          [
+            580.83,
+            259.17
+          ],
+          [
+            580.83,
+            277.1
+          ],
+          [
+            517.65,
+            277.1
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0074",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [358, 757, 401, 781]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            688.79,
+            1501.89
+          ],
+          [
+            771.52,
+            1501.89
+          ],
+          [
+            771.52,
+            1549.5
+          ],
+          [
+            688.79,
+            1549.5
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0075",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [896, 303, 958, 348]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1723.9,
+            601.15
+          ],
+          [
+            1843.19,
+            601.15
+          ],
+          [
+            1843.19,
+            690.43
+          ],
+          [
+            1723.9,
+            690.43
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0077",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [240, 631, 320, 791]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            407.28,
+            827.87
+          ],
+          [
+            543.04,
+            827.87
+          ],
+          [
+            543.04,
+            1037.79
+          ],
+          [
+            407.28,
+            1037.79
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0078",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [666, 398, 726, 438]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1130.2,
+            522.18
+          ],
+          [
+            1232.02,
+            522.18
+          ],
+          [
+            1232.02,
+            574.66
+          ],
+          [
+            1130.2,
+            574.66
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0080",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [838, 596, 918, 624]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1422.09,
+            781.95
+          ],
+          [
+            1557.85,
+            781.95
+          ],
+          [
+            1557.85,
+            818.69
+          ],
+          [
+            1422.09,
+            818.69
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0081",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [730, 590, 760, 630]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1719.88,
+            1019.52
+          ],
+          [
+            1790.56,
+            1019.52
+          ],
+          [
+            1790.56,
+            1088.64
+          ],
+          [
+            1719.88,
+            1088.64
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0082",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [513, 50, 806, 300]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1208.63,
+            86.4
+          ],
+          [
+            1898.94,
+            86.4
+          ],
+          [
+            1898.94,
+            518.4
+          ],
+          [
+            1208.63,
+            518.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0083",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [868, 168, 998, 400]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2045.01,
+            290.3
+          ],
+          [
+            2351.29,
+            290.3
+          ],
+          [
+            2351.29,
+            691.2
+          ],
+          [
+            2045.01,
+            691.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0101",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [566, 293, 698, 338]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            596.0,
+            600.06
+          ],
+          [
+            734.99,
+            600.06
+          ],
+          [
+            734.99,
+            692.22
+          ],
+          [
+            596.0,
+            692.22
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0103",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [566, 848, 792, 908]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            596.0,
+            1736.7
+          ],
+          [
+            833.98,
+            1736.7
+          ],
+          [
+            833.98,
+            1859.58
+          ],
+          [
+            596.0,
+            1859.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0104",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [568, 296, 608, 336]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            598.1,
+            606.21
+          ],
+          [
+            640.22,
+            606.21
+          ],
+          [
+            640.22,
+            688.13
+          ],
+          [
+            598.1,
+            688.13
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0114",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[360, 755], [410, 735], [460, 715], [510, 695], [560, 675], [610, 655], [660, 635], [710, 615], [760, 595], [810, 575], [860, 555], [910, 535], [960, 515]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            848.16,
+            1304.64
+          ],
+          [
+            965.96,
+            1270.08
+          ],
+          [
+            1083.76,
+            1235.52
+          ],
+          [
+            1201.56,
+            1200.96
+          ],
+          [
+            1319.36,
+            1166.4
+          ],
+          [
+            1437.16,
+            1131.84
+          ],
+          [
+            1554.96,
+            1097.28
+          ],
+          [
+            1672.76,
+            1062.72
+          ],
+          [
+            1790.56,
+            1028.16
+          ],
+          [
+            1908.36,
+            993.6
+          ],
+          [
+            2026.16,
+            959.04
+          ],
+          [
+            2143.96,
+            924.48
+          ],
+          [
+            2261.76,
+            889.92
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0117",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [422, 278, 432, 308]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            611.48,
+            244.64
+          ],
+          [
+            625.97,
+            244.64
+          ],
+          [
+            625.97,
+            271.04
+          ],
+          [
+            611.48,
+            271.04
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0118",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[438, 537], [462, 528], [487, 519], [512, 510], [537, 501], [562, 492], [587, 483], [612, 474], [637, 465], [662, 456]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            634.66,
+            472.56
+          ],
+          [
+            669.44,
+            464.64
+          ],
+          [
+            705.66,
+            456.72
+          ],
+          [
+            741.89,
+            448.8
+          ],
+          [
+            778.11,
+            440.88
+          ],
+          [
+            814.34,
+            432.96
+          ],
+          [
+            850.56,
+            425.04
+          ],
+          [
+            886.79,
+            417.12
+          ],
+          [
+            923.01,
+            409.2
+          ],
+          [
+            959.24,
+            401.28
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0120",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [286, 362, 352, 405]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            168.17,
+            277.29
+          ],
+          [
+            206.98,
+            277.29
+          ],
+          [
+            206.98,
+            310.23
+          ],
+          [
+            168.17,
+            310.23
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0121",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [368, 348, 398, 368]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            473.98,
+            482.68
+          ],
+          [
+            512.62,
+            482.68
+          ],
+          [
+            512.62,
+            510.42
+          ],
+          [
+            473.98,
+            510.42
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0126",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [603, 176, 631, 200]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            785.11,
+            229.15
+          ],
+          [
+            821.56,
+            229.15
+          ],
+          [
+            821.56,
+            260.4
+          ],
+          [
+            785.11,
+            260.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0127",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [688, 658, 708, 688]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1087.73,
+            1269.94
+          ],
+          [
+            1119.35,
+            1269.94
+          ],
+          [
+            1119.35,
+            1327.84
+          ],
+          [
+            1087.73,
+            1327.84
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0131",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[638, 490], [408, 533], [270, 538], [172, 458]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1110.12,
+            815.36
+          ],
+          [
+            709.92,
+            886.91
+          ],
+          [
+            469.8,
+            895.23
+          ],
+          [
+            299.28,
+            762.11
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0135",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [358, 798, 412, 822]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            688.79,
+            1583.23
+          ],
+          [
+            792.69,
+            1583.23
+          ],
+          [
+            792.69,
+            1630.85
+          ],
+          [
+            688.79,
+            1630.85
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0136",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [228, 808, 268, 838]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            438.67,
+            1603.07
+          ],
+          [
+            515.63,
+            1603.07
+          ],
+          [
+            515.63,
+            1662.59
+          ],
+          [
+            438.67,
+            1662.59
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "MF0138",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[521, 508], [500, 562]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            656.46,
+            388.62
+          ],
+          [
+            630.0,
+            429.93
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-001",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [442, 311, 540, 407]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1550.09,
+            1033.76
+          ],
+          [
+            1893.78,
+            1033.76
+          ],
+          [
+            1893.78,
+            1352.87
+          ],
+          [
+            1550.09,
+            1352.87
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-002",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [500, 403, 530, 448]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1753.5,
+            1339.57
+          ],
+          [
+            1858.71,
+            1339.57
+          ],
+          [
+            1858.71,
+            1489.15
+          ],
+          [
+            1753.5,
+            1489.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-004",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [735, 816, 765, 826]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2577.64,
+            2712.38
+          ],
+          [
+            2682.86,
+            2712.38
+          ],
+          [
+            2682.86,
+            2745.62
+          ],
+          [
+            2577.64,
+            2745.62
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [546, 213, 640, 276]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1914.82,
+            708.01
+          ],
+          [
+            2244.48,
+            708.01
+          ],
+          [
+            2244.48,
+            917.42
+          ],
+          [
+            1914.82,
+            917.42
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-006",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[413, 390], [438, 438]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1448.39,
+            1296.36
+          ],
+          [
+            1536.07,
+            1455.91
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [303, 706, 358, 745]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1062.62,
+            2346.74
+          ],
+          [
+            1255.51,
+            2346.74
+          ],
+          [
+            1255.51,
+            2476.38
+          ],
+          [
+            1062.62,
+            2476.38
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [726, 416, 756, 456]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2546.08,
+            1382.78
+          ],
+          [
+            2651.29,
+            1382.78
+          ],
+          [
+            2651.29,
+            1515.74
+          ],
+          [
+            2546.08,
+            1515.74
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[688, 581], [718, 541]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2412.82,
+            1931.24
+          ],
+          [
+            2518.03,
+            1798.28
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[566, 551], [646, 653]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1984.96,
+            1831.52
+          ],
+          [
+            2265.52,
+            2170.57
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-012",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [336, 258, 362, 274]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1178.35,
+            857.59
+          ],
+          [
+            1269.53,
+            857.59
+          ],
+          [
+            1269.53,
+            910.78
+          ],
+          [
+            1178.35,
+            910.78
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-013",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[563, 463], [568, 461]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1974.44,
+            1539.01
+          ],
+          [
+            1991.98,
+            1532.36
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-EPI-016",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [562, 100, 605, 165]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2327.8,
+            327.6
+          ],
+          [
+            2505.91,
+            327.6
+          ],
+          [
+            2505.91,
+            540.54
+          ],
+          [
+            2327.8,
+            540.54
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [672, 348, 700, 378]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2016.0,
+            833.11
+          ],
+          [
+            2100.0,
+            833.11
+          ],
+          [
+            2100.0,
+            904.93
+          ],
+          [
+            2016.0,
+            904.93
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-006",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [663, 451, 676, 464]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1989.0,
+            1079.69
+          ],
+          [
+            2028.0,
+            1079.69
+          ],
+          [
+            2028.0,
+            1110.82
+          ],
+          [
+            1989.0,
+            1110.82
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [662, 452, 682, 472]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1986.0,
+            1082.09
+          ],
+          [
+            2046.0,
+            1082.09
+          ],
+          [
+            2046.0,
+            1129.97
+          ],
+          [
+            1986.0,
+            1129.97
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-008",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [734, 356, 739, 361]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2202.0,
+            852.26
+          ],
+          [
+            2217.0,
+            852.26
+          ],
+          [
+            2217.0,
+            864.23
+          ],
+          [
+            2202.0,
+            864.23
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [431, 442, 473, 471]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1293.0,
+            1058.15
+          ],
+          [
+            1419.0,
+            1058.15
+          ],
+          [
+            1419.0,
+            1127.57
+          ],
+          [
+            1293.0,
+            1127.57
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [774, 393, 840, 458]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2322.0,
+            940.84
+          ],
+          [
+            2520.0,
+            940.84
+          ],
+          [
+            2520.0,
+            1096.45
+          ],
+          [
+            2322.0,
+            1096.45
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [564, 518, 572, 530]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1692.0,
+            1240.09
+          ],
+          [
+            1716.0,
+            1240.09
+          ],
+          [
+            1716.0,
+            1268.82
+          ],
+          [
+            1692.0,
+            1268.82
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-SF-012",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "```json\n{\"type\": \"box\", \"bbox\": [676, 348, 690, 362]}\n```",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2028.0,
+            833.11
+          ],
+          [
+            2070.0,
+            833.11
+          ],
+          [
+            2070.0,
+            866.63
+          ],
+          [
+            2028.0,
+            866.63
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-001",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [605, 488, 730, 515]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1038.18,
+            666.12
+          ],
+          [
+            1252.68,
+            666.12
+          ],
+          [
+            1252.68,
+            702.98
+          ],
+          [
+            1038.18,
+            702.98
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[0, 318], [168, 368], [238, 392], [288, 325], [368, 338], [392, 418], [408, 475], [418, 558], [588, 568], [592, 488], [608, 488], [608, 648], [628, 788], [788, 808], [858, 718], [938, 788], [1000, 788]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            0.0,
+            434.07
+          ],
+          [
+            288.29,
+            502.32
+          ],
+          [
+            408.41,
+            535.08
+          ],
+          [
+            494.21,
+            443.62
+          ],
+          [
+            631.49,
+            461.37
+          ],
+          [
+            672.67,
+            570.57
+          ],
+          [
+            700.13,
+            648.38
+          ],
+          [
+            717.29,
+            761.67
+          ],
+          [
+            1009.01,
+            775.32
+          ],
+          [
+            1015.87,
+            666.12
+          ],
+          [
+            1043.33,
+            666.12
+          ],
+          [
+            1043.33,
+            884.52
+          ],
+          [
+            1077.65,
+            1075.62
+          ],
+          [
+            1352.21,
+            1102.92
+          ],
+          [
+            1472.33,
+            980.07
+          ],
+          [
+            1609.61,
+            1075.62
+          ],
+          [
+            1716.0,
+            1075.62
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [600, 760, 700, 860]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1029.6,
+            1178.76
+          ],
+          [
+            1201.2,
+            1178.76
+          ],
+          [
+            1201.2,
+            1333.86
+          ],
+          [
+            1029.6,
+            1333.86
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [188, 637, 262, 712]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            322.61,
+            987.99
+          ],
+          [
+            449.59,
+            987.99
+          ],
+          [
+            449.59,
+            1104.31
+          ],
+          [
+            322.61,
+            1104.31
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [105, 118, 245, 145]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            128.52,
+            214.17
+          ],
+          [
+            299.88,
+            214.17
+          ],
+          [
+            299.88,
+            263.18
+          ],
+          [
+            128.52,
+            263.18
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-014",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [580, 770, 660, 830]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            941.34,
+            1420.65
+          ],
+          [
+            1071.18,
+            1420.65
+          ],
+          [
+            1071.18,
+            1531.35
+          ],
+          [
+            941.34,
+            1531.35
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-017",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [388, 368, 468, 398]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            629.72,
+            678.96
+          ],
+          [
+            759.56,
+            678.96
+          ],
+          [
+            759.56,
+            734.31
+          ],
+          [
+            629.72,
+            734.31
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-020",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [858, 595, 935, 665]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1392.53,
+            838.95
+          ],
+          [
+            1517.51,
+            838.95
+          ],
+          [
+            1517.51,
+            937.65
+          ],
+          [
+            1392.53,
+            937.65
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-021",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [438, 481, 508, 548]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            710.87,
+            678.21
+          ],
+          [
+            824.48,
+            678.21
+          ],
+          [
+            824.48,
+            772.68
+          ],
+          [
+            710.87,
+            772.68
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-024",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [370, 370, 485, 530]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            634.92,
+            316.35
+          ],
+          [
+            832.26,
+            316.35
+          ],
+          [
+            832.26,
+            453.15
+          ],
+          [
+            634.92,
+            453.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-025",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[125, 430], [125, 700]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            214.5,
+            367.65
+          ],
+          [
+            214.5,
+            598.5
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-027",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [600, 405, 775, 470]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            648.0,
+            753.3
+          ],
+          [
+            837.0,
+            753.3
+          ],
+          [
+            837.0,
+            874.2
+          ],
+          [
+            648.0,
+            874.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-028",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [720, 540, 880, 660]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            777.6,
+            1004.4
+          ],
+          [
+            950.4,
+            1004.4
+          ],
+          [
+            950.4,
+            1227.6
+          ],
+          [
+            777.6,
+            1227.6
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-031",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[618, 402], [672, 438], [726, 474], [780, 510], [834, 546], [888, 582], [942, 618]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            960.37,
+            876.76
+          ],
+          [
+            1044.29,
+            955.28
+          ],
+          [
+            1128.2,
+            1033.79
+          ],
+          [
+            1212.12,
+            1112.31
+          ],
+          [
+            1296.04,
+            1190.83
+          ],
+          [
+            1379.95,
+            1269.34
+          ],
+          [
+            1463.87,
+            1347.86
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-032",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [250, 710, 340, 750]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            388.5,
+            1548.51
+          ],
+          [
+            528.36,
+            1548.51
+          ],
+          [
+            528.36,
+            1635.75
+          ],
+          [
+            388.5,
+            1635.75
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-034",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [615, 388, 720, 428]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            955.71,
+            846.23
+          ],
+          [
+            1118.88,
+            846.23
+          ],
+          [
+            1118.88,
+            933.47
+          ],
+          [
+            955.71,
+            933.47
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-036",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [510, 580, 570, 630]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            818.55,
+            873.48
+          ],
+          [
+            914.85,
+            873.48
+          ],
+          [
+            914.85,
+            948.78
+          ],
+          [
+            818.55,
+            948.78
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-040",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [18, 112, 286, 347]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            28.89,
+            168.67
+          ],
+          [
+            459.03,
+            168.67
+          ],
+          [
+            459.03,
+            522.58
+          ],
+          [
+            28.89,
+            522.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-041",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [410, 350, 650, 460]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            432.96,
+            516.6
+          ],
+          [
+            686.4,
+            516.6
+          ],
+          [
+            686.4,
+            678.96
+          ],
+          [
+            432.96,
+            678.96
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-042",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[430, 300], [400, 380], [400, 480], [480, 550], [680, 540], [700, 450], [700, 350], [680, 310]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            454.08,
+            442.8
+          ],
+          [
+            422.4,
+            560.88
+          ],
+          [
+            422.4,
+            708.48
+          ],
+          [
+            506.88,
+            811.8
+          ],
+          [
+            718.08,
+            797.04
+          ],
+          [
+            739.2,
+            664.2
+          ],
+          [
+            739.2,
+            516.6
+          ],
+          [
+            718.08,
+            457.56
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-043",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [298, 218, 352, 246]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            511.37,
+            441.45
+          ],
+          [
+            604.03,
+            441.45
+          ],
+          [
+            604.03,
+            498.15
+          ],
+          [
+            511.37,
+            498.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-046",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "```json\n{\"type\": \"box\", \"bbox\": [358, 496, 448, 510]}\n```",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            614.33,
+            1004.4
+          ],
+          [
+            768.77,
+            1004.4
+          ],
+          [
+            768.77,
+            1032.75
+          ],
+          [
+            614.33,
+            1032.75
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-048",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [698, 762, 778, 810]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1183.11,
+            953.26
+          ],
+          [
+            1318.71,
+            953.26
+          ],
+          [
+            1318.71,
+            1013.31
+          ],
+          [
+            1183.11,
+            1013.31
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-049",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [398, 612, 428, 662]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            674.61,
+            765.61
+          ],
+          [
+            725.46,
+            765.61
+          ],
+          [
+            725.46,
+            828.16
+          ],
+          [
+            674.61,
+            828.16
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-052",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [246, 298, 434, 318]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            392.62,
+            770.63
+          ],
+          [
+            692.66,
+            770.63
+          ],
+          [
+            692.66,
+            822.35
+          ],
+          [
+            392.62,
+            822.35
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-054",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [626, 452, 688, 498]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1064.83,
+            450.19
+          ],
+          [
+            1170.29,
+            450.19
+          ],
+          [
+            1170.29,
+            496.01
+          ],
+          [
+            1064.83,
+            496.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-059",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "```json\n{\"type\": \"box\", \"bbox\": [375, 690, 495, 800]}\n```",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            635.62,
+            1179.9
+          ],
+          [
+            839.02,
+            1179.9
+          ],
+          [
+            839.02,
+            1368.0
+          ],
+          [
+            635.62,
+            1368.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC-WW1-061",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [318, 458, 438, 562]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            539.01,
+            783.18
+          ],
+          [
+            742.41,
+            783.18
+          ],
+          [
+            742.41,
+            961.02
+          ],
+          [
+            539.01,
+            961.02
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-001",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [593, 413, 607, 424]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2428.93,
+            1490.93
+          ],
+          [
+            2486.27,
+            1490.93
+          ],
+          [
+            2486.27,
+            1530.64
+          ],
+          [
+            2428.93,
+            1530.64
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-002",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [593, 468, 603, 480]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2428.93,
+            1689.48
+          ],
+          [
+            2469.89,
+            1689.48
+          ],
+          [
+            2469.89,
+            1732.8
+          ],
+          [
+            2428.93,
+            1732.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-004",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [376, 428, 426, 458]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1540.1,
+            1545.08
+          ],
+          [
+            1744.9,
+            1545.08
+          ],
+          [
+            1744.9,
+            1653.38
+          ],
+          [
+            1540.1,
+            1653.38
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[301, 437], [338, 421], [371, 411], [403, 403], [435, 397], [467, 393], [499, 390], [531, 388], [563, 386], [595, 384], [627, 382], [659, 380], [691, 378]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1232.9,
+            1577.57
+          ],
+          [
+            1384.45,
+            1519.81
+          ],
+          [
+            1519.62,
+            1483.71
+          ],
+          [
+            1650.69,
+            1454.83
+          ],
+          [
+            1781.76,
+            1433.17
+          ],
+          [
+            1912.83,
+            1418.73
+          ],
+          [
+            2043.9,
+            1407.9
+          ],
+          [
+            2174.98,
+            1400.68
+          ],
+          [
+            2306.05,
+            1393.46
+          ],
+          [
+            2437.12,
+            1386.24
+          ],
+          [
+            2568.19,
+            1379.02
+          ],
+          [
+            2699.26,
+            1371.8
+          ],
+          [
+            2830.34,
+            1364.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-006",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [710, 610, 721, 628]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2908.16,
+            1594.54
+          ],
+          [
+            2953.22,
+            1594.54
+          ],
+          [
+            2953.22,
+            1641.59
+          ],
+          [
+            2908.16,
+            1641.59
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [838, 630, 858, 715]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3432.45,
+            1646.82
+          ],
+          [
+            3514.37,
+            1646.82
+          ],
+          [
+            3514.37,
+            1869.01
+          ],
+          [
+            3432.45,
+            1869.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-008",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [826, 531, 983, 725]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3383.3,
+            1388.03
+          ],
+          [
+            4026.37,
+            1388.03
+          ],
+          [
+            4026.37,
+            1895.15
+          ],
+          [
+            3383.3,
+            1895.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [375, 448, 400, 470]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1536.0,
+            1171.07
+          ],
+          [
+            1638.4,
+            1171.07
+          ],
+          [
+            1638.4,
+            1228.58
+          ],
+          [
+            1536.0,
+            1228.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[310, 658], [840, 658]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1269.76,
+            1720.01
+          ],
+          [
+            3440.64,
+            1720.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [536, 333, 628, 351]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2195.46,
+            895.1
+          ],
+          [
+            2572.29,
+            895.1
+          ],
+          [
+            2572.29,
+            943.49
+          ],
+          [
+            2195.46,
+            943.49
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-012",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [545, 336, 851, 460]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2232.32,
+            903.17
+          ],
+          [
+            3485.7,
+            903.17
+          ],
+          [
+            3485.7,
+            1236.48
+          ],
+          [
+            2232.32,
+            1236.48
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-013",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [768, 652, 808, 792]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3145.73,
+            1752.58
+          ],
+          [
+            3309.57,
+            1752.58
+          ],
+          [
+            3309.57,
+            2128.9
+          ],
+          [
+            3145.73,
+            2128.9
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-014",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"point\", \"coordinates\": [582, 418]}",
+      "geometry": null,
+      "error": "unknown answer type 'point'"
+    },
+    {
+      "event_id": "NC2-DS-015",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [108, 187, 852, 735]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            442.37,
+            502.66
+          ],
+          [
+            3489.79,
+            502.66
+          ],
+          [
+            3489.79,
+            1975.68
+          ],
+          [
+            442.37,
+            1975.68
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-016",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [556, 410, 603, 457]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1888.18,
+            1462.06
+          ],
+          [
+            2047.79,
+            1462.06
+          ],
+          [
+            2047.79,
+            1629.66
+          ],
+          [
+            1888.18,
+            1629.66
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-017",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [620, 536, 667, 583]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2105.52,
+            1911.38
+          ],
+          [
+            2265.13,
+            1911.38
+          ],
+          [
+            2265.13,
+            2078.98
+          ],
+          [
+            2105.52,
+            2078.98
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-018",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[113, 583], [172, 583], [226, 583], [288, 583], [350, 583], [412, 583], [474, 583], [536, 583], [598, 583], [660, 583], [722, 583], [784, 583], [846, 583], [908, 583], [970, 583]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            383.75,
+            2078.98
+          ],
+          [
+            584.11,
+            2078.98
+          ],
+          [
+            767.5,
+            2078.98
+          ],
+          [
+            978.05,
+            2078.98
+          ],
+          [
+            1188.6,
+            2078.98
+          ],
+          [
+            1399.15,
+            2078.98
+          ],
+          [
+            1609.7,
+            2078.98
+          ],
+          [
+            1820.26,
+            2078.98
+          ],
+          [
+            2030.81,
+            2078.98
+          ],
+          [
+            2241.36,
+            2078.98
+          ],
+          [
+            2451.91,
+            2078.98
+          ],
+          [
+            2662.46,
+            2078.98
+          ],
+          [
+            2873.02,
+            2078.98
+          ],
+          [
+            3083.57,
+            2078.98
+          ],
+          [
+            3294.12,
+            2078.98
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-019",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [118, 283, 743, 582]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            400.73,
+            1009.18
+          ],
+          [
+            2523.23,
+            1009.18
+          ],
+          [
+            2523.23,
+            2075.41
+          ],
+          [
+            400.73,
+            2075.41
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-021",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[868, 350], [875, 400], [870, 450], [860, 500], [850, 550], [840, 600], [830, 650], [820, 700], [810, 750], [800, 800], [790, 850], [780, 900], [770, 950]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2612.68,
+            1433.6
+          ],
+          [
+            2633.75,
+            1638.4
+          ],
+          [
+            2618.7,
+            1843.2
+          ],
+          [
+            2588.6,
+            2048.0
+          ],
+          [
+            2558.5,
+            2252.8
+          ],
+          [
+            2528.4,
+            2457.6
+          ],
+          [
+            2498.3,
+            2662.4
+          ],
+          [
+            2468.2,
+            2867.2
+          ],
+          [
+            2438.1,
+            3072.0
+          ],
+          [
+            2408.0,
+            3276.8
+          ],
+          [
+            2377.9,
+            3481.6
+          ],
+          [
+            2347.8,
+            3686.4
+          ],
+          [
+            2317.7,
+            3891.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-022",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[458, 157], [538, 228], [628, 281], [708, 333], [788, 385], [868, 437], [948, 489]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1378.58,
+            643.07
+          ],
+          [
+            1619.38,
+            933.89
+          ],
+          [
+            1890.28,
+            1150.98
+          ],
+          [
+            2131.08,
+            1363.97
+          ],
+          [
+            2371.88,
+            1576.96
+          ],
+          [
+            2612.68,
+            1789.95
+          ],
+          [
+            2853.48,
+            2002.94
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-023",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [672, 193, 745, 228]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2022.72,
+            790.53
+          ],
+          [
+            2242.45,
+            790.53
+          ],
+          [
+            2242.45,
+            933.89
+          ],
+          [
+            2022.72,
+            933.89
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-024",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [83, 258, 108, 288]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            201.86,
+            515.23
+          ],
+          [
+            262.66,
+            515.23
+          ],
+          [
+            262.66,
+            575.14
+          ],
+          [
+            201.86,
+            575.14
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-026",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [363, 46, 428, 101]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            882.82,
+            91.86
+          ],
+          [
+            1040.9,
+            91.86
+          ],
+          [
+            1040.9,
+            201.7
+          ],
+          [
+            882.82,
+            201.7
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-027",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [820, 460, 950, 950]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1994.24,
+            918.62
+          ],
+          [
+            2310.4,
+            918.62
+          ],
+          [
+            2310.4,
+            1897.15
+          ],
+          [
+            1994.24,
+            1897.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-028",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[100, 345], [280, 350], [300, 360], [310, 450], [320, 460], [470, 460], [490, 465]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            243.2,
+            688.97
+          ],
+          [
+            680.96,
+            698.95
+          ],
+          [
+            729.6,
+            718.92
+          ],
+          [
+            753.92,
+            898.65
+          ],
+          [
+            778.24,
+            918.62
+          ],
+          [
+            1143.04,
+            918.62
+          ],
+          [
+            1191.68,
+            928.61
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-029",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[820, 188], [868, 331], [868, 475], [850, 500], [868, 656], [906, 662], [945, 850], [900, 945]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1994.24,
+            375.44
+          ],
+          [
+            2110.98,
+            661.01
+          ],
+          [
+            2110.98,
+            948.58
+          ],
+          [
+            2067.2,
+            998.5
+          ],
+          [
+            2110.98,
+            1310.03
+          ],
+          [
+            2203.39,
+            1322.01
+          ],
+          [
+            2298.24,
+            1697.45
+          ],
+          [
+            2188.8,
+            1887.17
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-030",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [432, 306, 440, 312]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            899.42,
+            1018.37
+          ],
+          [
+            916.08,
+            1018.37
+          ],
+          [
+            916.08,
+            1038.34
+          ],
+          [
+            899.42,
+            1038.34
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-031",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [314, 521, 326, 531]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            653.75,
+            1733.89
+          ],
+          [
+            678.73,
+            1733.89
+          ],
+          [
+            678.73,
+            1767.17
+          ],
+          [
+            653.75,
+            1767.17
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-032",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [281, 252, 356, 260]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            585.04,
+            838.66
+          ],
+          [
+            741.19,
+            838.66
+          ],
+          [
+            741.19,
+            865.28
+          ],
+          [
+            585.04,
+            865.28
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-033",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [560, 320, 670, 340]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1165.92,
+            1064.96
+          ],
+          [
+            1394.94,
+            1064.96
+          ],
+          [
+            1394.94,
+            1131.52
+          ],
+          [
+            1165.92,
+            1131.52
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-034",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [610, 450, 668, 490]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1987.38,
+            1843.2
+          ],
+          [
+            2176.34,
+            1843.2
+          ],
+          [
+            2176.34,
+            2007.04
+          ],
+          [
+            1987.38,
+            2007.04
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-035",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[745, 683], [778, 668], [808, 653], [818, 648]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2427.21,
+            2797.57
+          ],
+          [
+            2534.72,
+            2736.13
+          ],
+          [
+            2632.46,
+            2674.69
+          ],
+          [
+            2665.04,
+            2654.21
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-036",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [606, 630, 663, 664]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1974.35,
+            2580.48
+          ],
+          [
+            2160.05,
+            2580.48
+          ],
+          [
+            2160.05,
+            2719.74
+          ],
+          [
+            1974.35,
+            2719.74
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-037",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[642, 462], [668, 448]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2091.64,
+            1892.35
+          ],
+          [
+            2176.34,
+            1835.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-038",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [618, 630, 638, 645]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1257.01,
+            2083.41
+          ],
+          [
+            1297.69,
+            2083.41
+          ],
+          [
+            1297.69,
+            2133.01
+          ],
+          [
+            1257.01,
+            2133.01
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-039",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [118, 438, 148, 458]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            240.01,
+            1448.47
+          ],
+          [
+            301.03,
+            1448.47
+          ],
+          [
+            301.03,
+            1514.61
+          ],
+          [
+            240.01,
+            1514.61
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-040",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "```json\n{\"type\": \"box\", \"bbox\": [776, 338, 808, 358]}\n```",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1988.11,
+            1211.39
+          ],
+          [
+            2070.1,
+            1211.39
+          ],
+          [
+            2070.1,
+            1283.07
+          ],
+          [
+            1988.11,
+            1283.07
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-041",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [458, 378, 531, 497]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1173.4,
+            1354.75
+          ],
+          [
+            1360.42,
+            1354.75
+          ],
+          [
+            1360.42,
+            1781.25
+          ],
+          [
+            1173.4,
+            1781.25
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-042",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [394, 543, 413, 590]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1009.43,
+            1946.11
+          ],
+          [
+            1058.11,
+            1946.11
+          ],
+          [
+            1058.11,
+            2114.56
+          ],
+          [
+            1009.43,
+            2114.56
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-043",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [858, 318, 872, 328]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2938.65,
+            1002.65
+          ],
+          [
+            2986.6,
+            1002.65
+          ],
+          [
+            2986.6,
+            1034.18
+          ],
+          [
+            2938.65,
+            1034.18
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-044",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [738, 550, 762, 558]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2527.65,
+            1734.15
+          ],
+          [
+            2609.85,
+            1734.15
+          ],
+          [
+            2609.85,
+            1759.37
+          ],
+          [
+            2527.65,
+            1759.37
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-045",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [738, 480, 750, 511]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2527.65,
+            1513.44
+          ],
+          [
+            2568.75,
+            1513.44
+          ],
+          [
+            2568.75,
+            1611.18
+          ],
+          [
+            2527.65,
+            1611.18
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-046",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [196, 528, 266, 630]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            671.3,
+            1664.78
+          ],
+          [
+            911.05,
+            1664.78
+          ],
+          [
+            911.05,
+            1986.39
+          ],
+          [
+            671.3,
+            1986.39
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-047",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [650, 668, 826, 718]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2662.4,
+            2411.48
+          ],
+          [
+            3383.3,
+            2411.48
+          ],
+          [
+            3383.3,
+            2591.98
+          ],
+          [
+            2662.4,
+            2591.98
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-048",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [710, 583, 798, 607]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2137.1,
+            2387.97
+          ],
+          [
+            2401.98,
+            2387.97
+          ],
+          [
+            2401.98,
+            2486.27
+          ],
+          [
+            2137.1,
+            2486.27
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-049",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [613, 452, 652, 478]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1997.15,
+            1851.39
+          ],
+          [
+            2124.22,
+            1851.39
+          ],
+          [
+            2124.22,
+            1957.89
+          ],
+          [
+            1997.15,
+            1957.89
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-050",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[735, 588], [778, 568]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2394.63,
+            2408.45
+          ],
+          [
+            2534.72,
+            2326.53
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-051",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [536, 218, 616, 338]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2195.46,
+            585.98
+          ],
+          [
+            2523.14,
+            585.98
+          ],
+          [
+            2523.14,
+            908.54
+          ],
+          [
+            2195.46,
+            908.54
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-DS-052",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [178, 413, 314, 493]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            535.78,
+            1691.65
+          ],
+          [
+            945.14,
+            1691.65
+          ],
+          [
+            945.14,
+            2019.33
+          ],
+          [
+            535.78,
+            2019.33
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-001",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[268, 518], [306, 488], [343, 458], [381, 428], [418, 398]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1097.73,
+            1750.84
+          ],
+          [
+            1253.38,
+            1649.44
+          ],
+          [
+            1404.93,
+            1548.04
+          ],
+          [
+            1560.58,
+            1446.64
+          ],
+          [
+            1712.13,
+            1345.24
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-002",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [340, 780, 415, 875]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1392.64,
+            2636.4
+          ],
+          [
+            1699.84,
+            2636.4
+          ],
+          [
+            1699.84,
+            2957.5
+          ],
+          [
+            1392.64,
+            2957.5
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-003",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[233, 562], [300, 588]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            954.37,
+            1899.56
+          ],
+          [
+            1228.8,
+            1987.44
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-004",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [228, 803, 336, 872]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            933.89,
+            2714.14
+          ],
+          [
+            1376.26,
+            2714.14
+          ],
+          [
+            1376.26,
+            2947.36
+          ],
+          [
+            933.89,
+            2947.36
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [513, 483, 583, 527]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2101.25,
+            1632.54
+          ],
+          [
+            2387.97,
+            1632.54
+          ],
+          [
+            2387.97,
+            1781.26
+          ],
+          [
+            2101.25,
+            1781.26
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [301, 248, 378, 308]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            918.95,
+            1015.81
+          ],
+          [
+            1154.03,
+            1015.81
+          ],
+          [
+            1154.03,
+            1261.57
+          ],
+          [
+            918.95,
+            1261.57
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-008",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [260, 666, 281, 681]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            793.78,
+            2727.94
+          ],
+          [
+            857.89,
+            2727.94
+          ],
+          [
+            857.89,
+            2789.38
+          ],
+          [
+            793.78,
+            2789.38
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[462, 472], [438, 578], [412, 662], [388, 748], [352, 802]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1410.49,
+            1933.31
+          ],
+          [
+            1337.21,
+            2367.49
+          ],
+          [
+            1257.84,
+            2711.55
+          ],
+          [
+            1184.56,
+            3063.81
+          ],
+          [
+            1074.66,
+            3284.99
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [431, 531, 462, 556]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1315.84,
+            2174.98
+          ],
+          [
+            1410.49,
+            2174.98
+          ],
+          [
+            1410.49,
+            2277.38
+          ],
+          [
+            1315.84,
+            2277.38
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [318, 252, 350, 282]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            970.85,
+            1032.19
+          ],
+          [
+            1068.55,
+            1032.19
+          ],
+          [
+            1068.55,
+            1155.07
+          ],
+          [
+            970.85,
+            1155.07
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-013",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [122, 652, 213, 876]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            499.71,
+            1914.27
+          ],
+          [
+            872.45,
+            1914.27
+          ],
+          [
+            872.45,
+            2571.94
+          ],
+          [
+            499.71,
+            2571.94
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-014",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [453, 600, 500, 650]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1855.49,
+            1761.6
+          ],
+          [
+            2048.0,
+            1761.6
+          ],
+          [
+            2048.0,
+            1908.4
+          ],
+          [
+            1855.49,
+            1908.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-015",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [453, 613, 471, 631]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1855.49,
+            1799.77
+          ],
+          [
+            1929.22,
+            1799.77
+          ],
+          [
+            1929.22,
+            1852.62
+          ],
+          [
+            1855.49,
+            1852.62
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-016",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "```json\n{\"type\": \"box\", \"bbox\": [498, 392, 562, 422]}\n```",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1710.13,
+            1410.02
+          ],
+          [
+            1929.91,
+            1410.02
+          ],
+          [
+            1929.91,
+            1517.93
+          ],
+          [
+            1710.13,
+            1517.93
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-017",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[578, 521], [508, 568]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1984.85,
+            1874.04
+          ],
+          [
+            1744.47,
+            2043.1
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-018",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [408, 445, 452, 460]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1401.07,
+            1600.66
+          ],
+          [
+            1552.17,
+            1600.66
+          ],
+          [
+            1552.17,
+            1654.62
+          ],
+          [
+            1401.07,
+            1654.62
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-019",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [613, 568, 667, 580]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2105.04,
+            2043.1
+          ],
+          [
+            2290.48,
+            2043.1
+          ],
+          [
+            2290.48,
+            2086.26
+          ],
+          [
+            2105.04,
+            2086.26
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-020",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [405, 385, 435, 425]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1658.88,
+            1244.7
+          ],
+          [
+            1781.76,
+            1244.7
+          ],
+          [
+            1781.76,
+            1374.03
+          ],
+          [
+            1658.88,
+            1374.03
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-021",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[438, 438], [458, 458], [478, 478], [498, 498]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1794.05,
+            1416.05
+          ],
+          [
+            1875.97,
+            1480.71
+          ],
+          [
+            1957.89,
+            1545.37
+          ],
+          [
+            2039.81,
+            1610.03
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-022",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[330, 700], [390, 790]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1351.68,
+            2263.1
+          ],
+          [
+            1597.44,
+            2554.07
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-023",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [535, 857, 585, 908]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2191.36,
+            2770.68
+          ],
+          [
+            2396.16,
+            2770.68
+          ],
+          [
+            2396.16,
+            2935.56
+          ],
+          [
+            2191.36,
+            2935.56
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-024",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[593, 40], [600, 50], [610, 60], [620, 70], [630, 80], [640, 90], [650, 100], [660, 110], [670, 120], [680, 130], [690, 140], [700, 150], [710, 160], [720, 170], [730, 180], [740, 190], [750, 200], [760, 210], [770, 220], [780, 230], [790, 240], [800, 250], [810, 260], [820, 270], [830, 280], [840, 290], [850, 300], [860, 310], [870, 320], [880, 330], [890, 340], [900, 350], [910, 360], [920, 370], [930, 380], [940, 390], [950, 400], [960, 410], [970, 420], [980, 430], [990, 440], [1000, 450]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2141.92,
+            142.52
+          ],
+          [
+            2167.2,
+            178.15
+          ],
+          [
+            2203.32,
+            213.78
+          ],
+          [
+            2239.44,
+            249.41
+          ],
+          [
+            2275.56,
+            285.04
+          ],
+          [
+            2311.68,
+            320.67
+          ],
+          [
+            2347.8,
+            356.3
+          ],
+          [
+            2383.92,
+            391.93
+          ],
+          [
+            2420.04,
+            427.56
+          ],
+          [
+            2456.16,
+            463.19
+          ],
+          [
+            2492.28,
+            498.82
+          ],
+          [
+            2528.4,
+            534.45
+          ],
+          [
+            2564.52,
+            570.08
+          ],
+          [
+            2600.64,
+            605.71
+          ],
+          [
+            2636.76,
+            641.34
+          ],
+          [
+            2672.88,
+            676.97
+          ],
+          [
+            2709.0,
+            712.6
+          ],
+          [
+            2745.12,
+            748.23
+          ],
+          [
+            2781.24,
+            783.86
+          ],
+          [
+            2817.36,
+            819.49
+          ],
+          [
+            2853.48,
+            855.12
+          ],
+          [
+            2889.6,
+            890.75
+          ],
+          [
+            2925.72,
+            926.38
+          ],
+          [
+            2961.84,
+            962.01
+          ],
+          [
+            2997.96,
+            997.64
+          ],
+          [
+            3034.08,
+            1033.27
+          ],
+          [
+            3070.2,
+            1068.9
+          ],
+          [
+            3106.32,
+            1104.53
+          ],
+          [
+            3142.44,
+            1140.16
+          ],
+          [
+            3178.56,
+            1175.79
+          ],
+          [
+            3214.68,
+            1211.42
+          ],
+          [
+            3250.8,
+            1247.05
+          ],
+          [
+            3286.92,
+            1282.68
+          ],
+          [
+            3323.04,
+            1318.31
+          ],
+          [
+            3359.16,
+            1353.94
+          ],
+          [
+            3395.28,
+            1389.57
+          ],
+          [
+            3431.4,
+            1425.2
+          ],
+          [
+            3467.52,
+            1460.83
+          ],
+          [
+            3503.64,
+            1496.46
+          ],
+          [
+            3539.76,
+            1532.09
+          ],
+          [
+            3575.88,
+            1567.72
+          ],
+          [
+            3612.0,
+            1603.35
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-025",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[538, 508], [592, 481]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1943.26,
+            1810.0
+          ],
+          [
+            2138.3,
+            1713.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-026",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [498, 568, 568, 631]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1798.78,
+            2023.78
+          ],
+          [
+            2051.62,
+            2023.78
+          ],
+          [
+            2051.62,
+            2248.25
+          ],
+          [
+            1798.78,
+            2248.25
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-027",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[478, 503], [422, 551]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1726.54,
+            1792.19
+          ],
+          [
+            1524.26,
+            1963.21
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-028",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [100, 536, 1000, 961]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            361.2,
+            1909.77
+          ],
+          [
+            3612.0,
+            1909.77
+          ],
+          [
+            3612.0,
+            3424.04
+          ],
+          [
+            361.2,
+            3424.04
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-033",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [28, 373, 253, 651]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            98.34,
+            1003.74
+          ],
+          [
+            888.54,
+            1003.74
+          ],
+          [
+            888.54,
+            1751.84
+          ],
+          [
+            98.34,
+            1751.84
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-035",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [519, 318, 563, 438]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1822.73,
+            855.74
+          ],
+          [
+            1977.26,
+            855.74
+          ],
+          [
+            1977.26,
+            1178.66
+          ],
+          [
+            1822.73,
+            1178.66
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-037",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [335, 562, 378, 608]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            834.49,
+            2301.95
+          ],
+          [
+            941.6,
+            2301.95
+          ],
+          [
+            941.6,
+            2490.37
+          ],
+          [
+            834.49,
+            2490.37
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-038",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [546, 691, 561, 708]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1613.98,
+            1583.08
+          ],
+          [
+            1658.32,
+            1583.08
+          ],
+          [
+            1658.32,
+            1622.03
+          ],
+          [
+            1613.98,
+            1622.03
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-039",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[453, 591], [431, 515]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1339.07,
+            1353.98
+          ],
+          [
+            1274.04,
+            1179.87
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-040",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [350, 610, 360, 624]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1034.6,
+            1397.51
+          ],
+          [
+            1064.16,
+            1397.51
+          ],
+          [
+            1064.16,
+            1429.58
+          ],
+          [
+            1034.6,
+            1429.58
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-041",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [358, 348, 376, 360]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1058.25,
+            797.27
+          ],
+          [
+            1111.46,
+            797.27
+          ],
+          [
+            1111.46,
+            824.76
+          ],
+          [
+            1058.25,
+            824.76
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-042",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [288, 518, 308, 548]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            851.33,
+            1186.74
+          ],
+          [
+            910.45,
+            1186.74
+          ],
+          [
+            910.45,
+            1255.47
+          ],
+          [
+            851.33,
+            1255.47
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-043",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [100, 340, 115, 360]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            295.6,
+            778.94
+          ],
+          [
+            339.94,
+            778.94
+          ],
+          [
+            339.94,
+            824.76
+          ],
+          [
+            295.6,
+            824.76
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-045",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [717, 746, 824, 898]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2936.83,
+            1985.85
+          ],
+          [
+            3375.1,
+            1985.85
+          ],
+          [
+            3375.1,
+            2390.48
+          ],
+          [
+            2936.83,
+            2390.48
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-PH-046",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [578, 553, 633, 594]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1767.52,
+            1215.49
+          ],
+          [
+            1935.71,
+            1215.49
+          ],
+          [
+            1935.71,
+            1305.61
+          ],
+          [
+            1767.52,
+            1305.61
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-002",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [458, 108, 538, 198]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1875.97,
+            342.14
+          ],
+          [
+            2203.65,
+            342.14
+          ],
+          [
+            2203.65,
+            627.26
+          ],
+          [
+            1875.97,
+            627.26
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-003",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [483, 151, 537, 193]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1978.37,
+            478.37
+          ],
+          [
+            2199.55,
+            478.37
+          ],
+          [
+            2199.55,
+            611.42
+          ],
+          [
+            1978.37,
+            611.42
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-004",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [103, 637, 113, 651]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            421.89,
+            2018.02
+          ],
+          [
+            462.85,
+            2018.02
+          ],
+          [
+            462.85,
+            2062.37
+          ],
+          [
+            421.89,
+            2062.37
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-005",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [750, 400, 800, 440]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3072.0,
+            1267.2
+          ],
+          [
+            3276.8,
+            1267.2
+          ],
+          [
+            3276.8,
+            1393.92
+          ],
+          [
+            3072.0,
+            1393.92
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-006",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[733, 441], [788, 539]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            3002.37,
+            1397.09
+          ],
+          [
+            3227.65,
+            1707.55
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-007",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[100, 538], [158, 562], [216, 586]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            310.0,
+            1452.6
+          ],
+          [
+            489.8,
+            1517.4
+          ],
+          [
+            669.6,
+            1582.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-008",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [153, 519, 240, 553]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            474.3,
+            1401.3
+          ],
+          [
+            744.0,
+            1401.3
+          ],
+          [
+            744.0,
+            1493.1
+          ],
+          [
+            474.3,
+            1493.1
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [302, 330, 388, 352]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            936.2,
+            891.0
+          ],
+          [
+            1202.8,
+            891.0
+          ],
+          [
+            1202.8,
+            950.4
+          ],
+          [
+            936.2,
+            950.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [394, 438, 430, 478]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1221.4,
+            1182.6
+          ],
+          [
+            1333.0,
+            1182.6
+          ],
+          [
+            1333.0,
+            1290.6
+          ],
+          [
+            1221.4,
+            1290.6
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-011",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[426, 673], [408, 708]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1320.6,
+            1817.1
+          ],
+          [
+            1264.8,
+            1911.6
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-012",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [398, 446, 428, 476]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1233.8,
+            1204.2
+          ],
+          [
+            1326.8,
+            1204.2
+          ],
+          [
+            1326.8,
+            1285.2
+          ],
+          [
+            1233.8,
+            1285.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-014",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[266, 403], [288, 378], [308, 353], [328, 328], [348, 303]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            558.6,
+            1047.8
+          ],
+          [
+            604.8,
+            982.8
+          ],
+          [
+            646.8,
+            917.8
+          ],
+          [
+            688.8,
+            852.8
+          ],
+          [
+            730.8,
+            787.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-015",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [636, 148, 722, 210]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1335.6,
+            384.8
+          ],
+          [
+            1516.2,
+            384.8
+          ],
+          [
+            1516.2,
+            546.0
+          ],
+          [
+            1335.6,
+            546.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-016",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[658, 338], [706, 310], [755, 282], [804, 254]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1381.8,
+            878.8
+          ],
+          [
+            1482.6,
+            806.0
+          ],
+          [
+            1585.5,
+            733.2
+          ],
+          [
+            1688.4,
+            660.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-017",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [846, 238, 1000, 338]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1801.98,
+            809.2
+          ],
+          [
+            2130.0,
+            809.2
+          ],
+          [
+            2130.0,
+            1149.2
+          ],
+          [
+            1801.98,
+            1149.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-018",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [363, 673, 413, 713]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            773.19,
+            2288.2
+          ],
+          [
+            879.69,
+            2288.2
+          ],
+          [
+            879.69,
+            2424.2
+          ],
+          [
+            773.19,
+            2424.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-019",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[163, 251], [172, 271], [172, 301], [183, 331], [183, 361], [194, 381], [194, 401], [183, 411], [163, 411], [143, 411], [133, 411], [123, 411], [123, 431]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            347.19,
+            853.4
+          ],
+          [
+            366.36,
+            921.4
+          ],
+          [
+            366.36,
+            1023.4
+          ],
+          [
+            389.79,
+            1125.4
+          ],
+          [
+            389.79,
+            1227.4
+          ],
+          [
+            413.22,
+            1295.4
+          ],
+          [
+            413.22,
+            1363.4
+          ],
+          [
+            389.79,
+            1397.4
+          ],
+          [
+            347.19,
+            1397.4
+          ],
+          [
+            304.59,
+            1397.4
+          ],
+          [
+            283.29,
+            1397.4
+          ],
+          [
+            261.99,
+            1397.4
+          ],
+          [
+            261.99,
+            1465.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-020",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [153, 413, 184, 433]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            325.89,
+            1404.2
+          ],
+          [
+            391.92,
+            1404.2
+          ],
+          [
+            391.92,
+            1472.2
+          ],
+          [
+            325.89,
+            1472.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-021",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[327, 501], [327, 598]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            696.51,
+            1703.4
+          ],
+          [
+            696.51,
+            2033.2
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-022",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [172, 827, 300, 943]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            420.54,
+            2323.87
+          ],
+          [
+            733.5,
+            2323.87
+          ],
+          [
+            733.5,
+            2649.83
+          ],
+          [
+            420.54,
+            2649.83
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-023",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [825, 336, 880, 348]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2017.12,
+            944.16
+          ],
+          [
+            2151.6,
+            944.16
+          ],
+          [
+            2151.6,
+            977.88
+          ],
+          [
+            2017.12,
+            977.88
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-024",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [600, 320, 830, 460]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1467.0,
+            899.2
+          ],
+          [
+            2029.35,
+            899.2
+          ],
+          [
+            2029.35,
+            1292.6
+          ],
+          [
+            1467.0,
+            1292.6
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-025",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[452, 408], [452, 388]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1105.14,
+            1146.48
+          ],
+          [
+            1105.14,
+            1090.28
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-026",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[352, 383], [488, 262]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            860.64,
+            1076.23
+          ],
+          [
+            1193.16,
+            736.22
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-027",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[668, 310], [752, 272]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1633.26,
+            871.1
+          ],
+          [
+            1838.64,
+            764.32
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-028",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[686, 353], [752, 381]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1450.89,
+            420.07
+          ],
+          [
+            1590.48,
+            453.39
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-029",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[258, 586], [333, 513], [388, 458], [438, 411]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            545.67,
+            697.34
+          ],
+          [
+            704.3,
+            610.47
+          ],
+          [
+            820.62,
+            545.02
+          ],
+          [
+            926.37,
+            489.09
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-030",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [438, 388, 462, 428]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            926.37,
+            461.72
+          ],
+          [
+            977.13,
+            461.72
+          ],
+          [
+            977.13,
+            509.32
+          ],
+          [
+            926.37,
+            509.32
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-031",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [788, 362, 862, 408]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1666.62,
+            430.78
+          ],
+          [
+            1823.13,
+            430.78
+          ],
+          [
+            1823.13,
+            485.52
+          ],
+          [
+            1666.62,
+            485.52
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-032",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [792, 362, 862, 408]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1675.08,
+            430.78
+          ],
+          [
+            1823.13,
+            430.78
+          ],
+          [
+            1823.13,
+            485.52
+          ],
+          [
+            1675.08,
+            485.52
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-033",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [626, 401, 756, 643]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2564.1,
+            1096.73
+          ],
+          [
+            3096.58,
+            1096.73
+          ],
+          [
+            3096.58,
+            1758.61
+          ],
+          [
+            2564.1,
+            1758.61
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-034",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [571, 598, 625, 708]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2338.82,
+            1635.53
+          ],
+          [
+            2560.0,
+            1635.53
+          ],
+          [
+            2560.0,
+            1936.38
+          ],
+          [
+            2338.82,
+            1936.38
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-035",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [623, 696, 658, 733]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2551.81,
+            1903.56
+          ],
+          [
+            2695.17,
+            1903.56
+          ],
+          [
+            2695.17,
+            2004.75
+          ],
+          [
+            2551.81,
+            2004.75
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-037",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [766, 93, 791, 131]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3137.54,
+            202.83
+          ],
+          [
+            3239.94,
+            202.83
+          ],
+          [
+            3239.94,
+            285.71
+          ],
+          [
+            3137.54,
+            285.71
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-038",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [293, 231, 316, 293]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1200.13,
+            503.81
+          ],
+          [
+            1294.34,
+            503.81
+          ],
+          [
+            1294.34,
+            639.03
+          ],
+          [
+            1200.13,
+            639.03
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-039",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[301, 281], [402, 388]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1232.9,
+            612.86
+          ],
+          [
+            1646.59,
+            846.23
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-040",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[318, 508], [338, 558], [358, 608], [378, 658], [398, 708]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1302.53,
+            1107.95
+          ],
+          [
+            1384.45,
+            1217.0
+          ],
+          [
+            1466.37,
+            1326.05
+          ],
+          [
+            1548.29,
+            1435.1
+          ],
+          [
+            1630.21,
+            1544.15
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-041",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[897, 878], [882, 888], [866, 898], [851, 908], [836, 918], [821, 928], [806, 938], [791, 948], [776, 958], [761, 968], [746, 978], [731, 988]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            3674.11,
+            2545.32
+          ],
+          [
+            3612.67,
+            2574.31
+          ],
+          [
+            3547.14,
+            2603.3
+          ],
+          [
+            3485.7,
+            2632.29
+          ],
+          [
+            3424.26,
+            2661.28
+          ],
+          [
+            3362.82,
+            2690.27
+          ],
+          [
+            3301.38,
+            2719.26
+          ],
+          [
+            3239.94,
+            2748.25
+          ],
+          [
+            3178.5,
+            2777.24
+          ],
+          [
+            3117.06,
+            2806.23
+          ],
+          [
+            3055.62,
+            2835.22
+          ],
+          [
+            2994.18,
+            2864.21
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-042",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[598, 462], [512, 462]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2449.41,
+            1339.34
+          ],
+          [
+            2097.15,
+            1339.34
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-043",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[494, 448], [494, 488], [494, 528], [494, 568], [494, 608], [494, 648], [494, 688], [494, 728], [494, 768], [494, 808], [494, 848], [494, 888], [494, 928], [494, 968]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2023.42,
+            1298.75
+          ],
+          [
+            2023.42,
+            1414.71
+          ],
+          [
+            2023.42,
+            1530.67
+          ],
+          [
+            2023.42,
+            1646.63
+          ],
+          [
+            2023.42,
+            1762.59
+          ],
+          [
+            2023.42,
+            1878.55
+          ],
+          [
+            2023.42,
+            1994.51
+          ],
+          [
+            2023.42,
+            2110.47
+          ],
+          [
+            2023.42,
+            2226.43
+          ],
+          [
+            2023.42,
+            2342.39
+          ],
+          [
+            2023.42,
+            2458.35
+          ],
+          [
+            2023.42,
+            2574.31
+          ],
+          [
+            2023.42,
+            2690.27
+          ],
+          [
+            2023.42,
+            2806.23
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-044",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[238, 362], [148, 238]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            974.85,
+            1049.44
+          ],
+          [
+            606.21,
+            689.96
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-045",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[418, 842], [438, 848], [458, 854], [478, 860], [498, 866], [518, 872], [538, 878], [558, 884], [578, 890], [598, 896]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1712.13,
+            2420.75
+          ],
+          [
+            1794.05,
+            2438.0
+          ],
+          [
+            1875.97,
+            2455.25
+          ],
+          [
+            1957.89,
+            2472.5
+          ],
+          [
+            2039.81,
+            2489.75
+          ],
+          [
+            2121.73,
+            2507.0
+          ],
+          [
+            2203.65,
+            2524.25
+          ],
+          [
+            2285.57,
+            2541.5
+          ],
+          [
+            2367.49,
+            2558.75
+          ],
+          [
+            2449.41,
+            2576.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-046",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[438, 672], [452, 718]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1794.05,
+            1932.0
+          ],
+          [
+            1851.39,
+            2064.25
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-047",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [810, 910, 835, 935]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            3317.76,
+            2616.25
+          ],
+          [
+            3420.16,
+            2616.25
+          ],
+          [
+            3420.16,
+            2688.12
+          ],
+          [
+            3317.76,
+            2688.12
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-048",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[801, 637], [786, 562], [786, 462], [712, 203]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            3280.9,
+            2500.22
+          ],
+          [
+            3219.46,
+            2205.85
+          ],
+          [
+            3219.46,
+            1813.35
+          ],
+          [
+            2916.35,
+            796.77
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-049",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[395, 628], [122, 628]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1617.92,
+            2464.9
+          ],
+          [
+            499.71,
+            2464.9
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-050",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[518, 710], [572, 708]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            2121.73,
+            1957.47
+          ],
+          [
+            2342.91,
+            1951.96
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-051",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [610, 658, 696, 745]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            2498.56,
+            1473.92
+          ],
+          [
+            2850.82,
+            1473.92
+          ],
+          [
+            2850.82,
+            1668.8
+          ],
+          [
+            2498.56,
+            1668.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-052",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[162, 348], [250, 431], [290, 498], [350, 552], [410, 571], [420, 598], [470, 598], [520, 581], [550, 571]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            663.55,
+            779.52
+          ],
+          [
+            1024.0,
+            965.44
+          ],
+          [
+            1187.84,
+            1115.52
+          ],
+          [
+            1433.6,
+            1236.48
+          ],
+          [
+            1679.36,
+            1279.04
+          ],
+          [
+            1720.32,
+            1339.52
+          ],
+          [
+            1925.12,
+            1339.52
+          ],
+          [
+            2129.92,
+            1301.44
+          ],
+          [
+            2252.8,
+            1279.04
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-053",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[378, 657], [552, 698]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1360.8,
+            2496.6
+          ],
+          [
+            1987.2,
+            2652.4
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-054",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [457, 152, 535, 410]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1645.2,
+            577.6
+          ],
+          [
+            1926.0,
+            577.6
+          ],
+          [
+            1926.0,
+            1558.0
+          ],
+          [
+            1645.2,
+            1558.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-055",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [180, 588, 240, 680]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            540.0,
+            1646.4
+          ],
+          [
+            720.0,
+            1646.4
+          ],
+          [
+            720.0,
+            1904.0
+          ],
+          [
+            540.0,
+            1904.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-056",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[128, 277], [128, 322], [128, 367], [128, 412], [128, 457], [128, 502], [128, 547], [128, 592], [128, 637], [128, 682], [128, 727], [128, 772], [128, 817], [128, 862], [128, 907], [128, 952], [128, 997]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            384.0,
+            831.0
+          ],
+          [
+            384.0,
+            966.0
+          ],
+          [
+            384.0,
+            1101.0
+          ],
+          [
+            384.0,
+            1236.0
+          ],
+          [
+            384.0,
+            1371.0
+          ],
+          [
+            384.0,
+            1506.0
+          ],
+          [
+            384.0,
+            1641.0
+          ],
+          [
+            384.0,
+            1776.0
+          ],
+          [
+            384.0,
+            1911.0
+          ],
+          [
+            384.0,
+            2046.0
+          ],
+          [
+            384.0,
+            2181.0
+          ],
+          [
+            384.0,
+            2316.0
+          ],
+          [
+            384.0,
+            2451.0
+          ],
+          [
+            384.0,
+            2586.0
+          ],
+          [
+            384.0,
+            2721.0
+          ],
+          [
+            384.0,
+            2856.0
+          ],
+          [
+            384.0,
+            2991.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-057",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [250, 712, 310, 738]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            700.0,
+            1495.2
+          ],
+          [
+            868.0,
+            1495.2
+          ],
+          [
+            868.0,
+            1549.8
+          ],
+          [
+            700.0,
+            1549.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-058",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [266, 340, 402, 580]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            691.6,
+            1020.0
+          ],
+          [
+            1045.2,
+            1020.0
+          ],
+          [
+            1045.2,
+            1740.0
+          ],
+          [
+            691.6,
+            1740.0
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "NC2-SP-060",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[270, 338], [285, 370]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1053.0,
+            1301.3
+          ],
+          [
+            1111.5,
+            1424.5
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0002",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [588, 293, 682, 318]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            904.34,
+            513.92
+          ],
+          [
+            1048.92,
+            513.92
+          ],
+          [
+            1048.92,
+            557.77
+          ],
+          [
+            904.34,
+            557.77
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0009",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/5cad772b-47fd-475c-918a-f2af24bb2a65/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"line\", \"points\": [[760, 1000], [730, 800], [680, 600], [650, 400], [620, 200]]}",
+      "geometry": {
+        "type": "line",
+        "coordinates": [
+          [
+            1168.88,
+            1754.0
+          ],
+          [
+            1122.74,
+            1403.2
+          ],
+          [
+            1045.84,
+            1052.4
+          ],
+          [
+            999.7,
+            701.6
+          ],
+          [
+            953.56,
+            350.8
+          ]
+        ]
+      }
+    },
+    {
+      "event_id": "Z0010",
+      "model": "/private/tmp/claude-501/-Users-ericchen-thesis-hegrounding/3bdbecbd-3635-4243-97fa-0d9d531e6e70/scratchpad/qwen_weights/model",
+      "raw": "{\"type\": \"box\", \"bbox\": [728, 218, 790, 312]}",
+      "geometry": {
+        "type": "polygon",
+        "coordinates": [
+          [
+            1119.66,
+            382.37
+          ],
+          [
+            1215.02,
+            382.37
+          ],
+          [
+            1215.02,
+            547.25
+          ],
+          [
+            1119.66,
+            547.25
+          ]
+        ]
+      }
+    }
+  ]
+}

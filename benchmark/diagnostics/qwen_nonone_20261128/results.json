@@ -1,0 +1,981 @@
+{
+ "meta": {
+  "lenient_rule": "unified lenient parser code/make_lenient_final260.py (2026-11-28; L1 missing type, L2 coordinate layout, L3 truncated)",
+  "n_items": 260,
+  "n_rerun": 75,
+  "rerun_prompt_version": "grounding-v2-nonone-20261128"
+ },
+ "main_strict": {
+  "all260": {
+   "n": 260,
+   "IoU": 0.16200850533536884,
+   "hit@0.5": 0.11923076923076924,
+   "hit@0.75": 0.03076923076923077,
+   "center_in_region": 0.2923076923076923,
+   "n_with_pred": 183,
+   "median_center_dist_pct": 3.187806276752815,
+   "within5pct": 0.45384615384615384,
+   "boundary_iou_polygon": 0.1404784111511344,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "none": 75,
+    "line": 60,
+    "unparseable": 2
+   },
+   "IoU_ci": [
+    0.13491355758147427,
+    0.19005716927649202
+   ],
+   "hit@0.5_ci": [
+    0.08076923076923077,
+    0.16153846153846155
+   ],
+   "center_in_region_ci": [
+    0.23846153846153847,
+    0.34615384615384615
+   ],
+   "median_center_dist_pct_ci": [
+    2.6043157798120173,
+    3.9740726629822096
+   ]
+  },
+  "rerun75": {
+   "n": 75,
+   "IoU": 0.0,
+   "hit@0.5": 0.0,
+   "hit@0.75": 0.0,
+   "center_in_region": 0.0,
+   "n_with_pred": 0,
+   "median_center_dist_pct": null,
+   "within5pct": 0.0,
+   "boundary_iou_polygon": 0.0,
+   "iou_gt0": 0,
+   "status": {
+    "none": 75
+   },
+   "IoU_ci": [
+    0.0,
+    0.0
+   ],
+   "hit@0.5_ci": [
+    0.0,
+    0.0
+   ],
+   "center_in_region_ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "other185": {
+   "n": 185,
+   "IoU": 0.2276876291199778,
+   "hit@0.5": 0.16756756756756758,
+   "hit@0.75": 0.043243243243243246,
+   "center_in_region": 0.41081081081081083,
+   "n_with_pred": 183,
+   "median_center_dist_pct": 3.187806276752815,
+   "within5pct": 0.6378378378378379,
+   "boundary_iou_polygon": 0.213020541499671,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "line": 60,
+    "unparseable": 2
+   }
+  },
+  "by_level_260": {
+   "1": {
+    "n": 133,
+    "IoU": 0.20350319484567833,
+    "hit@0.5": 0.15789473684210525,
+    "hit@0.75": 0.06015037593984962,
+    "center_in_region": 0.3609022556390977,
+    "n_with_pred": 100,
+    "median_center_dist_pct": 2.422449358043793,
+    "within5pct": 0.5714285714285714,
+    "boundary_iou_polygon": 0.19870827733915528,
+    "iou_gt0": 83,
+    "status": {
+     "polygon": 73,
+     "line": 27,
+     "none": 32,
+     "unparseable": 1
+    },
+    "IoU_ci": [
+     0.16187848042734068,
+     0.2481105708894415
+    ],
+    "hit@0.5_ci": [
+     0.09774436090225563,
+     0.22556390977443608
+    ],
+    "center_in_region_ci": [
+     0.2781954887218045,
+     0.44360902255639095
+    ],
+    "median_center_dist_pct_ci": [
+     1.6107392046264017,
+     3.076026044532869
+    ]
+   },
+   "2": {
+    "n": 51,
+    "IoU": 0.13627035922235264,
+    "hit@0.5": 0.058823529411764705,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.27450980392156865,
+    "n_with_pred": 30,
+    "median_center_dist_pct": 3.6972986606016125,
+    "within5pct": 0.35294117647058826,
+    "boundary_iou_polygon": 0.12067173992414744,
+    "iou_gt0": 22,
+    "status": {
+     "polygon": 19,
+     "none": 21,
+     "line": 11
+    },
+    "IoU_ci": [
+     0.08387121549166776,
+     0.19133330112747968
+    ],
+    "hit@0.5_ci": [
+     0.0,
+     0.13725490196078433
+    ],
+    "center_in_region_ci": [
+     0.1568627450980392,
+     0.4117647058823529
+    ],
+    "median_center_dist_pct_ci": [
+     1.7062125389692058,
+     7.474271988784621
+    ]
+   },
+   "3": {
+    "n": 76,
+    "IoU": 0.1066644493734302,
+    "hit@0.5": 0.09210526315789473,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.18421052631578946,
+    "n_with_pred": 53,
+    "median_center_dist_pct": 5.776609996381676,
+    "within5pct": 0.3157894736842105,
+    "boundary_iou_polygon": 0.048687419531634676,
+    "iou_gt0": 34,
+    "status": {
+     "polygon": 31,
+     "none": 22,
+     "line": 22,
+     "unparseable": 1
+    },
+    "IoU_ci": [
+     0.06858260521770551,
+     0.14717317697331664
+    ],
+    "hit@0.5_ci": [
+     0.039473684210526314,
+     0.15789473684210525
+    ],
+    "center_in_region_ci": [
+     0.10526315789473684,
+     0.27631578947368424
+    ],
+    "median_center_dist_pct_ci": [
+     3.6416760922704556,
+     8.056819125811192
+    ]
+   },
+   "IoU_kw_p": 0.007653039279580719,
+   "IoU_jt_p_decreasing": 0.0004999500049995,
+   "center_kw_p": 0.0251252978308786,
+   "center_jt_p_decreasing": 0.0069965017491254375
+  },
+  "by_level_75": {
+   "1": {
+    "n": 32,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 32
+    }
+   },
+   "2": {
+    "n": 21,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 21
+    }
+   },
+   "3": {
+    "n": 22,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 22
+    }
+   }
+  }
+ },
+ "main_lenient": {
+  "all260": {
+   "n": 260,
+   "IoU": 0.16200850533536884,
+   "hit@0.5": 0.11923076923076924,
+   "hit@0.75": 0.03076923076923077,
+   "center_in_region": 0.2923076923076923,
+   "n_with_pred": 185,
+   "median_center_dist_pct": 3.190408034686782,
+   "within5pct": 0.45384615384615384,
+   "boundary_iou_polygon": 0.1404784111511344,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "none": 75,
+    "line": 62
+   },
+   "IoU_ci": [
+    0.1345308987582257,
+    0.1903021905031663
+   ],
+   "hit@0.5_ci": [
+    0.08076923076923077,
+    0.16153846153846155
+   ],
+   "center_in_region_ci": [
+    0.23846153846153847,
+    0.34615384615384615
+   ],
+   "median_center_dist_pct_ci": [
+    2.6255716590461895,
+    3.989118435538383
+   ]
+  },
+  "rerun75": {
+   "n": 75,
+   "IoU": 0.0,
+   "hit@0.5": 0.0,
+   "hit@0.75": 0.0,
+   "center_in_region": 0.0,
+   "n_with_pred": 0,
+   "median_center_dist_pct": null,
+   "within5pct": 0.0,
+   "boundary_iou_polygon": 0.0,
+   "iou_gt0": 0,
+   "status": {
+    "none": 75
+   },
+   "IoU_ci": [
+    0.0,
+    0.0
+   ],
+   "hit@0.5_ci": [
+    0.0,
+    0.0
+   ],
+   "center_in_region_ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "other185": {
+   "n": 185,
+   "IoU": 0.2276876291199778,
+   "hit@0.5": 0.16756756756756758,
+   "hit@0.75": 0.043243243243243246,
+   "center_in_region": 0.41081081081081083,
+   "n_with_pred": 185,
+   "median_center_dist_pct": 3.190408034686782,
+   "within5pct": 0.6378378378378379,
+   "boundary_iou_polygon": 0.213020541499671,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "line": 62
+   }
+  },
+  "by_level_260": {
+   "1": {
+    "n": 133,
+    "IoU": 0.20350319484567833,
+    "hit@0.5": 0.15789473684210525,
+    "hit@0.75": 0.06015037593984962,
+    "center_in_region": 0.3609022556390977,
+    "n_with_pred": 101,
+    "median_center_dist_pct": 2.4964392694652644,
+    "within5pct": 0.5714285714285714,
+    "boundary_iou_polygon": 0.19870827733915528,
+    "iou_gt0": 83,
+    "status": {
+     "polygon": 73,
+     "line": 28,
+     "none": 32
+    },
+    "IoU_ci": [
+     0.16101687428364042,
+     0.24768379091777834
+    ],
+    "hit@0.5_ci": [
+     0.09774436090225563,
+     0.21804511278195488
+    ],
+    "center_in_region_ci": [
+     0.2781954887218045,
+     0.44360902255639095
+    ],
+    "median_center_dist_pct_ci": [
+     1.6107392046264017,
+     3.104351468635007
+    ]
+   },
+   "2": {
+    "n": 51,
+    "IoU": 0.13627035922235264,
+    "hit@0.5": 0.058823529411764705,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.27450980392156865,
+    "n_with_pred": 30,
+    "median_center_dist_pct": 3.6972986606016125,
+    "within5pct": 0.35294117647058826,
+    "boundary_iou_polygon": 0.12067173992414744,
+    "iou_gt0": 22,
+    "status": {
+     "polygon": 19,
+     "none": 21,
+     "line": 11
+    },
+    "IoU_ci": [
+     0.08453997908559292,
+     0.19232463710910497
+    ],
+    "hit@0.5_ci": [
+     0.0,
+     0.13725490196078433
+    ],
+    "center_in_region_ci": [
+     0.1568627450980392,
+     0.39215686274509803
+    ],
+    "median_center_dist_pct_ci": [
+     1.7580624804529308,
+     7.474271988784621
+    ]
+   },
+   "3": {
+    "n": 76,
+    "IoU": 0.1066644493734302,
+    "hit@0.5": 0.09210526315789473,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.18421052631578946,
+    "n_with_pred": 54,
+    "median_center_dist_pct": 5.904191860442633,
+    "within5pct": 0.3157894736842105,
+    "boundary_iou_polygon": 0.048687419531634676,
+    "iou_gt0": 34,
+    "status": {
+     "polygon": 31,
+     "none": 22,
+     "line": 23
+    },
+    "IoU_ci": [
+     0.06948216698111416,
+     0.1467050601633906
+    ],
+    "hit@0.5_ci": [
+     0.039473684210526314,
+     0.15789473684210525
+    ],
+    "center_in_region_ci": [
+     0.10526315789473684,
+     0.27631578947368424
+    ],
+    "median_center_dist_pct_ci": [
+     3.807874377626333,
+     8.540410224992941
+    ]
+   },
+   "IoU_kw_p": 0.007653039279580719,
+   "IoU_jt_p_decreasing": 0.0013998600139986002,
+   "center_kw_p": 0.0251252978308786,
+   "center_jt_p_decreasing": 0.0024987506246876563
+  },
+  "by_level_75": {
+   "1": {
+    "n": 32,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 32
+    }
+   },
+   "2": {
+    "n": 21,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 21
+    }
+   },
+   "3": {
+    "n": 22,
+    "IoU": 0.0,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.0,
+    "n_with_pred": 0,
+    "median_center_dist_pct": null,
+    "within5pct": 0.0,
+    "boundary_iou_polygon": 0.0,
+    "iou_gt0": 0,
+    "status": {
+     "none": 22
+    }
+   }
+  }
+ },
+ "nonone_strict": {
+  "all260": {
+   "n": 260,
+   "IoU": 0.20047040590650494,
+   "hit@0.5": 0.15384615384615385,
+   "hit@0.75": 0.03076923076923077,
+   "center_in_region": 0.36538461538461536,
+   "n_with_pred": 257,
+   "median_center_dist_pct": 3.783833316525651,
+   "within5pct": 0.5807692307692308,
+   "boundary_iou_polygon": 0.17306652790621924,
+   "iou_gt0": 173,
+   "status": {
+    "polygon": 184,
+    "line": 73,
+    "unparseable": 3
+   },
+   "IoU_ci": [
+    0.17277476916799003,
+    0.22933626899445425
+   ],
+   "hit@0.5_ci": [
+    0.11153846153846154,
+    0.2
+   ],
+   "center_in_region_ci": [
+    0.3076923076923077,
+    0.4230769230769231
+   ],
+   "median_center_dist_pct_ci": [
+    3.076026044532869,
+    4.45226293607037
+   ]
+  },
+  "rerun75": {
+   "n": 75,
+   "IoU": 0.13333458864660513,
+   "hit@0.5": 0.12,
+   "hit@0.75": 0.0,
+   "center_in_region": 0.25333333333333335,
+   "n_with_pred": 74,
+   "median_center_dist_pct": 6.169208311874501,
+   "within5pct": 0.44,
+   "boundary_iou_polygon": 0.09569526348715396,
+   "iou_gt0": 34,
+   "status": {
+    "polygon": 61,
+    "line": 13,
+    "unparseable": 1
+   },
+   "IoU_ci": [
+    0.08814405089709325,
+    0.18250595742615333
+   ],
+   "hit@0.5_ci": [
+    0.05333333333333334,
+    0.2
+   ],
+   "center_in_region_ci": [
+    0.16,
+    0.36
+   ],
+   "median_center_dist_pct_ci": [
+    3.903190841906823,
+    9.463148208053843
+   ]
+  },
+  "other185": {
+   "n": 185,
+   "IoU": 0.2276876291199778,
+   "hit@0.5": 0.16756756756756758,
+   "hit@0.75": 0.043243243243243246,
+   "center_in_region": 0.41081081081081083,
+   "n_with_pred": 183,
+   "median_center_dist_pct": 3.187806276752815,
+   "within5pct": 0.6378378378378379,
+   "boundary_iou_polygon": 0.213020541499671,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "line": 60,
+    "unparseable": 2
+   }
+  },
+  "by_level_260": {
+   "1": {
+    "n": 133,
+    "IoU": 0.2542495616601754,
+    "hit@0.5": 0.21804511278195488,
+    "hit@0.75": 0.06015037593984962,
+    "center_in_region": 0.46616541353383456,
+    "n_with_pred": 132,
+    "median_center_dist_pct": 2.5898077890218154,
+    "within5pct": 0.6992481203007519,
+    "boundary_iou_polygon": 0.23348468267254413,
+    "iou_gt0": 100,
+    "status": {
+     "polygon": 98,
+     "line": 34,
+     "unparseable": 1
+    },
+    "IoU_ci": [
+     0.21101596527736677,
+     0.2977978581885817
+    ],
+    "hit@0.5_ci": [
+     0.15037593984962405,
+     0.2857142857142857
+    ],
+    "center_in_region_ci": [
+     0.38345864661654133,
+     0.556390977443609
+    ],
+    "median_center_dist_pct_ci": [
+     1.8940044727305019,
+     3.266955103504661
+    ]
+   },
+   "2": {
+    "n": 51,
+    "IoU": 0.17207434438039718,
+    "hit@0.5": 0.058823529411764705,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.35294117647058826,
+    "n_with_pred": 51,
+    "median_center_dist_pct": 4.007902885760634,
+    "within5pct": 0.5294117647058824,
+    "boundary_iou_polygon": 0.1589078962952546,
+    "iou_gt0": 31,
+    "status": {
+     "polygon": 40,
+     "line": 11
+    },
+    "IoU_ci": [
+     0.11924854345035091,
+     0.22745284017042985
+    ],
+    "hit@0.5_ci": [
+     0.0,
+     0.13725490196078433
+    ],
+    "center_in_region_ci": [
+     0.23529411764705882,
+     0.49019607843137253
+    ],
+    "median_center_dist_pct_ci": [
+     2.2241165754051786,
+     8.36684666476071
+    ]
+   },
+   "3": {
+    "n": 76,
+    "IoU": 0.12541213515115388,
+    "hit@0.5": 0.10526315789473684,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.19736842105263158,
+    "n_with_pred": 74,
+    "median_center_dist_pct": 6.234941395711175,
+    "within5pct": 0.40789473684210525,
+    "boundary_iou_polygon": 0.07281238509061234,
+    "iou_gt0": 42,
+    "status": {
+     "polygon": 46,
+     "line": 28,
+     "unparseable": 2
+    },
+    "IoU_ci": [
+     0.08650970533776507,
+     0.1674496774271729
+    ],
+    "hit@0.5_ci": [
+     0.039473684210526314,
+     0.18421052631578946
+    ],
+    "center_in_region_ci": [
+     0.11842105263157894,
+     0.2894736842105263
+    ],
+    "median_center_dist_pct_ci": [
+     4.3221545187463635,
+     8.732226014387246
+    ]
+   },
+   "IoU_kw_p": 0.00058781236523623,
+   "IoU_jt_p_decreasing": 0.00019998000199980003,
+   "center_kw_p": 0.0005383449533614105,
+   "center_jt_p_decreasing": 0.0004997501249375312
+  },
+  "by_level_75": {
+   "1": {
+    "n": 32,
+    "IoU": 0.21091458707275365,
+    "hit@0.5": 0.25,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.4375,
+    "n_with_pred": 32,
+    "median_center_dist_pct": 4.6168710812605305,
+    "within5pct": 0.53125,
+    "boundary_iou_polygon": 0.14859009551538874,
+    "iou_gt0": 17,
+    "status": {
+     "line": 7,
+     "polygon": 25
+    }
+   },
+   "2": {
+    "n": 21,
+    "IoU": 0.08695253538382246,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.19047619047619047,
+    "n_with_pred": 21,
+    "median_center_dist_pct": 8.36684666476071,
+    "within5pct": 0.42857142857142855,
+    "boundary_iou_polygon": 0.0764723127422143,
+    "iou_gt0": 9,
+    "status": {
+     "polygon": 21
+    }
+   },
+   "3": {
+    "n": 22,
+    "IoU": 0.06476473268668172,
+    "hit@0.5": 0.045454545454545456,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.045454545454545456,
+    "n_with_pred": 21,
+    "median_center_dist_pct": 7.0037936617333525,
+    "within5pct": 0.3181818181818182,
+    "boundary_iou_polygon": 0.05858920207180288,
+    "iou_gt0": 8,
+    "status": {
+     "polygon": 15,
+     "line": 6,
+     "unparseable": 1
+    }
+   }
+  }
+ },
+ "nonone_lenient": {
+  "all260": {
+   "n": 260,
+   "IoU": 0.20047040590650494,
+   "hit@0.5": 0.15384615384615385,
+   "hit@0.75": 0.03076923076923077,
+   "center_in_region": 0.36538461538461536,
+   "n_with_pred": 259,
+   "median_center_dist_pct": 3.7984787980530124,
+   "within5pct": 0.5807692307692308,
+   "boundary_iou_polygon": 0.17306652790621924,
+   "iou_gt0": 173,
+   "status": {
+    "polygon": 184,
+    "line": 75,
+    "unparseable": 1
+   },
+   "IoU_ci": [
+    0.17264486085046898,
+    0.22867502940365017
+   ],
+   "hit@0.5_ci": [
+    0.11153846153846154,
+    0.19615384615384615
+   ],
+   "center_in_region_ci": [
+    0.3076923076923077,
+    0.4230769230769231
+   ],
+   "median_center_dist_pct_ci": [
+    3.104351468635007,
+    4.6048949434942195
+   ]
+  },
+  "rerun75": {
+   "n": 75,
+   "IoU": 0.13333458864660513,
+   "hit@0.5": 0.12,
+   "hit@0.75": 0.0,
+   "center_in_region": 0.25333333333333335,
+   "n_with_pred": 74,
+   "median_center_dist_pct": 6.169208311874501,
+   "within5pct": 0.44,
+   "boundary_iou_polygon": 0.09569526348715396,
+   "iou_gt0": 34,
+   "status": {
+    "polygon": 61,
+    "line": 13,
+    "unparseable": 1
+   },
+   "IoU_ci": [
+    0.08924746690135339,
+    0.18059805258610984
+   ],
+   "hit@0.5_ci": [
+    0.05333333333333334,
+    0.2
+   ],
+   "center_in_region_ci": [
+    0.16,
+    0.3466666666666667
+   ],
+   "median_center_dist_pct_ci": [
+    3.81805056765007,
+    9.302857271000772
+   ]
+  },
+  "other185": {
+   "n": 185,
+   "IoU": 0.2276876291199778,
+   "hit@0.5": 0.16756756756756758,
+   "hit@0.75": 0.043243243243243246,
+   "center_in_region": 0.41081081081081083,
+   "n_with_pred": 185,
+   "median_center_dist_pct": 3.190408034686782,
+   "within5pct": 0.6378378378378379,
+   "boundary_iou_polygon": 0.213020541499671,
+   "iou_gt0": 139,
+   "status": {
+    "polygon": 123,
+    "line": 62
+   }
+  },
+  "by_level_260": {
+   "1": {
+    "n": 133,
+    "IoU": 0.2542495616601754,
+    "hit@0.5": 0.21804511278195488,
+    "hit@0.75": 0.06015037593984962,
+    "center_in_region": 0.46616541353383456,
+    "n_with_pred": 133,
+    "median_center_dist_pct": 2.6043157798120173,
+    "within5pct": 0.6992481203007519,
+    "boundary_iou_polygon": 0.23348468267254413,
+    "iou_gt0": 100,
+    "status": {
+     "polygon": 98,
+     "line": 35
+    },
+    "IoU_ci": [
+     0.21045252520907357,
+     0.29882993474519465
+    ],
+    "hit@0.5_ci": [
+     0.15037593984962405,
+     0.2857142857142857
+    ],
+    "center_in_region_ci": [
+     0.38345864661654133,
+     0.5488721804511278
+    ],
+    "median_center_dist_pct_ci": [
+     1.900463107791418,
+     3.3461039302565063
+    ]
+   },
+   "2": {
+    "n": 51,
+    "IoU": 0.17207434438039718,
+    "hit@0.5": 0.058823529411764705,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.35294117647058826,
+    "n_with_pred": 51,
+    "median_center_dist_pct": 4.007902885760634,
+    "within5pct": 0.5294117647058824,
+    "boundary_iou_polygon": 0.1589078962952546,
+    "iou_gt0": 31,
+    "status": {
+     "polygon": 40,
+     "line": 11
+    },
+    "IoU_ci": [
+     0.11829412327089034,
+     0.2270731487174444
+    ],
+    "hit@0.5_ci": [
+     0.0,
+     0.13725490196078433
+    ],
+    "center_in_region_ci": [
+     0.21568627450980393,
+     0.49019607843137253
+    ],
+    "median_center_dist_pct_ci": [
+     2.2241165754051786,
+     8.36684666476071
+    ]
+   },
+   "3": {
+    "n": 76,
+    "IoU": 0.12541213515115388,
+    "hit@0.5": 0.10526315789473684,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.19736842105263158,
+    "n_with_pred": 75,
+    "median_center_dist_pct": 6.317317370860002,
+    "within5pct": 0.40789473684210525,
+    "boundary_iou_polygon": 0.07281238509061234,
+    "iou_gt0": 42,
+    "status": {
+     "polygon": 46,
+     "line": 29,
+     "unparseable": 1
+    },
+    "IoU_ci": [
+     0.08621888572645844,
+     0.16810072265013745
+    ],
+    "hit@0.5_ci": [
+     0.039473684210526314,
+     0.18421052631578946
+    ],
+    "center_in_region_ci": [
+     0.10526315789473684,
+     0.2894736842105263
+    ],
+    "median_center_dist_pct_ci": [
+     4.323637917995539,
+     9.024001324174694
+    ]
+   },
+   "IoU_kw_p": 0.00058781236523623,
+   "IoU_jt_p_decreasing": 0.00019998000199980003,
+   "center_kw_p": 0.0005383449533614105,
+   "center_jt_p_decreasing": 0.0004997501249375312
+  },
+  "by_level_75": {
+   "1": {
+    "n": 32,
+    "IoU": 0.21091458707275365,
+    "hit@0.5": 0.25,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.4375,
+    "n_with_pred": 32,
+    "median_center_dist_pct": 4.6168710812605305,
+    "within5pct": 0.53125,
+    "boundary_iou_polygon": 0.14859009551538874,
+    "iou_gt0": 17,
+    "status": {
+     "line": 7,
+     "polygon": 25
+    }
+   },
+   "2": {
+    "n": 21,
+    "IoU": 0.08695253538382246,
+    "hit@0.5": 0.0,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.19047619047619047,
+    "n_with_pred": 21,
+    "median_center_dist_pct": 8.36684666476071,
+    "within5pct": 0.42857142857142855,
+    "boundary_iou_polygon": 0.0764723127422143,
+    "iou_gt0": 9,
+    "status": {
+     "polygon": 21
+    }
+   },
+   "3": {
+    "n": 22,
+    "IoU": 0.06476473268668172,
+    "hit@0.5": 0.045454545454545456,
+    "hit@0.75": 0.0,
+    "center_in_region": 0.045454545454545456,
+    "n_with_pred": 21,
+    "median_center_dist_pct": 7.0037936617333525,
+    "within5pct": 0.3181818181818182,
+    "boundary_iou_polygon": 0.05858920207180288,
+    "iou_gt0": 8,
+    "status": {
+     "polygon": 15,
+     "line": 6,
+     "unparseable": 1
+    }
+   }
+  }
+ },
+ "delta_260_strict": {
+  "IoU": 0.0384619005711361,
+  "IoU_ci": [
+   0.024200096049133472,
+   0.054102431821981274
+  ]
+ },
+ "delta_260_lenient": {
+  "IoU": 0.0384619005711361,
+  "IoU_ci": [
+   0.023988802160339766,
+   0.05414920114509824
+  ]
+ },
+ "rerun_replies": {
+  "finish_reason": {
+   "stop": 75
+  },
+  "max_completion_tokens": 141,
+  "median_prompt_tokens": 10937,
+  "time_utc": [
+   "2026-11-28T03:00:53+00:00",
+   "2026-11-28T04:57:10+00:00"
+  ],
+  "image_max_pixels_used": 0
+ },
+ "rerun75_gold_vs_pred_type_lenient": {
+  "polygon/polygon": 55,
+  "polygon/line": 7,
+  "line/polygon": 6,
+  "line/line": 6,
+  "polygon/unparseable": 1
+ }
+}

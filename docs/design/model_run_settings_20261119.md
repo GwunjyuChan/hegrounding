@@ -1,4 +1,4 @@
-# 模型运行参数记录（eval_v2，2026-11-19；11-25 补 Gemma；11-26 补 Claude / Gemini、37 题改问法重跑、Qwen 重跑）
+# 模型运行参数记录（eval_v2，2026-11-19；11-25 补 Gemma；11-26 补 Claude / Gemini、37 题改问法重跑、Qwen 重跑；11-28 Qwen 去掉 none 消融）
 
 以后每次评测都按本文件的格式记一份，放在 docs/design/。来源：评测脚本、模型配置（11-19 当天读取）、服务日志 `~/mlx-27b/server-launchd*.log`、原始输出 `benchmark/exports/eval_v2_20261119/runs/*.raw.jsonl`。
 
@@ -127,6 +127,24 @@
 | 复现性 | 同一 revision、同样参数，换了硬件和库版本：223 道未改的题里只有 75 题回复与 11-19 逐字相同；正式跑之前的 3 题检查中输入 token 数完全一致但 2 题输出不同。223 题平均 IoU 新 0.158 / 旧 0.159，260 题 IoU 新 0.162 / 旧 0.168，hit@0.5 0.119 / 0.138 |
 | 运行时间 | 2026-11-26 01:20 – 11:20 UTC（中途两次因会话结束中断、续跑；已完成的题不重跑） |
 | 命令 | `OPENAI_API_KEY=local python3 code/run_models.py --package rerun_markloc_20261126 --model <权重路径> --base-url http://127.0.0.1:8092/v1 --detail "" --temperature 0 --retries 1 --out rerun_markloc_20261126/runs/qwen3.8-27b-4bit.raw.jsonl`；其余 223 题同样命令，`--package final260_20261126 --ids <223 题>` |
+
+## 2026-11-28 消融：Qwen3.8-27B 去掉 none 选项，重跑原来答 none 的 75 题
+
+结果报告：`qwen_nonone_ablation_20261128.md`。消融，不替换主表。
+
+| 项 | 值 |
+|---|---|
+| 题目 | 最终 260 题里 Qwen（11-26 MacBook 重跑，`final260_20261126/runs/qwen3.8-27b-4bit.raw.jsonl`）答 `{"type": "none"}` 的 75 题（难度 32 / 21 / 22），`rerun_nonone_20261128/ids.txt` |
+| 提示词 | **grounding-v2-nonone-20261128**（`code/prompt.py` 的 `USER_TEMPLATE_V2_NONONE`）：与 grounding-v2-20261119 相比只删掉 user 提示最后一行 `- the place is not shown on this map: {"type": "none"}`，其余逐字相同；system 提示不变；37 道改问法的题用改后问法。`code/make_nonone_rerun.py` 从 `final260_20261126/tasks.jsonl` 生成 `rerun_nonone_20261128/tasks.jsonl`（sha256 6ac1e267…），逐题断言新提示 = 原提示去掉这一行 |
+| 权重 | 重新下载 mlx-community/Qwen3.8-27B-4bit，revision b935172e4bb5dcd0543774a34748fb92422e3027（与 11-19、11-26 相同，下载元数据核对过；3 个 safetensors 共约 16 GB） |
+| 推理框架 | 与 11-26 MacBook 重跑相同：mlx-vlm 0.8.0、mlx 0.32.4、mlx-metal 0.32.4、transformers 5.23.0（Python 3.12 临时虚拟环境，uv 安装同样版本），`mlx_vlm.server --host 127.0.0.1 --port 8092 --prefill-step-size 128 --kv-bits 4 --kv-quant-scheme uniform --max-tokens 2048`；客户端 openai 3.60.0（11-26 为 3.59.0，请求体相同）；直连，不经 hermes / 工具；未开思考 |
+| 硬件 | 同一台 MacBook Pro（M4 Pro，48 GB），接电源；服务和客户端由 `caffeinate -dims` 包住的独立后台脚本运行，没有中断 |
+| 生成参数 | temperature 0；seed 未设；`--retries 1` |
+| 图片 | 75 题全部原分辨率（没有用 `--max-pixels`）；输入中位数约 10,900 token |
+| 输出情况 | 75/75 finish_reason 为 stop，最长输出 141 token；全部为纯 JSON（无代码块）；1 题（NC2-DS-014）自创 `{"type": "point", ...}`，无法解析记 0；严格与宽松解析结果相同 |
+| 运行时间 | 2026-11-28 03:00–04:57 UTC |
+| 命令 | `OPENAI_API_KEY=local python code/run_models.py --package rerun_nonone_20261128 --model <权重路径> --base-url http://127.0.0.1:8092/v1 --detail "" --temperature 0 --retries 1 --out rerun_nonone_20261128/runs/qwen3.8-27b-4bit.raw.jsonl` |
+| 计分 | `benchmark/diagnostics/qwen_nonone_20261128/analyze.py`：185 题主运行 + 75 题重跑拼成 `rerun_nonone_20261128/runs/qwen3.8-27b-4bit-nonone260{,-lenient}.*`，`convert_predictions.py` + `eval_geometry.py`（同一金标和线规则）。宽松解析用全项目统一规则（`lenient.py` 调用 `code/make_lenient_final260.py`） |
 
 ## 提示词全文（grounding-v2-20261119）
 
